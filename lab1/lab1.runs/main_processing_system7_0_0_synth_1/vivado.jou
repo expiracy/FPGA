@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Jan 23 13:50:04 2026
+# Process ID         : 32832
+# Current directory  : C:/Users/james/Documents/repos/FPGA/lab1/lab1.runs/main_processing_system7_0_0_synth_1
+# Command line       : vivado.exe -log main_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_processing_system7_0_0.tcl
+# Log file           : C:/Users/james/Documents/repos/FPGA/lab1/lab1.runs/main_processing_system7_0_0_synth_1/main_processing_system7_0_0.vds
+# Journal file       : C:/Users/james/Documents/repos/FPGA/lab1/lab1.runs/main_processing_system7_0_0_synth_1\vivado.jou
+# Running On         : expiracy
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 9700X 8-Core Processor             
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33377 MB
+# Swap memory        : 36514 MB
+# Total Virtual      : 69892 MB
+# Available Virtual  : 17485 MB
+#-----------------------------------------------------------
+source main_processing_system7_0_0.tcl -notrace
