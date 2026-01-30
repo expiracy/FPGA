@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:array_mult:1.0
-// IP Revision: 2114458606
+// IP Revision: 2114458621
 
 (* X_CORE_INFO = "array_mult,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,array_mult,{}" *)
-(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,array_mult,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=array_mult,x_ipVersion=1.0,x_ipCoreRevision=2114458606,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_ADDR_WIDTH=4,C_S_AXI_CTRL_DATA_WIDTH=32,C_S_AXI_DATA_IN_B_ADDR_WIDTH=8,C_S_AXI_DATA_IN_B_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,array_mult,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=array_mult,x_ipVersion=1.0,x_ipCoreRevision=2114458621,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_ADDR_WIDTH=4,C_S_AXI_CTRL_DATA_WIDTH=32,C_S_AXI_DATA_IN_B_ADDR_WIDTH=8,C_S_AXI_DATA_IN_B_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_0_hls_inst_0 (

@@ -1635,12 +1635,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 10:48:57 UTC 2026</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e9771bd8</spirit:value>
+            <spirit:value>9:6b1001b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1654,11 +1650,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 10:47:40 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e9771bd8</spirit:value>
+            <spirit:value>9:6b1001b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1669,7 +1665,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e9771bd8</spirit:value>
+            <spirit:value>9:6b1001b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1685,11 +1681,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 10:47:40 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ea7c6142</spirit:value>
+            <spirit:value>9:681b7b2e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1705,11 +1701,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 10:47:40 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ea7c6142</spirit:value>
+            <spirit:value>9:681b7b2e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1725,11 +1721,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 10:47:40 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e9771bd8</spirit:value>
+            <spirit:value>9:6b1001b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1745,11 +1741,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 10:47:40 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e9771bd8</spirit:value>
+            <spirit:value>9:6b1001b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2592,37 +2588,37 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2631,32 +2627,36 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_mul_32s_32s_32_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult.v</spirit:name>
+        <spirit:name>hdl/verilog/impl.bat</spirit:name>
+        <spirit:userFileType>bat</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2677,31 +2677,31 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2709,27 +2709,31 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_mul_32s_32s_32_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_mul_32s_32s_32_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/1f15/hdl/verilog/array_mult.v</spirit:name>
+        <spirit:name>hdl/verilog/impl.bat</spirit:name>
+        <spirit:userFileType>bat</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2808,7 +2812,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Array_mult</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114458606</xilinx:coreRevision>
+      <xilinx:coreRevision>2114458621</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2916,7 +2920,7 @@
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="552146c3"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="39f58b4f"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d95ed6b1"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fa80ea8f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="b7472f2d"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b9423416"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="49f10290"/>

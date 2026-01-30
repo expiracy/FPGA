@@ -24,13 +24,14 @@ void array_mult (stream_data &in_a, data in_b[ROWS*COLS], stream_data &result)
 
 	// Read the input matrix from the stream and store it in the local memory
 	for (i=0;i<ROWS*COLS;i++) {
+        #pragma HLS unroll
 		in_a.read(in_a_store[i]); // Read value form the stream
 	}
-
+    
 	ROWS_LOOP: for (i=0;i<ROWS;i++) { // Iterates through rows in in_a
-		// #pragma HLS unroll factor=2
+		#pragma HLS unroll
 		COLS_LOOP: for (j=0;j<COLS;j++) { // Iterates through columns in in_b
-			// #pragma HLS unroll
+			#pragma HLS unroll
 			mult_acc.data=0; // Initialize the accumulator
 
 			MULT_ACC_LOOP: for (k=0;k<MULT_ACC;k++) { // For each value in the row/column

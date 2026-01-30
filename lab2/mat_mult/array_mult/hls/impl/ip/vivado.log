@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Jan 30 10:46:49 2026
-# Process ID: 24004
+# Start of session at: Fri Jan 30 11:01:52 2026
+# Process ID: 8392
 # Current directory: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/vivado.log
@@ -19,15 +19,15 @@
 # Host memory       :34067 MB
 # Swap memory       :5100 MB
 # Total Virtual     :39167 MB
-# Available Virtual :21375 MB
+# Available Virtual :21877 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace
 INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/repos/FPGA/lab2/mat_mult/array_mult/hls/hls_data.json outdir=C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip srcdir=C:/repos/FPGA/lab2/mat_mult/array_mult/hls sort_interfaces_ports=false
 INFO: Copied 1 ipmisc file(s) to C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/misc
-INFO: Copied 14 verilog file(s) to C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/hdl/verilog
+INFO: Copied 15 verilog file(s) to C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/hdl/verilog
 INFO: Copied 11 vhdl file(s) to C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/hdl/vhdl
 INFO: Copied 10 swdriver file(s) to C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 510.730 ; gain = 192.668
+ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 509.066 ; gain = 190.543
 INFO: Import ports from HDL: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/hdl/vhdl/array_mult.vhd (array_mult)
 INFO: Add axi4lite interface s_axi_CTRL
 INFO: Add axi4lite interface s_axi_DATA_IN_B
@@ -44,4 +44,4 @@ INFO: Calling post_process_sysgen to specialize IP
 Generating sysgen info xml from json file
 INFO: Created IP C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/component.xml
 INFO: Created IP archive C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/ip/xilinx_com_hls_array_mult_1_0.zip
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 30 10:47:05 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 30 11:02:02 2026...

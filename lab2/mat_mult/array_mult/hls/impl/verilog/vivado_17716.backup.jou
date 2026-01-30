@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri Jan 30 11:02:31 2026
-# Process ID: 17084
-# Current directory: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
-# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
-# Log file: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
-# Journal file: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+# Start of session at: Fri Jan 30 10:47:08 2026
+# Process ID: 17716
+# Current directory: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/verilog
+# Command line: vivado.exe -mode batch -source run_vivado.tcl
+# Log file: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/verilog/vivado.log
+# Journal file: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/impl/verilog\vivado.jou
 # Running On        :E10-E21C6500
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -19,5 +19,6 @@
 # Host memory       :34067 MB
 # Swap memory       :5100 MB
 # Total Virtual     :39167 MB
-# Available Virtual :21043 MB
+# Available Virtual :21222 MB
 #-----------------------------------------------------------
+source run_vivado.tcl
