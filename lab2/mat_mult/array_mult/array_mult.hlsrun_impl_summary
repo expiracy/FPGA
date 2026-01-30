@@ -1,0 +1,272 @@
+<ENTRY>
+{
+ "thisFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\array_mult.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "01/30/26 10:46:39",
+ "timestampMillis": "243473899",
+ "buildStep": {
+  "cmdId": "7c6ed8b0-c0ec-4e35-bf16-715c2a3271cd",
+  "name": "vitis-run",
+  "logFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\logs\\array_mult.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config C:\\repos\\FPGA\\lab2\\mat_mult\\hls_config.cfg --work_dir array_mult ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "C:\\repos\\FPGA\\lab2\\mat_mult\\hls_config.cfg",
+   "--work_dir",
+   "array_mult"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:46:39",
+ "timestampMillis": "243473900",
+ "status": {
+  "cmdId": "7c6ed8b0-c0ec-4e35-bf16-715c2a3271cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480580",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "array_mult",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/repos\\FPGA\\lab2\\matrix_mult.cpp",
+     "C:/repos\\FPGA\\lab2\\matrix_mult.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480582",
+ "buildStep": {
+  "cmdId": "5250a8db-7482-439b-b574-e10a0ef78f4e",
+  "name": "export_design",
+  "logFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\hls.log",
+  "commandLine": "export_design -flow impl",
+  "args": [
+   "-flow",
+   "impl"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480582",
+ "status": {
+  "cmdId": "5250a8db-7482-439b-b574-e10a0ef78f4e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480583",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480584",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\impl\\report\\verilog\\export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480584",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\impl\\report\\verilog\\export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480585",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480585",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\impl\\report\\verilog\\export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:46:46",
+ "timestampMillis": "243480586",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\impl\\report\\verilog\\export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:51:56",
+ "timestampMillis": "243790899",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:51:56",
+ "timestampMillis": "243790899",
+ "report": {
+  "path": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:51:56",
+ "timestampMillis": "243790900",
+ "status": {
+  "cmdId": "5250a8db-7482-439b-b574-e10a0ef78f4e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:51:56",
+ "timestampMillis": "243790989",
+ "status": {
+  "cmdId": "7c6ed8b0-c0ec-4e35-bf16-715c2a3271cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:51:56",
+ "timestampMillis": "243790990",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:51:56",
+ "timestampMillis": "243790990",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
