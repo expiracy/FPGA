@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-//Date        : Fri Jan 30 11:02:20 2026
+//Date        : Fri Jan 30 11:33:27 2026
 //Host        : E10-E21C6500 running 64-bit major release  (build 9200)
 //Command     : generate_target bd_0_wrapper.bd
 //Design      : bd_0_wrapper
@@ -62,18 +62,18 @@ module bd_0_wrapper
     s_axi_DATA_IN_B_wvalid);
   input ap_clk;
   input ap_rst_n;
-  input [31:0]in_a_tdata;
-  input [3:0]in_a_tkeep;
+  input [15:0]in_a_tdata;
+  input [1:0]in_a_tkeep;
   input [0:0]in_a_tlast;
   output in_a_tready;
-  input [3:0]in_a_tstrb;
+  input [1:0]in_a_tstrb;
   input in_a_tvalid;
   output interrupt;
-  output [31:0]result_tdata;
-  output [3:0]result_tkeep;
+  output [15:0]result_tdata;
+  output [1:0]result_tkeep;
   output [0:0]result_tlast;
   input result_tready;
-  output [3:0]result_tstrb;
+  output [1:0]result_tstrb;
   output result_tvalid;
   input [3:0]s_axi_CTRL_araddr;
   output s_axi_CTRL_arready;
@@ -92,10 +92,10 @@ module bd_0_wrapper
   output s_axi_CTRL_wready;
   input [3:0]s_axi_CTRL_wstrb;
   input s_axi_CTRL_wvalid;
-  input [7:0]s_axi_DATA_IN_B_araddr;
+  input [6:0]s_axi_DATA_IN_B_araddr;
   output s_axi_DATA_IN_B_arready;
   input s_axi_DATA_IN_B_arvalid;
-  input [7:0]s_axi_DATA_IN_B_awaddr;
+  input [6:0]s_axi_DATA_IN_B_awaddr;
   output s_axi_DATA_IN_B_awready;
   input s_axi_DATA_IN_B_awvalid;
   input s_axi_DATA_IN_B_bready;
@@ -112,18 +112,18 @@ module bd_0_wrapper
 
   wire ap_clk;
   wire ap_rst_n;
-  wire [31:0]in_a_tdata;
-  wire [3:0]in_a_tkeep;
+  wire [15:0]in_a_tdata;
+  wire [1:0]in_a_tkeep;
   wire [0:0]in_a_tlast;
   wire in_a_tready;
-  wire [3:0]in_a_tstrb;
+  wire [1:0]in_a_tstrb;
   wire in_a_tvalid;
   wire interrupt;
-  wire [31:0]result_tdata;
-  wire [3:0]result_tkeep;
+  wire [15:0]result_tdata;
+  wire [1:0]result_tkeep;
   wire [0:0]result_tlast;
   wire result_tready;
-  wire [3:0]result_tstrb;
+  wire [1:0]result_tstrb;
   wire result_tvalid;
   wire [3:0]s_axi_CTRL_araddr;
   wire s_axi_CTRL_arready;
@@ -142,10 +142,10 @@ module bd_0_wrapper
   wire s_axi_CTRL_wready;
   wire [3:0]s_axi_CTRL_wstrb;
   wire s_axi_CTRL_wvalid;
-  wire [7:0]s_axi_DATA_IN_B_araddr;
+  wire [6:0]s_axi_DATA_IN_B_araddr;
   wire s_axi_DATA_IN_B_arready;
   wire s_axi_DATA_IN_B_arvalid;
-  wire [7:0]s_axi_DATA_IN_B_awaddr;
+  wire [6:0]s_axi_DATA_IN_B_awaddr;
   wire s_axi_DATA_IN_B_awready;
   wire s_axi_DATA_IN_B_awvalid;
   wire s_axi_DATA_IN_B_bready;

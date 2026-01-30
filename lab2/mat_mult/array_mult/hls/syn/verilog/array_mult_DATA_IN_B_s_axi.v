@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module array_mult_DATA_IN_B_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 8,
+    C_S_AXI_ADDR_WIDTH = 7,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -33,20 +33,21 @@ module array_mult_DATA_IN_B_s_axi
     input  wire                          RREADY,
     input  wire [4:0]                    in_b_address0,
     input  wire                          in_b_ce0,
-    output wire [31:0]                   in_b_q0
+    output wire [15:0]                   in_b_q0
 );
 //------------------------Address Info-------------------
 // Protocol Used: ap_ctrl_none
 //
-// 0x80 ~
-// 0xff : Memory 'in_b' (25 * 32b)
-//        Word n : bit [31:0] - in_b[n]
+// 0x40 ~
+// 0x7f : Memory 'in_b' (25 * 16b)
+//        Word n : bit [15: 0] - in_b[2n]
+//                 bit [31:16] - in_b[2n+1]
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_IN_B_BASE = 8'h80,
-    ADDR_IN_B_HIGH = 8'hff,
+    ADDR_IN_B_BASE = 7'h40,
+    ADDR_IN_B_HIGH = 7'h7f,
     WRIDLE         = 2'd0,
     WRDATA         = 2'd1,
     WRRESP         = 2'd2,
@@ -54,7 +55,7 @@ localparam
     RDIDLE         = 2'd0,
     RDDATA         = 2'd1,
     RDRESET        = 2'd2,
-    ADDR_BITS                = 8;
+    ADDR_BITS                = 7;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -69,10 +70,10 @@ localparam
     wire                          ar_hs;
     wire [ADDR_BITS-1:0]          raddr;
     // memory signals
-    wire [4:0]                    int_in_b_address0;
+    wire [3:0]                    int_in_b_address0;
     wire                          int_in_b_ce0;
     wire [31:0]                   int_in_b_q0;
-    wire [4:0]                    int_in_b_address1;
+    wire [3:0]                    int_in_b_address1;
     wire                          int_in_b_ce1;
     wire                          int_in_b_we1;
     wire [3:0]                    int_in_b_be1;
@@ -80,6 +81,7 @@ localparam
     wire [31:0]                   int_in_b_q1;
     reg                           int_in_b_read;
     reg                           int_in_b_write;
+    reg  [0:0]                    int_in_b_shift0;
 
 //------------------------Instantiation------------------
 // int_in_b
@@ -87,13 +89,13 @@ array_mult_DATA_IN_B_s_axi_ram #(
     .MEM_STYLE ( "auto" ),
     .MEM_TYPE  ( "2P" ),
     .BYTES     ( 4 ),
-    .DEPTH     ( 25 )
+    .DEPTH     ( 13 )
 ) int_in_b (
     .clk0      ( ACLK ),
     .address0  ( int_in_b_address0 ),
     .ce0       ( int_in_b_ce0 ),
     .we0       ( {4{1'b0}} ),
-    .d0        ( {32{1'b0}} ),
+    .d0        ( {16{1'b0}} ),
     .q0        ( int_in_b_q0 ),
     .clk1      ( ACLK ),
     .address1  ( int_in_b_address1 ),
@@ -203,10 +205,10 @@ end
 
 //------------------------Memory logic-------------------
 // in_b
-assign int_in_b_address0 = in_b_address0;
+assign int_in_b_address0 = in_b_address0 >> 1;
 assign int_in_b_ce0      = in_b_ce0;
-assign in_b_q0           = int_in_b_q0;
-assign int_in_b_address1 = ar_hs? raddr[6:2] : waddr[6:2];
+assign in_b_q0           = int_in_b_q0 >> (int_in_b_shift0 * 16);
+assign int_in_b_address1 = ar_hs? raddr[5:2] : waddr[5:2];
 assign int_in_b_ce1      = ar_hs | (int_in_b_write & WVALID);
 assign int_in_b_we1      = int_in_b_write & w_hs;
 assign int_in_b_be1      = int_in_b_we1 ? WSTRB : 'b0;
@@ -232,6 +234,16 @@ always @(posedge ACLK) begin
             int_in_b_write <= 1'b1;
         else if (w_hs)
             int_in_b_write <= 1'b0;
+    end
+end
+
+// int_in_b_shift0
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_in_b_shift0 <= 1'b0;
+    else if (ACLK_EN) begin
+        if (in_b_ce0)
+            int_in_b_shift0 <= in_b_address0[0];
     end
 end
 

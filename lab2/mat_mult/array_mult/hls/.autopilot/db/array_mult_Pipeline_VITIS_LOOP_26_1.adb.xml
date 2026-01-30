@@ -32,9 +32,9 @@ newFuncRoot:0 %i = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="0">
 <![CDATA[
-newFuncRoot:1 %specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_a_V_data_V, i4 %in_a_V_keep_V, i4 %in_a_V_strb_V, i1 0, i1 %in_a_V_last_V, i1 0, i1 0, void @empty_8
+newFuncRoot:1 %specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i16 %in_a_V_data_V, i2 %in_a_V_keep_V, i2 %in_a_V_strb_V, i1 0, i1 %in_a_V_last_V, i1 0, i1 0, void @empty_8
 
 ]]></Node>
 <StgValue><ssdm name="specaxissidechannel_ln0"/></StgValue>
@@ -47,9 +47,9 @@ newFuncRoot:1 %specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_Spec
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="4" op_3_bw="4" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="0" op_19_bw="0" op_20_bw="32" op_21_bw="32" op_22_bw="32">
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="2" op_3_bw="2" op_4_bw="16" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="0" op_19_bw="0" op_20_bw="32" op_21_bw="32" op_22_bw="32">
 <![CDATA[
-newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_a_V_last_V, i4 %in_a_V_strb_V, i4 %in_a_V_keep_V, i32 %in_a_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0
+newFuncRoot:2 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_a_V_last_V, i2 %in_a_V_strb_V, i2 %in_a_V_keep_V, i16 %in_a_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -203,7 +203,7 @@ for.inc.split:2 %speclooptripcount_ln21 = speclooptripcount void @_ssdm_op_SpecL
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:3 %specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11
+for.inc.split:3 %specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln26"/></StgValue>
@@ -217,9 +217,9 @@ for.inc.split:3 %specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, v
 </and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="5" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="24" bw="5" op_0_bw="16" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc.split:4 %in_a_store_data_addr = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln26
+for.inc.split:4 %in_a_store_data_addr = getelementptr i16 %in_a_store_data, i64 0, i64 %zext_ln26
 
 ]]></Node>
 <StgValue><ssdm name="in_a_store_data_addr"/></StgValue>
@@ -233,9 +233,9 @@ for.inc.split:4 %in_a_store_data_addr = getelementptr i32 %in_a_store_data, i64 
 </and_exp></or_exp>
 </condition>
 
-<Node id="25" bw="5" op_0_bw="4" op_1_bw="64" op_2_bw="64">
+<Node id="25" bw="5" op_0_bw="2" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc.split:5 %in_a_store_keep_addr = getelementptr i4 %in_a_store_keep, i64 0, i64 %zext_ln26
+for.inc.split:5 %in_a_store_keep_addr = getelementptr i2 %in_a_store_keep, i64 0, i64 %zext_ln26
 
 ]]></Node>
 <StgValue><ssdm name="in_a_store_keep_addr"/></StgValue>
@@ -249,9 +249,9 @@ for.inc.split:5 %in_a_store_keep_addr = getelementptr i4 %in_a_store_keep, i64 0
 </and_exp></or_exp>
 </condition>
 
-<Node id="26" bw="5" op_0_bw="4" op_1_bw="64" op_2_bw="64">
+<Node id="26" bw="5" op_0_bw="2" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc.split:6 %in_a_store_strb_addr = getelementptr i4 %in_a_store_strb, i64 0, i64 %zext_ln26
+for.inc.split:6 %in_a_store_strb_addr = getelementptr i2 %in_a_store_strb, i64 0, i64 %zext_ln26
 
 ]]></Node>
 <StgValue><ssdm name="in_a_store_strb_addr"/></StgValue>
@@ -281,9 +281,9 @@ for.inc.split:7 %in_a_store_last_addr = getelementptr i1 %in_a_store_last, i64 0
 </and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="41" op_0_bw="41" op_1_bw="32" op_2_bw="4" op_3_bw="4" op_4_bw="1">
+<Node id="28" bw="21" op_0_bw="21" op_1_bw="16" op_2_bw="2" op_3_bw="2" op_4_bw="1">
 <![CDATA[
-for.inc.split:8 %empty = read i41 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %in_a_V_data_V, i4 %in_a_V_keep_V, i4 %in_a_V_strb_V, i1 %in_a_V_last_V
+for.inc.split:8 %empty = read i21 @_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A, i16 %in_a_V_data_V, i2 %in_a_V_keep_V, i2 %in_a_V_strb_V, i1 %in_a_V_last_V
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -297,9 +297,9 @@ for.inc.split:8 %empty = read i41 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0
 </and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="32" op_0_bw="41">
+<Node id="29" bw="16" op_0_bw="21">
 <![CDATA[
-for.inc.split:9 %p_s = extractvalue i41 %empty
+for.inc.split:9 %p_s = extractvalue i21 %empty
 
 ]]></Node>
 <StgValue><ssdm name="p_s"/></StgValue>
@@ -313,9 +313,9 @@ for.inc.split:9 %p_s = extractvalue i41 %empty
 </and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="4" op_0_bw="41">
+<Node id="30" bw="2" op_0_bw="21">
 <![CDATA[
-for.inc.split:10 %p_1 = extractvalue i41 %empty
+for.inc.split:10 %p_1 = extractvalue i21 %empty
 
 ]]></Node>
 <StgValue><ssdm name="p_1"/></StgValue>
@@ -329,9 +329,9 @@ for.inc.split:10 %p_1 = extractvalue i41 %empty
 </and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="4" op_0_bw="41">
+<Node id="31" bw="2" op_0_bw="21">
 <![CDATA[
-for.inc.split:11 %p_2 = extractvalue i41 %empty
+for.inc.split:11 %p_2 = extractvalue i21 %empty
 
 ]]></Node>
 <StgValue><ssdm name="p_2"/></StgValue>
@@ -345,25 +345,25 @@ for.inc.split:11 %p_2 = extractvalue i41 %empty
 </and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="1" op_0_bw="41">
+<Node id="32" bw="1" op_0_bw="21">
 <![CDATA[
-for.inc.split:12 %p_0 = extractvalue i41 %empty
+for.inc.split:12 %p_0 = extractvalue i21 %empty
 
 ]]></Node>
 <StgValue><ssdm name="p_0"/></StgValue>
 </operation>
 
 <operation id="26" st_id="1" stage="1" lat="1">
-<core>RAM_1WnR</core>
+<core>RAM</core>
 <MemPortIdVec>0 </MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp><literal name="icmp_ln26" val="0"/>
 </and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="0" op_0_bw="32" op_1_bw="5">
+<Node id="33" bw="0" op_0_bw="16" op_1_bw="5">
 <![CDATA[
-for.inc.split:13 %store_ln27 = store i32 %p_s, i5 %in_a_store_data_addr
+for.inc.split:13 %store_ln27 = store i16 %p_s, i5 %in_a_store_data_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln27"/></StgValue>
@@ -377,9 +377,9 @@ for.inc.split:13 %store_ln27 = store i32 %p_s, i5 %in_a_store_data_addr
 </and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="0" op_0_bw="4" op_1_bw="5">
+<Node id="34" bw="0" op_0_bw="2" op_1_bw="5">
 <![CDATA[
-for.inc.split:14 %store_ln27 = store i4 %p_1, i5 %in_a_store_keep_addr
+for.inc.split:14 %store_ln27 = store i2 %p_1, i5 %in_a_store_keep_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln27"/></StgValue>
@@ -393,9 +393,9 @@ for.inc.split:14 %store_ln27 = store i4 %p_1, i5 %in_a_store_keep_addr
 </and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="4" op_1_bw="5">
+<Node id="35" bw="0" op_0_bw="2" op_1_bw="5">
 <![CDATA[
-for.inc.split:15 %store_ln27 = store i4 %p_2, i5 %in_a_store_strb_addr
+for.inc.split:15 %store_ln27 = store i2 %p_2, i5 %in_a_store_strb_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln27"/></StgValue>
@@ -470,7 +470,7 @@ ROWS_LOOP.exitStub:0 %ret_ln0 = ret
 
 <ports>
 <port id="39" name="in_a_store_data" dir="1" iftype="1">
-<core>RAM_1WnR</core><StgValue><ssdm name="in_a_store_data"/><MemPortTyVec>0 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </MemPortTyVec>
+<core>RAM</core><StgValue><ssdm name="in_a_store_data"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </port>
 <port id="40" name="in_a_store_keep" dir="1" iftype="1">
@@ -607,7 +607,7 @@ ROWS_LOOP.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="116" from="_ssdm_op_SpecLoopName" to="specloopname_ln26" fromId="115" toId="16">
 </dataflow>
-<dataflow id="118" from="empty_11" to="specloopname_ln26" fromId="117" toId="16">
+<dataflow id="118" from="empty_12" to="specloopname_ln26" fromId="117" toId="16">
 </dataflow>
 <dataflow id="119" from="in_a_store_data" to="in_a_store_data_addr" fromId="39" toId="17">
 </dataflow>
@@ -633,7 +633,7 @@ ROWS_LOOP.exitStub:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="131" from="zext_ln26" to="in_a_store_last_addr" fromId="13" toId="20">
 </dataflow>
-<dataflow id="133" from="_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A" to="empty" fromId="132" toId="21">
+<dataflow id="133" from="_ssdm_op_Read.axis.volatile.i16P0A.i2P0A.i2P0A.i1P0A" to="empty" fromId="132" toId="21">
 </dataflow>
 <dataflow id="134" from="in_a_V_data_V" to="empty" fromId="43" toId="21">
 </dataflow>

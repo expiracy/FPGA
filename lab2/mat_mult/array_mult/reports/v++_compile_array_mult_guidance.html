@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2024.1 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Fri Jan 30 10:34:22 2026</td></tr>
+<tr><td><b>Date</b></td><td>Fri Jan 30 11:32:08 2026</td></tr>
 <tr><td><b>Host</b></td><td>E10-E21C6500 running 64-bit major release  (build 9200)</td></tr>
 <tr><td><b>Command</b></td><td>C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\repos\FPGA\lab2\mat_mult\hls_config.cfg --work_dir array_mult </td></tr>
 </table></center><br>
@@ -3416,7 +3416,7 @@ window.onload = function () { addSorting(); }
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 8
+<pre>Violations found: 13
 </pre>
 <pre>Rule Specs Violated: 2
 </pre>
@@ -3434,24 +3434,35 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">4</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.array_mult.Throughput</td>
-<td align="left">The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) and axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">8</td>
+<td align="left">13</td>
 <td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.array_mult.Kernel</td>
-<td align="left">**** Estimated Fmax: 123.77 MHz
+<td align="left">**** Estimated Fmax: 162.71 MHz
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.array_mult.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.array_mult.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3462,51 +3473,84 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.array_mult.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'ROWS_LOOP'
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">3</td>
+<td align="left">10</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.array_mult.Throughput</td>
-<td align="left">The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) and axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>).
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">7</td>
-<td align="left">Kernel</td>
+<td align="left">11</td>
+<td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Kernel Related</td>
-<td align="left">Accelerator.array_mult.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were NOT satisfied.
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.array_mult.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">2</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.array_mult.Throughput</td>
-<td align="left">The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) and axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>).
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.array_mult.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.array_mult.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Throughput</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Throughput Related</td>
+<td align="left">Accelerator.array_mult.Throughput</td>
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">5</td>
 <td align="left">Throughput</td>
-<td align="left">WARNING</td>
+<td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.array_mult.Throughput</td>
-<td align="left">The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) and axis write operation ('result_V_data_V_write_ln45', <a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>) on port 'result_V_data_V' (<a href="file:///C:/repos/FPGA/lab2/mat_mult\../matrix_mult.cpp#line=45">matrix_mult.cpp</a>).
+<td align="left">Pipelining result : Target II = 2, Final II = 2, Depth = 6, loop 'MULT_ACC_LOOP'
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3518,6 +3562,17 @@ window.onload = function () { addSorting(); }
 <td align="left">HLS Throughput Related</td>
 <td align="left">Accelerator.array_mult.Throughput</td>
 <td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_1'
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">Kernel</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.array_mult.Kernel</td>
+<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2024.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>

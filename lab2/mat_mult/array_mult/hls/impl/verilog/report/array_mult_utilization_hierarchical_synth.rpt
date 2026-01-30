@@ -1,0 +1,102 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Fri Jan 30 11:35:36 2026
+| Host         : E10-E21C6500 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/array_mult_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------------------------------------------+----------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                             Instance                            |                                Module                                | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------------------------------------------+----------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                                                    |                                                                (top) |        787 |        681 |     106 |    0 | 775 |      0 |      0 |         10 |
+|   bd_0_i                                                        |                                                                 bd_0 |        787 |        681 |     106 |    0 | 775 |      0 |      0 |         10 |
+|     hls_inst                                                    |                                                      bd_0_hls_inst_0 |        787 |        681 |     106 |    0 | 775 |      0 |      0 |         10 |
+|       (hls_inst)                                                |                                                      bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|       inst                                                      |                                           bd_0_hls_inst_0_array_mult |        787 |        681 |     106 |    0 | 775 |      0 |      0 |         10 |
+|         (inst)                                                  |                                           bd_0_hls_inst_0_array_mult |         50 |         50 |       0 |    0 | 185 |      0 |      0 |          0 |
+|         CTRL_s_axi_U                                            |                                bd_0_hls_inst_0_array_mult_CTRL_s_axi |         28 |         28 |       0 |    0 |  25 |      0 |      0 |          0 |
+|         DATA_IN_B_s_axi_U                                       |                           bd_0_hls_inst_0_array_mult_DATA_IN_B_s_axi |        123 |         59 |      64 |    0 | 107 |      0 |      0 |          0 |
+|           (DATA_IN_B_s_axi_U)                                   |                           bd_0_hls_inst_0_array_mult_DATA_IN_B_s_axi |         38 |         38 |       0 |    0 |  43 |      0 |      0 |          0 |
+|           int_in_b                                              |                       bd_0_hls_inst_0_array_mult_DATA_IN_B_s_axi_ram |         85 |         21 |      64 |    0 |  64 |      0 |      0 |          0 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP1 |         26 |         26 |       0 |    0 |  31 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP1 |         13 |         13 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_31 |         12 |         12 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U15                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_32 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_33 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP2 |         46 |         46 |       0 |    0 |  31 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP2 |         30 |         30 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_28 |         15 |         15 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U20                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_29 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_30 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP3 |         46 |         46 |       0 |    0 |  31 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP3 |         29 |         29 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_25 |         16 |         16 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U25                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_26 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_27 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP4 |         27 |         27 |       0 |    0 |  31 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP4 |         13 |         13 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_22 |         13 |         13 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U30                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_23 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_24 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP5 |         47 |         47 |       0 |    0 |  31 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP5 |         33 |         33 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_19 |         13 |         13 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U35                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_20 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_21 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP6 |         36 |         36 |       0 |    0 |  33 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP6 |         14 |         14 |       0 |    0 |  31 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_16 |         21 |         21 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U40                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_17 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_18 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP7 |         37 |         37 |       0 |    0 |  33 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP7 |         14 |         14 |       0 |    0 |  31 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_13 |         22 |         22 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U45                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_14 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_15 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP8 |         39 |         39 |       0 |    0 |  33 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP8 |         17 |         17 |       0 |    0 |  31 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              | bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_10 |         21 |         21 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U50                    |         bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_11 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_12 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459           |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP9 |         51 |         51 |       0 |    0 |  33 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459)       |        bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP9 |         31 |         31 |       0 |    0 |  31 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              |  bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_7 |         19 |         19 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U55                    |          bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_8 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U |  bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_9 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378            |         bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP |         32 |         32 |       0 |    0 |  31 |      0 |      0 |          1 |
+|           (grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378)        |         bd_0_hls_inst_0_array_mult_array_mult_Pipeline_MULT_ACC_LOOP |         16 |         16 |       0 |    0 |  29 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              |  bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init_6 |         15 |         15 |       0 |    0 |   2 |      0 |      0 |          0 |
+|           mac_muladd_16s_16s_16ns_16_4_1_U9                     |            bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|             array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U |    bd_0_hls_inst_0_array_mult_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362          |       bd_0_hls_inst_0_array_mult_array_mult_Pipeline_VITIS_LOOP_26_1 |         21 |         21 |       0 |    0 |   7 |      0 |      0 |          0 |
+|           (grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362)      |       bd_0_hls_inst_0_array_mult_array_mult_Pipeline_VITIS_LOOP_26_1 |          0 |          0 |       0 |    0 |   5 |      0 |      0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U              |    bd_0_hls_inst_0_array_mult_flow_control_loop_pipe_sequential_init |         21 |         21 |       0 |    0 |   2 |      0 |      0 |          0 |
+|         in_a_store_data_U                                       |             bd_0_hls_inst_0_array_mult_in_a_store_data_RAM_AUTO_1R1W |         44 |         12 |      32 |    0 |  16 |      0 |      0 |          0 |
+|         in_a_store_keep_U                                       |             bd_0_hls_inst_0_array_mult_in_a_store_keep_RAM_AUTO_1R1W |          5 |          1 |       4 |    0 |   2 |      0 |      0 |          0 |
+|         in_a_store_last_U                                       |             bd_0_hls_inst_0_array_mult_in_a_store_last_RAM_AUTO_1R1W |          6 |          4 |       2 |    0 |   1 |      0 |      0 |          0 |
+|         in_a_store_strb_U                                       |           bd_0_hls_inst_0_array_mult_in_a_store_keep_RAM_AUTO_1R1W_0 |          5 |          1 |       4 |    0 |   2 |      0 |      0 |          0 |
+|         regslice_both_in_a_V_data_V_U                           |                             bd_0_hls_inst_0_array_mult_regslice_both |         25 |         25 |       0 |    0 |  37 |      0 |      0 |          0 |
+|         regslice_both_in_a_V_keep_V_U                           |             bd_0_hls_inst_0_array_mult_regslice_both__parameterized0 |          8 |          8 |       0 |    0 |   7 |      0 |      0 |          0 |
+|         regslice_both_in_a_V_last_V_U                           |             bd_0_hls_inst_0_array_mult_regslice_both__parameterized1 |          5 |          5 |       0 |    0 |   5 |      0 |      0 |          0 |
+|         regslice_both_in_a_V_strb_V_U                           |           bd_0_hls_inst_0_array_mult_regslice_both__parameterized0_1 |          8 |          8 |       0 |    0 |   7 |      0 |      0 |          0 |
+|         regslice_both_result_V_data_V_U                         |                           bd_0_hls_inst_0_array_mult_regslice_both_2 |         44 |         44 |       0 |    0 |  37 |      0 |      0 |          0 |
+|         regslice_both_result_V_keep_V_U                         |           bd_0_hls_inst_0_array_mult_regslice_both__parameterized0_3 |          6 |          6 |       0 |    0 |   7 |      0 |      0 |          0 |
+|         regslice_both_result_V_last_V_U                         |           bd_0_hls_inst_0_array_mult_regslice_both__parameterized1_4 |         16 |         16 |       0 |    0 |   5 |      0 |      0 |          0 |
+|         regslice_both_result_V_strb_V_U                         |           bd_0_hls_inst_0_array_mult_regslice_both__parameterized0_5 |          6 |          6 |       0 |    0 |   7 |      0 |      0 |          0 |
++-----------------------------------------------------------------+----------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

@@ -8,11 +8,11 @@
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "in_a_TDATA[31:0]"},
-						"TKEEP": { "actual": "in_a_TKEEP[3:0]"},
+						"TDATA": { "actual": "in_a_TDATA[15:0]"},
+						"TKEEP": { "actual": "in_a_TKEEP[1:0]"},
 						"TLAST": { "actual": "in_a_TLAST[0:0]"},
 						"TREADY": { "actual": "in_a_TREADY"},
-						"TSTRB": { "actual": "in_a_TSTRB[3:0]"},
+						"TSTRB": { "actual": "in_a_TSTRB[1:0]"},
 						"TVALID": { "actual": "in_a_TVALID"}
 					}
 				},
@@ -21,11 +21,11 @@
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
 						"ARESETN": { "actual": "ap_rst_n"},
-						"TDATA": { "actual": "result_TDATA[31:0]"},
-						"TKEEP": { "actual": "result_TKEEP[3:0]"},
+						"TDATA": { "actual": "result_TDATA[15:0]"},
+						"TKEEP": { "actual": "result_TKEEP[1:0]"},
 						"TLAST": { "actual": "result_TLAST[0:0]"},
 						"TREADY": { "actual": "result_TREADY"},
-						"TSTRB": { "actual": "result_TSTRB[3:0]"},
+						"TSTRB": { "actual": "result_TSTRB[1:0]"},
 						"TVALID": { "actual": "result_TVALID"}
 					}
 				},
@@ -57,11 +57,11 @@
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
 						"ACLK": { "actual": "ap_clk"},
-						"ARADDR": { "actual": "s_axi_DATA_IN_B_ARADDR[7:0]"},
+						"ARADDR": { "actual": "s_axi_DATA_IN_B_ARADDR[6:0]"},
 						"ARESETN": { "actual": "ap_rst_n"},
 						"ARREADY": { "actual": "s_axi_DATA_IN_B_ARREADY"},
 						"ARVALID": { "actual": "s_axi_DATA_IN_B_ARVALID"},
-						"AWADDR": { "actual": "s_axi_DATA_IN_B_AWADDR[7:0]"},
+						"AWADDR": { "actual": "s_axi_DATA_IN_B_AWADDR[6:0]"},
 						"AWREADY": { "actual": "s_axi_DATA_IN_B_AWREADY"},
 						"AWVALID": { "actual": "s_axi_DATA_IN_B_AWVALID"},
 						"BREADY": { "actual": "s_axi_DATA_IN_B_BREADY"},

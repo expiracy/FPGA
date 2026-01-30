@@ -259,25 +259,25 @@ static AESL_RUNTIME_BC __xlx_result_V_strb_V_V_size_Reader("../tv/stream_size/st
 unsigned int ap_apatb_result_V_last_V_cap_bc;
 static AESL_RUNTIME_BC __xlx_result_V_last_V_V_size_Reader("../tv/stream_size/stream_size_out_result_V_last_V.dat");
 using hls::sim::Byte;
-extern "C" void array_mult(volatile void *, volatile void *, volatile void *, volatile void *, Byte<4>*, volatile void *, volatile void *, volatile void *, volatile void *);
+extern "C" void array_mult(volatile void *, volatile void *, volatile void *, volatile void *, Byte<2>*, volatile void *, volatile void *, volatile void *, volatile void *);
 extern "C" void apatb_array_mult_hw(volatile void * __xlx_apatb_param_in_a_V_data_V, volatile void * __xlx_apatb_param_in_a_V_keep_V, volatile void * __xlx_apatb_param_in_a_V_strb_V, volatile void * __xlx_apatb_param_in_a_V_last_V, volatile void * __xlx_apatb_param_in_b, volatile void * __xlx_apatb_param_result_V_data_V, volatile void * __xlx_apatb_param_result_V_keep_V, volatile void * __xlx_apatb_param_result_V_strb_V, volatile void * __xlx_apatb_param_result_V_last_V) {
 using hls::sim::createStream;
-auto* sin_a_V_data_V = createStream((hls::stream<int>*)__xlx_apatb_param_in_a_V_data_V);
+auto* sin_a_V_data_V = createStream((hls::stream<short>*)__xlx_apatb_param_in_a_V_data_V);
 auto* sin_a_V_keep_V = createStream((hls::stream<char>*)__xlx_apatb_param_in_a_V_keep_V);
 auto* sin_a_V_strb_V = createStream((hls::stream<char>*)__xlx_apatb_param_in_a_V_strb_V);
 auto* sin_a_V_last_V = createStream((hls::stream<char>*)__xlx_apatb_param_in_a_V_last_V);
   // Collect __xlx_in_b__tmp_vec
-std::vector<Byte<4>> __xlx_in_b__tmp_vec;
+std::vector<Byte<2>> __xlx_in_b__tmp_vec;
 for (size_t i = 0; i < 25; ++i){
-__xlx_in_b__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_in_b)[i]);
+__xlx_in_b__tmp_vec.push_back(((Byte<2>*)__xlx_apatb_param_in_b)[i]);
 }
   int __xlx_size_param_in_b = 25;
   int __xlx_offset_param_in_b = 0;
-  int __xlx_offset_byte_param_in_b = 0*4;
+  int __xlx_offset_byte_param_in_b = 0*2;
   //Create input buffer for result_V_data_V
   ap_apatb_result_V_data_V_cap_bc = __xlx_result_V_data_V_V_size_Reader.read_size();
-  int* __xlx_result_V_data_V_input_buffer= new int[ap_apatb_result_V_data_V_cap_bc];
-auto* sresult_V_data_V = createStream((hls::stream<int>*)__xlx_apatb_param_result_V_data_V);
+  short* __xlx_result_V_data_V_input_buffer= new short[ap_apatb_result_V_data_V_cap_bc];
+auto* sresult_V_data_V = createStream((hls::stream<short>*)__xlx_apatb_param_result_V_data_V);
   //Create input buffer for result_V_keep_V
   ap_apatb_result_V_keep_V_cap_bc = __xlx_result_V_keep_V_V_size_Reader.read_size();
   char* __xlx_result_V_keep_V_input_buffer= new char[ap_apatb_result_V_keep_V_cap_bc];
@@ -291,16 +291,16 @@ auto* sresult_V_strb_V = createStream((hls::stream<char>*)__xlx_apatb_param_resu
   char* __xlx_result_V_last_V_input_buffer= new char[ap_apatb_result_V_last_V_cap_bc];
 auto* sresult_V_last_V = createStream((hls::stream<char>*)__xlx_apatb_param_result_V_last_V);
   // DUT call
-  array_mult(sin_a_V_data_V->data<int>(), sin_a_V_keep_V->data<char>(), sin_a_V_strb_V->data<char>(), sin_a_V_last_V->data<char>(), __xlx_in_b__tmp_vec.data(), sresult_V_data_V->data<int>(), sresult_V_keep_V->data<char>(), sresult_V_strb_V->data<char>(), sresult_V_last_V->data<char>());
-sin_a_V_data_V->transfer((hls::stream<int>*)__xlx_apatb_param_in_a_V_data_V);
+  array_mult(sin_a_V_data_V->data<short>(), sin_a_V_keep_V->data<char>(), sin_a_V_strb_V->data<char>(), sin_a_V_last_V->data<char>(), __xlx_in_b__tmp_vec.data(), sresult_V_data_V->data<short>(), sresult_V_keep_V->data<char>(), sresult_V_strb_V->data<char>(), sresult_V_last_V->data<char>());
+sin_a_V_data_V->transfer((hls::stream<short>*)__xlx_apatb_param_in_a_V_data_V);
 sin_a_V_keep_V->transfer((hls::stream<char>*)__xlx_apatb_param_in_a_V_keep_V);
 sin_a_V_strb_V->transfer((hls::stream<char>*)__xlx_apatb_param_in_a_V_strb_V);
 sin_a_V_last_V->transfer((hls::stream<char>*)__xlx_apatb_param_in_a_V_last_V);
 // print __xlx_apatb_param_in_b
 for (size_t i = 0; i < __xlx_size_param_in_b; ++i) {
-((Byte<4>*)__xlx_apatb_param_in_b)[i] = __xlx_in_b__tmp_vec[__xlx_offset_param_in_b+i];
+((Byte<2>*)__xlx_apatb_param_in_b)[i] = __xlx_in_b__tmp_vec[__xlx_offset_param_in_b+i];
 }
-sresult_V_data_V->transfer((hls::stream<int>*)__xlx_apatb_param_result_V_data_V);
+sresult_V_data_V->transfer((hls::stream<short>*)__xlx_apatb_param_result_V_data_V);
 sresult_V_keep_V->transfer((hls::stream<char>*)__xlx_apatb_param_result_V_keep_V);
 sresult_V_strb_V->transfer((hls::stream<char>*)__xlx_apatb_param_result_V_strb_V);
 sresult_V_last_V->transfer((hls::stream<char>*)__xlx_apatb_param_result_V_last_V);

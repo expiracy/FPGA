@@ -560,7 +560,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_DATA_IN_B.ADDR_WIDTH">8</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_DATA_IN_B.ADDR_WIDTH">7</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
@@ -1023,7 +1023,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.IN_A.TDATA_NUM_BYTES">4</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.IN_A.TDATA_NUM_BYTES">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1193,7 +1193,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RESULT.TDATA_NUM_BYTES">4</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RESULT.TDATA_NUM_BYTES">2</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1614,8 +1614,8 @@
           <spirit:name>Memory_in_b</spirit:name>
           <spirit:displayName>Memory_in_b</spirit:displayName>
           <spirit:description>Memory in_b</spirit:description>
-          <spirit:addressOffset>128</spirit:addressOffset>
-          <spirit:size spirit:format="long">128</spirit:size>
+          <spirit:addressOffset>64</spirit:addressOffset>
+          <spirit:size spirit:format="long">64</spirit:size>
           <spirit:access>read-write</spirit:access>
           <spirit:reset>
             <spirit:value spirit:format="long">0</spirit:value>
@@ -1635,8 +1635,12 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jan 30 11:34:37 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b1001b4</spirit:value>
+            <spirit:value>9:ec31bf8a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1650,11 +1654,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:33:27 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b1001b4</spirit:value>
+            <spirit:value>9:ec31bf8a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1665,7 +1669,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b1001b4</spirit:value>
+            <spirit:value>9:ec31bf8a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1681,11 +1685,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:33:27 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:681b7b2e</spirit:value>
+            <spirit:value>9:46e6d39a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1701,11 +1705,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:33:27 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:681b7b2e</spirit:value>
+            <spirit:value>9:46e6d39a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1721,11 +1725,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:33:27 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b1001b4</spirit:value>
+            <spirit:value>9:ec31bf8a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1741,11 +1745,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jan 30 11:02:20 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 11:33:27 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6b1001b4</spirit:value>
+            <spirit:value>9:ec31bf8a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2005,7 +2009,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_IN_B_ADDR_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_IN_B_ADDR_WIDTH&apos;)) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2048,7 +2052,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_IN_B_ADDR_WIDTH&apos;)) - 1)">7</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXI_DATA_IN_B_ADDR_WIDTH&apos;)) - 1)">6</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2293,7 +2297,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2310,7 +2314,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2321,7 +2325,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="long">15</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">3</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -2363,7 +2367,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2374,7 +2378,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="long">15</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="long">3</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
       </spirit:port>
@@ -2396,7 +2400,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:left spirit:format="long">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2413,7 +2417,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2460,7 +2464,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long">1</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2497,7 +2501,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_DATA_IN_B_ADDR_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_DATA_IN_B_ADDR_WIDTH">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_DATA_IN_B_ADDR_WIDTH">7</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_DATA_IN_B_DATA_WIDTH</spirit:name>
@@ -2588,75 +2592,112 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP7.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP8.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP9.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_mul_32s_32s_32_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/impl.bat</spirit:name>
-        <spirit:userFileType>bat</spirit:userFileType>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_in_a_store_data_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_mac_muladd_16s_16s_16ns_16_4_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_regslice_both.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2677,63 +2718,91 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP3.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP5.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP7.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP8.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_MULT_ACC_LOOP9.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_mul_32s_32s_32_2_1.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult_regslice_both.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_CTRL_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/impl.bat</spirit:name>
-        <spirit:userFileType>bat</spirit:userFileType>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_DATA_IN_B_s_axi.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/0231/hdl/verilog/array_mult.v</spirit:name>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_flow_control_loop_pipe_sequential_init.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_in_a_store_data_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_mac_muladd_16s_16s_16ns_16_4_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult_regslice_both.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/6525/hdl/verilog/array_mult.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2787,7 +2856,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">90</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="4">610</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2798,7 +2867,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">91</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="5">611</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -2812,7 +2881,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Array_mult</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114458621</xilinx:coreRevision>
+      <xilinx:coreRevision>2114458652</xilinx:coreRevision>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2918,12 +2987,12 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="552146c3"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="39f58b4f"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fa80ea8f"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="b7472f2d"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b9423416"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="49f10290"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f4079d1c"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ab8f305e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a990a333"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="a95ce37d"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bb554c90"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="25b37073"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

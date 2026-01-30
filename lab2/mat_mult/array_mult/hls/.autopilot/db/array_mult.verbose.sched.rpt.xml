@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'array_mult'" level="0">
-<item name = "Date">Fri Jan 30 10:34:19 2026
+<item name = "Date">Fri Jan 30 11:32:01 2026
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">array_mult</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.080 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.146 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">90, 90, 0.900 us, 0.900 us, 91, 91, no</column>
+<column name="">610, 610, 6.100 us, 6.100 us, 611, 611, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,11 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- COLS_LOOP">114, 114, 37, -, -, 3, no</column>
+<column name="- COLS_LOOP">114, 114, 37, -, -, 3, no</column>
+<column name="- COLS_LOOP">114, 114, 37, -, -, 3, no</column>
+<column name="- COLS_LOOP">114, 114, 37, -, -, 3, no</column>
+<column name="- COLS_LOOP">114, 114, 37, -, -, 3, no</column>
 </table>
 </item>
 </section>

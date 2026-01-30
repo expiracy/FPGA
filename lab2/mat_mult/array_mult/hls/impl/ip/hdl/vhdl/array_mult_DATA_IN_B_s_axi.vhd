@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity array_mult_DATA_IN_B_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 8;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 7;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     ACLK                  :in   STD_LOGIC;
@@ -36,16 +36,17 @@ port (
     RREADY                :in   STD_LOGIC;
     in_b_address0         :in   STD_LOGIC_VECTOR(4 downto 0);
     in_b_ce0              :in   STD_LOGIC;
-    in_b_q0               :out  STD_LOGIC_VECTOR(31 downto 0)
+    in_b_q0               :out  STD_LOGIC_VECTOR(15 downto 0)
 );
 end entity array_mult_DATA_IN_B_s_axi;
 
 -- ------------------------Address Info-------------------
 -- Protocol Used: ap_ctrl_none
 --
--- 0x80 ~
--- 0xff : Memory 'in_b' (25 * 32b)
---        Word n : bit [31:0] - in_b[n]
+-- 0x40 ~
+-- 0x7f : Memory 'in_b' (25 * 16b)
+--        Word n : bit [15: 0] - in_b[2n]
+--                 bit [31:16] - in_b[2n+1]
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of array_mult_DATA_IN_B_s_axi is
@@ -53,9 +54,9 @@ architecture behave of array_mult_DATA_IN_B_s_axi is
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;
     signal wnext, rnext: states;
-    constant ADDR_IN_B_BASE : INTEGER := 16#80#;
-    constant ADDR_IN_B_HIGH : INTEGER := 16#ff#;
-    constant ADDR_BITS         : INTEGER := 8;
+    constant ADDR_IN_B_BASE : INTEGER := 16#40#;
+    constant ADDR_IN_B_HIGH : INTEGER := 16#7f#;
+    constant ADDR_BITS         : INTEGER := 7;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(C_S_AXI_DATA_WIDTH-1 downto 0);
@@ -69,10 +70,10 @@ architecture behave of array_mult_DATA_IN_B_s_axi is
     signal ARREADY_t           : STD_LOGIC;
     signal RVALID_t            : STD_LOGIC;
     -- memory signals
-    signal int_in_b_address0   : UNSIGNED(4 downto 0);
+    signal int_in_b_address0   : UNSIGNED(3 downto 0);
     signal int_in_b_ce0        : STD_LOGIC;
     signal int_in_b_q0         : UNSIGNED(31 downto 0);
-    signal int_in_b_address1   : UNSIGNED(4 downto 0);
+    signal int_in_b_address1   : UNSIGNED(3 downto 0);
     signal int_in_b_ce1        : STD_LOGIC;
     signal int_in_b_we1        : STD_LOGIC;
     signal int_in_b_be1        : UNSIGNED(3 downto 0);
@@ -80,6 +81,7 @@ architecture behave of array_mult_DATA_IN_B_s_axi is
     signal int_in_b_q1         : UNSIGNED(31 downto 0);
     signal int_in_b_read       : STD_LOGIC;
     signal int_in_b_write      : STD_LOGIC;
+    signal int_in_b_shift0     : UNSIGNED(0 downto 0);
 
     component array_mult_DATA_IN_B_s_axi_ram is
         generic (
@@ -123,8 +125,8 @@ generic map (
      MEM_STYLE => "auto",
      MEM_TYPE  => "2P",
      BYTES     => 4,
-     DEPTH     => 25,
-     AWIDTH    => log2(25))
+     DEPTH     => 13,
+     AWIDTH    => log2(13))
 port map (
      clk0      => ACLK,
      address0  => int_in_b_address0,
@@ -259,10 +261,10 @@ port map (
 
 -- ----------------------- Memory logic ------------------
     -- in_b
-    int_in_b_address0    <= UNSIGNED(in_b_address0);
+    int_in_b_address0    <= SHIFT_RIGHT(UNSIGNED(in_b_address0), 1)(3 downto 0);
     int_in_b_ce0         <= in_b_ce0;
-    in_b_q0              <= STD_LOGIC_VECTOR(RESIZE(int_in_b_q0, 32));
-    int_in_b_address1    <= raddr(6 downto 2) when ar_hs = '1' else waddr(6 downto 2);
+    in_b_q0              <= STD_LOGIC_VECTOR(SHIFT_RIGHT(int_in_b_q0, TO_INTEGER(int_in_b_shift0) * 16)(15 downto 0));
+    int_in_b_address1    <= raddr(5 downto 2) when ar_hs = '1' else waddr(5 downto 2);
     int_in_b_ce1         <= '1' when ar_hs = '1' or (int_in_b_write = '1' and WVALID  = '1') else '0';
     int_in_b_we1         <= '1' when int_in_b_write = '1' and w_hs = '1' else '0';
     int_in_b_be1         <= UNSIGNED(WSTRB) when int_in_b_we1 = '1' else (others=>'0');
@@ -293,6 +295,19 @@ port map (
                     int_in_b_write <= '1';
                 elsif (w_hs = '1') then
                     int_in_b_write <= '0';
+                end if;
+            end if;
+        end if;
+    end process;
+
+    process (ACLK)
+    begin
+        if (ACLK'event and ACLK = '1') then
+            if (ARESET = '1') then
+                int_in_b_shift0 <= (others=>'0');
+            elsif (ACLK_EN = '1') then
+                if (in_b_ce0 = '1') then
+                    int_in_b_shift0 <= UNSIGNED(in_b_address0(0 downto 0));
                 end if;
             end if;
         end if;

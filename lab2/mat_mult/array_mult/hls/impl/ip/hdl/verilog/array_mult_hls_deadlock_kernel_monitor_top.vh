@@ -6,18 +6,17 @@ assign kernel_monitor_reset = ~ap_rst_n;
 assign kernel_monitor_clock = ap_clk;
 assign kernel_monitor_report = 1'b0;
 wire [1:0] axis_block_sigs;
-wire [2:0] inst_idle_sigs;
+wire [1:0] inst_idle_sigs;
 wire [0:0] inst_block_sigs;
 wire kernel_block;
 
-assign axis_block_sigs[0] = ~grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_364.in_a_TDATA_blk_n;
-assign axis_block_sigs[1] = ~grp_array_mult_Pipeline_ROWS_LOOP_fu_380.result_TDATA_blk_n;
+assign axis_block_sigs[0] = ~result_TDATA_blk_n;
+assign axis_block_sigs[1] = ~grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362.in_a_TDATA_blk_n;
 
 assign inst_block_sigs[0] = 1'b0;
 
 assign inst_idle_sigs[0] = 1'b0;
-assign inst_idle_sigs[1] = grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_364.ap_idle;
-assign inst_idle_sigs[2] = grp_array_mult_Pipeline_ROWS_LOOP_fu_380.ap_idle;
+assign inst_idle_sigs[1] = grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362.ap_idle;
 
 array_mult_hls_deadlock_idx0_monitor array_mult_hls_deadlock_idx0_monitor_U (
     .clock(kernel_monitor_clock),

@@ -1199,8 +1199,8 @@ void array_mult_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*,
 extern "C"
 void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apatb_param_in_a_V_keep_V, void* __xlx_apatb_param_in_a_V_strb_V, void* __xlx_apatb_param_in_a_V_last_V, void* __xlx_apatb_param_in_b, void* __xlx_apatb_param_result_V_data_V, void* __xlx_apatb_param_result_V_keep_V, void* __xlx_apatb_param_result_V_strb_V, void* __xlx_apatb_param_result_V_last_V)
 {
-  static hls::sim::Stream<hls::sim::Byte<4>> port0 {
-    .width = 32,
+  static hls::sim::Stream<hls::sim::Byte<2>> port0 {
+    .width = 16,
     .name = "in_a_V_data_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_in_a_V_data_V),
@@ -1210,11 +1210,11 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_in_a_V_data_V),
 #endif
   };
-  port0.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_in_a_V_data_V;
+  port0.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_in_a_V_data_V;
   port0.hasWrite = false;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port1 {
-    .width = 4,
+    .width = 2,
     .name = "in_a_V_keep_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_in_a_V_keep_V),
@@ -1228,7 +1228,7 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
   port1.hasWrite = false;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port2 {
-    .width = 4,
+    .width = 2,
     .name = "in_a_V_strb_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_in_a_V_strb_V),
@@ -1255,8 +1255,8 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
   port3.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_in_a_V_last_V;
   port3.hasWrite = false;
 
-  static hls::sim::Stream<hls::sim::Byte<4>> port4 {
-    .width = 32,
+  static hls::sim::Stream<hls::sim::Byte<2>> port4 {
+    .width = 16,
     .name = "result_V_data_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_result_V_data_V),
@@ -1266,11 +1266,11 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
     .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_result_V_data_V),
 #endif
   };
-  port4.param = (hls::stream<hls::sim::Byte<4>>*)__xlx_apatb_param_result_V_data_V;
+  port4.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_result_V_data_V;
   port4.hasWrite = true;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port5 {
-    .width = 4,
+    .width = 2,
     .name = "result_V_keep_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_result_V_keep_V),
@@ -1284,7 +1284,7 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
   port5.hasWrite = true;
 
   static hls::sim::Stream<hls::sim::Byte<1>> port6 {
-    .width = 4,
+    .width = 2,
     .name = "result_V_strb_V",
 #ifdef POST_CHECK
     .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_result_V_strb_V),
@@ -1316,8 +1316,8 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
 #else
   static hls::sim::Memory<hls::sim::Reader, hls::sim::Writer> port8 {
 #endif
-    .width = 32,
-    .asize = 4,
+    .width = 16,
+    .asize = 2,
     .hbm = false,
     .name = { "in_b" },
 #ifdef POST_CHECK
@@ -1331,7 +1331,7 @@ void apatb_array_mult_hw(void* __xlx_apatb_param_in_a_V_data_V, void* __xlx_apat
 #endif
   };
   port8.param = { __xlx_apatb_param_in_b };
-  port8.nbytes = { 100 };
+  port8.nbytes = { 50 };
   port8.offset = {  };
   port8.hasWrite = { false };
 

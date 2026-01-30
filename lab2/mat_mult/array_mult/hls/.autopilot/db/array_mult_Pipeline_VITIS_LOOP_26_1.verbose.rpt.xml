@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'array_mult_Pipeline_VITIS_LOOP_26_1'" level="0">
-<item name = "Date">Fri Jan 30 10:34:19 2026
+<item name = "Date">Fri Jan 30 11:32:02 2026
 </item>
 <item name = "Version">2024.1 (Build 5069499 on May 21 2024)</item>
 <item name = "Project">array_mult</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.208 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.146 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -112,27 +112,27 @@
 <column name="ap_idle">out, 1, ap_ctrl_hs, array_mult_Pipeline_VITIS_LOOP_26_1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, array_mult_Pipeline_VITIS_LOOP_26_1, return value</column>
 <column name="in_a_TVALID">in, 1, axis, in_a_V_data_V, pointer</column>
-<column name="in_a_TDATA">in, 32, axis, in_a_V_data_V, pointer</column>
+<column name="in_a_TDATA">in, 16, axis, in_a_V_data_V, pointer</column>
 <column name="in_a_store_data_address0">out, 5, ap_memory, in_a_store_data, array</column>
 <column name="in_a_store_data_ce0">out, 1, ap_memory, in_a_store_data, array</column>
 <column name="in_a_store_data_we0">out, 1, ap_memory, in_a_store_data, array</column>
-<column name="in_a_store_data_d0">out, 32, ap_memory, in_a_store_data, array</column>
+<column name="in_a_store_data_d0">out, 16, ap_memory, in_a_store_data, array</column>
 <column name="in_a_store_keep_address0">out, 5, ap_memory, in_a_store_keep, array</column>
 <column name="in_a_store_keep_ce0">out, 1, ap_memory, in_a_store_keep, array</column>
 <column name="in_a_store_keep_we0">out, 1, ap_memory, in_a_store_keep, array</column>
-<column name="in_a_store_keep_d0">out, 4, ap_memory, in_a_store_keep, array</column>
+<column name="in_a_store_keep_d0">out, 2, ap_memory, in_a_store_keep, array</column>
 <column name="in_a_store_strb_address0">out, 5, ap_memory, in_a_store_strb, array</column>
 <column name="in_a_store_strb_ce0">out, 1, ap_memory, in_a_store_strb, array</column>
 <column name="in_a_store_strb_we0">out, 1, ap_memory, in_a_store_strb, array</column>
-<column name="in_a_store_strb_d0">out, 4, ap_memory, in_a_store_strb, array</column>
+<column name="in_a_store_strb_d0">out, 2, ap_memory, in_a_store_strb, array</column>
 <column name="in_a_store_last_address0">out, 5, ap_memory, in_a_store_last, array</column>
 <column name="in_a_store_last_ce0">out, 1, ap_memory, in_a_store_last, array</column>
 <column name="in_a_store_last_we0">out, 1, ap_memory, in_a_store_last, array</column>
 <column name="in_a_store_last_d0">out, 1, ap_memory, in_a_store_last, array</column>
 <column name="in_a_TREADY">out, 1, axis, in_a_V_last_V, pointer</column>
 <column name="in_a_TLAST">in, 1, axis, in_a_V_last_V, pointer</column>
-<column name="in_a_TKEEP">in, 4, axis, in_a_V_keep_V, pointer</column>
-<column name="in_a_TSTRB">in, 4, axis, in_a_V_strb_V, pointer</column>
+<column name="in_a_TKEEP">in, 2, axis, in_a_V_keep_V, pointer</column>
+<column name="in_a_TSTRB">in, 2, axis, in_a_V_strb_V, pointer</column>
 </table>
 </item>
 </section>

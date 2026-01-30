@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename in_a_store_data \
     op interface \
-    ports { in_a_store_data_address0 { O 5 vector } in_a_store_data_ce0 { O 1 bit } in_a_store_data_we0 { O 1 bit } in_a_store_data_d0 { O 32 vector } } \
+    ports { in_a_store_data_address0 { O 5 vector } in_a_store_data_ce0 { O 1 bit } in_a_store_data_we0 { O 1 bit } in_a_store_data_d0 { O 16 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_a_store_data'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename in_a_store_keep \
     op interface \
-    ports { in_a_store_keep_address0 { O 5 vector } in_a_store_keep_ce0 { O 1 bit } in_a_store_keep_we0 { O 1 bit } in_a_store_keep_d0 { O 4 vector } } \
+    ports { in_a_store_keep_address0 { O 5 vector } in_a_store_keep_ce0 { O 1 bit } in_a_store_keep_we0 { O 1 bit } in_a_store_keep_d0 { O 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_a_store_keep'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename in_a_store_strb \
     op interface \
-    ports { in_a_store_strb_address0 { O 5 vector } in_a_store_strb_ce0 { O 1 bit } in_a_store_strb_we0 { O 1 bit } in_a_store_strb_d0 { O 4 vector } } \
+    ports { in_a_store_strb_address0 { O 5 vector } in_a_store_strb_ce0 { O 1 bit } in_a_store_strb_we0 { O 1 bit } in_a_store_strb_d0 { O 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_a_store_strb'"
@@ -94,7 +94,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {in_a} \
     metadata {  } \
     op interface \
-    ports { in_a_TVALID { I 1 bit } in_a_TDATA { I 32 vector } } \
+    ports { in_a_TVALID { I 1 bit } in_a_TDATA { I 16 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_a_V_data_V'"
@@ -113,7 +113,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {in_a} \
     metadata {  } \
     op interface \
-    ports { in_a_TKEEP { I 4 vector } } \
+    ports { in_a_TKEEP { I 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_a_V_keep_V'"
@@ -132,7 +132,7 @@ eval "::AESL_LIB_XILADAPTER::native_axis_add { \
     corename {in_a} \
     metadata {  } \
     op interface \
-    ports { in_a_TSTRB { I 4 vector } } \
+    ports { in_a_TSTRB { I 2 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_a_V_strb_V'"

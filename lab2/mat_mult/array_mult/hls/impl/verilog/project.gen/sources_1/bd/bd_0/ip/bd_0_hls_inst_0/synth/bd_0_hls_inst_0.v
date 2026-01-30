@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:array_mult:1.0
-// IP Revision: 2114458621
+// IP Revision: 2114458652
 
 (* X_CORE_INFO = "array_mult,Vivado 2024.1" *)
 (* CHECK_LICENSE_TYPE = "bd_0_hls_inst_0,array_mult,{}" *)
-(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,array_mult,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=array_mult,x_ipVersion=1.0,x_ipCoreRevision=2114458621,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_ADDR_WIDTH=4,C_S_AXI_CTRL_DATA_WIDTH=32,C_S_AXI_DATA_IN_B_ADDR_WIDTH=8,C_S_AXI_DATA_IN_B_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "bd_0_hls_inst_0,array_mult,{x_ipProduct=Vivado 2024.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=array_mult,x_ipVersion=1.0,x_ipCoreRevision=2114458652,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CTRL_ADDR_WIDTH=4,C_S_AXI_CTRL_DATA_WIDTH=32,C_S_AXI_DATA_IN_B_ADDR_WIDTH=7,C_S_AXI_DATA_IN_B_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_0_hls_inst_0 (
@@ -144,13 +144,13 @@ input wire [3 : 0] s_axi_CTRL_WSTRB;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL WVALID" *)
 input wire s_axi_CTRL_WVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B ARADDR" *)
-input wire [7 : 0] s_axi_DATA_IN_B_ARADDR;
+input wire [6 : 0] s_axi_DATA_IN_B_ARADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B ARREADY" *)
 output wire s_axi_DATA_IN_B_ARREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B ARVALID" *)
 input wire s_axi_DATA_IN_B_ARVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B AWADDR" *)
-input wire [7 : 0] s_axi_DATA_IN_B_AWADDR;
+input wire [6 : 0] s_axi_DATA_IN_B_AWADDR;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B AWREADY" *)
 output wire s_axi_DATA_IN_B_AWREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B AWVALID" *)
@@ -175,7 +175,7 @@ input wire [31 : 0] s_axi_DATA_IN_B_WDATA;
 output wire s_axi_DATA_IN_B_WREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B WSTRB" *)
 input wire [3 : 0] s_axi_DATA_IN_B_WSTRB;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_DATA_IN_B, ADDR_WIDTH 8, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, FREQ_HZ 100000000.0, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THRE\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_DATA_IN_B, ADDR_WIDTH 7, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, FREQ_HZ 100000000.0, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, NUM_READ_THREADS 1, NUM_WRITE_THRE\
 ADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_DATA_IN_B WVALID" *)
 input wire s_axi_DATA_IN_B_WVALID;
@@ -189,29 +189,29 @@ input wire ap_rst_n;
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *)
 output wire interrupt;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_a TDATA" *)
-input wire [31 : 0] in_a_TDATA;
+input wire [15 : 0] in_a_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_a TKEEP" *)
-input wire [3 : 0] in_a_TKEEP;
+input wire [1 : 0] in_a_TKEEP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_a TLAST" *)
 input wire [0 : 0] in_a_TLAST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_a TREADY" *)
 output wire in_a_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_a TSTRB" *)
-input wire [3 : 0] in_a_TSTRB;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME in_a, TUSER_WIDTH 0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+input wire [1 : 0] in_a_TSTRB;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME in_a, TUSER_WIDTH 0, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 in_a TVALID" *)
 input wire in_a_TVALID;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 result TDATA" *)
-output wire [31 : 0] result_TDATA;
+output wire [15 : 0] result_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 result TKEEP" *)
-output wire [3 : 0] result_TKEEP;
+output wire [1 : 0] result_TKEEP;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 result TLAST" *)
 output wire [0 : 0] result_TLAST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 result TREADY" *)
 input wire result_TREADY;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 result TSTRB" *)
-output wire [3 : 0] result_TSTRB;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME result, TUSER_WIDTH 0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+output wire [1 : 0] result_TSTRB;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME result, TUSER_WIDTH 0, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000.0, PHASE 0.0, CLK_DOMAIN bd_0_ap_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 result TVALID" *)
 output wire result_TVALID;
 
@@ -221,7 +221,7 @@ output wire result_TVALID;
   array_mult #(
     .C_S_AXI_CTRL_ADDR_WIDTH(4),
     .C_S_AXI_CTRL_DATA_WIDTH(32),
-    .C_S_AXI_DATA_IN_B_ADDR_WIDTH(8),
+    .C_S_AXI_DATA_IN_B_ADDR_WIDTH(7),
     .C_S_AXI_DATA_IN_B_DATA_WIDTH(32)
   ) inst (
     .s_axi_CTRL_ARADDR(s_axi_CTRL_ARADDR),

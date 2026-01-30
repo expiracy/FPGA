@@ -1,3 +1,109 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
+Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        ROWS_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../matrix_mult.cpp:30:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_mult
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
+Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COLS_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../matrix_mult.cpp:32:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_mult
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
+Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COLS_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../matrix_mult.cpp:32:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_mult
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
+Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COLS_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../matrix_mult.cpp:32:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_mult
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
+Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COLS_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../matrix_mult.cpp:32:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_mult
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
+Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi16EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COLS_LOOP
+  - String:          ''' ('
+  - LoopLoc:         '../matrix_mult.cpp:32:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          array_mult
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '2'
+...
 --- !HLSReportInfo
 Pass:            auto-loop-pipeline
 Name:            AutoLoopPipeline
@@ -7,130 +113,4 @@ Args:
   - String:          '> at '
   - LoopLoc:         '../matrix_mult.cpp:26:19'
   - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        ROWS_LOOP
-  - String:          '> at '
-  - LoopLoc:         '../matrix_mult.cpp:30:13'
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 32, Column: 14 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        COLS_LOOP
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 36, Column: 19 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        MULT_ACC_LOOP
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        COLS_LOOP
-  - String:          ''' ('
-  - LoopLoc:         '../matrix_mult.cpp:32:14'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          array_mult
-  - String:          ''' completely with a factor of '
-  - Factor:          '5'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        MULT_ACC_LOOP
-  - String:          ''' ('
-  - LoopLoc:         '../matrix_mult.cpp:36:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          array_mult
-  - String:          ''' completely with a factor of '
-  - Factor:          '5'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        MULT_ACC_LOOP
-  - String:          ''' ('
-  - LoopLoc:         '../matrix_mult.cpp:36:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          array_mult
-  - String:          ''' completely with a factor of '
-  - Factor:          '5'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        MULT_ACC_LOOP
-  - String:          ''' ('
-  - LoopLoc:         '../matrix_mult.cpp:36:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          array_mult
-  - String:          ''' completely with a factor of '
-  - Factor:          '5'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        MULT_ACC_LOOP
-  - String:          ''' ('
-  - LoopLoc:         '../matrix_mult.cpp:36:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          array_mult
-  - String:          ''' completely with a factor of '
-  - Factor:          '5'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../matrix_mult.cpp, Line: 14, Column: 0 }
-Function:        _Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEEPS3_S6_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        MULT_ACC_LOOP
-  - String:          ''' ('
-  - LoopLoc:         '../matrix_mult.cpp:36:19'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          array_mult
-  - String:          ''' completely with a factor of '
-  - Factor:          '5'
 ...

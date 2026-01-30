@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3E1F5EB455972702",
+      "boundary_crc": "0x1F2EF3C035F1C6EA",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../project.gen/sources_1/bd/bd_0",
       "name": "bd_0",
@@ -50,7 +50,7 @@
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
-            "value": "4"
+            "value": "2"
           },
           "TDEST_WIDTH": {
             "value": "0"
@@ -66,13 +66,13 @@
           "TDATA": {
             "physical_name": "in_a_tdata",
             "direction": "I",
-            "left": "31",
+            "left": "15",
             "right": "0"
           },
           "TKEEP": {
             "physical_name": "in_a_tkeep",
             "direction": "I",
-            "left": "3",
+            "left": "1",
             "right": "0"
           },
           "TLAST": {
@@ -88,7 +88,7 @@
           "TSTRB": {
             "physical_name": "in_a_tstrb",
             "direction": "I",
-            "left": "3",
+            "left": "1",
             "right": "0"
           },
           "TVALID": {
@@ -138,7 +138,7 @@
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
-            "value": "4",
+            "value": "2",
             "value_src": "const_prop"
           },
           "TDEST_WIDTH": {
@@ -158,13 +158,13 @@
           "TDATA": {
             "physical_name": "result_tdata",
             "direction": "O",
-            "left": "31",
+            "left": "15",
             "right": "0"
           },
           "TKEEP": {
             "physical_name": "result_tkeep",
             "direction": "O",
-            "left": "3",
+            "left": "1",
             "right": "0"
           },
           "TLAST": {
@@ -180,7 +180,7 @@
           "TSTRB": {
             "physical_name": "result_tstrb",
             "direction": "O",
-            "left": "3",
+            "left": "1",
             "right": "0"
           },
           "TVALID": {
@@ -494,7 +494,7 @@
           "ARADDR": {
             "physical_name": "s_axi_DATA_IN_B_araddr",
             "direction": "I",
-            "left": "7",
+            "left": "6",
             "right": "0"
           },
           "ARREADY": {
@@ -508,7 +508,7 @@
           "AWADDR": {
             "physical_name": "s_axi_DATA_IN_B_awaddr",
             "direction": "I",
-            "left": "7",
+            "left": "6",
             "right": "0"
           },
           "AWREADY": {
@@ -642,7 +642,7 @@
     "components": {
       "hls_inst": {
         "vlnv": "xilinx.com:hls:array_mult:1.0",
-        "ip_revision": "2114458621",
+        "ip_revision": "2114458652",
         "xci_name": "bd_0_hls_inst_0",
         "xci_path": "ip\\bd_0_hls_inst_0\\bd_0_hls_inst_0.xci",
         "inst_hier_path": "hls_inst"

@@ -15,11 +15,11 @@ dict set axilite_register_dict CTRL $port_CTRL
 set port_DATA_IN_B {
 in_b { 
 	dir I
-	width 32
+	width 16
 	depth 25
 	mode ap_memory
-	offset 128
-	offset_end 255
+	offset 64
+	offset_end 127
 	core_op ram_1p
 	core_impl auto
 	core_latency 1

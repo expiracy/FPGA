@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'array_mult'
 ================================================================
 + General Information: 
-    * Date:           Fri Jan 30 10:34:21 2026
+    * Date:           Fri Jan 30 11:32:06 2026
     * Version:        2024.1 (Build 5069499 on May 21 2024)
     * Project:        array_mult
     * Solution:       hls (Vivado IP Flow Target)
@@ -15,16 +15,39 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
-    |                 Modules                |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |         |           |           |     |
-    |                 & Loops                |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
-    +----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
-    |+ array_mult                            |  Timing|  -0.78|       90|  900.000|         -|       91|     -|        no|     -|  15 (6%)|  2910 (2%)|  2169 (4%)|    -|
-    | + array_mult_Pipeline_VITIS_LOOP_26_1  |       -|   1.09|       27|  270.000|         -|       27|     -|        no|     -|        -|    7 (~0%)|   64 (~0%)|    -|
-    |  o VITIS_LOOP_26_1                     |       -|   7.30|       25|  250.000|         1|        1|    25|       yes|     -|        -|          -|          -|    -|
-    | + array_mult_Pipeline_ROWS_LOOP        |  Timing|  -0.78|       33|  330.000|         -|       33|     -|        no|     -|  15 (6%)|  1851 (1%)|  1497 (2%)|    -|
-    |  o ROWS_LOOP                           |      II|   7.30|       31|  310.000|        12|        5|     5|       yes|     -|        -|          -|          -|    -|
-    +----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |         |           |           |     |
+    |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ array_mult                            |     -|  1.15|      610|  6.100e+03|         -|      611|     -|        no|     -|  10 (4%)|  847 (~0%)|  2539 (4%)|    -|
+    | + array_mult_Pipeline_VITIS_LOOP_26_1  |     -|  1.15|       27|    270.000|         -|       27|     -|        no|     -|        -|    7 (~0%)|   64 (~0%)|    -|
+    |  o VITIS_LOOP_26_1                     |     -|  7.30|       25|    250.000|         1|        1|    25|       yes|     -|        -|          -|          -|    -|
+    | o COLS_LOOP                            |     -|  7.30|      114|  1.140e+03|        37|        -|     3|        no|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP   |     -|  1.57|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   47 (~0%)|  106 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP1  |     -|  1.57|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   47 (~0%)|  106 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    | o COLS_LOOP                            |     -|  7.30|      114|  1.140e+03|        37|        -|     3|        no|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP2  |     -|  1.57|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   47 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP3  |     -|  1.57|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   47 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    | o COLS_LOOP                            |     -|  7.30|      114|  1.140e+03|        37|        -|     3|        no|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP4  |     -|  1.57|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   47 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP5  |     -|  1.57|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   47 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    | o COLS_LOOP                            |     -|  7.30|      114|  1.140e+03|        37|        -|     3|        no|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP6  |     -|  1.61|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   49 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP7  |     -|  1.61|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   49 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    | o COLS_LOOP                            |     -|  7.30|      114|  1.140e+03|        37|        -|     3|        no|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP8  |     -|  1.61|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   49 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    |  + array_mult_Pipeline_MULT_ACC_LOOP9  |     -|  1.61|       15|    150.000|         -|       15|     -|        no|     -|  1 (~0%)|   49 (~0%)|  119 (~0%)|    -|
+    |   o MULT_ACC_LOOP                      |     -|  7.30|       13|    130.000|         6|        2|     5|       yes|     -|        -|          -|          -|    -|
+    +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
 
 
 ================================================================
@@ -35,7 +58,7 @@
 | Interface       | Data Width | Address Width | Offset | Register |
 +-----------------+------------+---------------+--------+----------+
 | s_axi_CTRL      | 32         | 4             |        |          |
-| s_axi_DATA_IN_B | 32         | 8             | 128    | 0        |
+| s_axi_DATA_IN_B | 32         | 7             | 64     | 0        |
 +-----------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
@@ -52,8 +75,8 @@
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
 | Interface | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
-| in_a      | in        | both          | 32    | 4     | 1     | 1      | 4     | 1      |
-| result    | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| in_a      | in        | both          | 16    | 2     | 1     | 1      | 2     | 1      |
+| result    | out       | both          | 16    | 2     | 1     | 1      | 2     | 1      |
 +-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
 
 * TOP LEVEL CONTROL
@@ -74,65 +97,110 @@
 +----------+-----------+--------------------------------------------------------+
 | Argument | Direction | Datatype                                               |
 +----------+-----------+--------------------------------------------------------+
-| in_a     | in        | stream<hls::axis<ap_int<32>, 0, 0, 0, '8', false>, 0>& |
-| in_b     | in        | ap_int<32>*                                            |
-| result   | out       | stream<hls::axis<ap_int<32>, 0, 0, 0, '8', false>, 0>& |
+| in_a     | in        | stream<hls::axis<ap_int<16>, 0, 0, 0, '8', false>, 0>& |
+| in_b     | in        | ap_int<16>*                                            |
+| result   | out       | stream<hls::axis<ap_int<16>, 0, 0, 0, '8', false>, 0>& |
 +----------+-----------+--------------------------------------------------------+
 
 * SW-to-HW Mapping
-+----------+-----------------+-----------+--------------------------------+
-| Argument | HW Interface    | HW Type   | HW Info                        |
-+----------+-----------------+-----------+--------------------------------+
-| in_a     | in_a            | interface |                                |
-| in_b     | s_axi_DATA_IN_B | memory    | name=in_b offset=128 range=128 |
-| result   | result          | interface |                                |
-+----------+-----------------+-----------+--------------------------------+
++----------+-----------------+-----------+------------------------------+
+| Argument | HW Interface    | HW Type   | HW Info                      |
++----------+-----------------+-----------+------------------------------+
+| in_a     | in_a            | interface |                              |
+| in_b     | s_axi_DATA_IN_B | memory    | name=in_b offset=64 range=64 |
+| result   | result          | interface |                              |
++----------+-----------------+-----------+------------------------------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+----------------------------------------+-----+--------+-------------+-------+--------+---------+
-| Name                                   | DSP | Pragma | Variable    | Op    | Impl   | Latency |
-+----------------------------------------+-----+--------+-------------+-------+--------+---------+
-| + array_mult                           | 15  |        |             |       |        |         |
-|  + array_mult_Pipeline_VITIS_LOOP_26_1 | 0   |        |             |       |        |         |
-|    icmp_ln26_fu_132_p2                 |     |        | icmp_ln26   | seteq | auto   | 0       |
-|    add_ln26_fu_138_p2                  |     |        | add_ln26    | add   | fabric | 0       |
-|  + array_mult_Pipeline_ROWS_LOOP       | 15  |        |             |       |        |         |
-|    icmp_ln30_fu_439_p2                 |     |        | icmp_ln30   | seteq | auto   | 0       |
-|    add_ln30_fu_445_p2                  |     |        | add_ln30    | add   | fabric | 0       |
-|    mul_i_i250_fu_467_p2                |     |        | mul_i_i250  | add   | fabric | 0       |
-|    add_ln40_fu_507_p2                  |     |        | add_ln40    | add   | fabric | 0       |
-|    add_ln39_fu_517_p2                  |     |        | add_ln39    | add   | fabric | 0       |
-|    add_ln39_1_fu_487_p2                |     |        | add_ln39_1  | add   | fabric | 0       |
-|    add_ln39_2_fu_497_p2                |     |        | add_ln39_2  | add   | fabric | 0       |
-|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39    | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_1  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_2  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_3  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_4  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_5  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_6  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_7  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_8  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_9  | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_10 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_11 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_12 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_13 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_14 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_15 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_16 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_17 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_18 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_19 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_20 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_21 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_22 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_23 | mul   | auto   | 1       |
-|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_24 | mul   | auto   | 1       |
-+----------------------------------------+-----+--------+-------------+-------+--------+---------+
++----------------------------------------+-----+--------+-----------------+-------+-----------+---------+
+| Name                                   | DSP | Pragma | Variable        | Op    | Impl      | Latency |
++----------------------------------------+-----+--------+-----------------+-------+-----------+---------+
+| + array_mult                           | 10  |        |                 |       |           |         |
+|   cmp_i_i_0_fu_519_p2                  |     |        | cmp_i_i_0       | seteq | auto      | 0       |
+|   mult_acc_last_fu_524_p2              |     |        | mult_acc_last   | and   | auto      | 0       |
+|   icmp_ln32_fu_509_p2                  |     |        | icmp_ln32       | setlt | auto      | 0       |
+|   j_16_fu_548_p2                       |     |        | j_16            | add   | fabric    | 0       |
+|   cmp_i_i_1_0_fu_603_p2                |     |        | cmp_i_i_1_0     | seteq | auto      | 0       |
+|   mult_acc_last_1_fu_608_p2            |     |        | mult_acc_last_1 | and   | auto      | 0       |
+|   icmp_ln32_1_fu_593_p2                |     |        | icmp_ln32_1     | setlt | auto      | 0       |
+|   j_18_fu_632_p2                       |     |        | j_18            | add   | fabric    | 0       |
+|   cmp_i_i_2_0_fu_687_p2                |     |        | cmp_i_i_2_0     | seteq | auto      | 0       |
+|   mult_acc_last_2_fu_692_p2            |     |        | mult_acc_last_2 | and   | auto      | 0       |
+|   icmp_ln32_2_fu_677_p2                |     |        | icmp_ln32_2     | setlt | auto      | 0       |
+|   j_20_fu_716_p2                       |     |        | j_20            | add   | fabric    | 0       |
+|   cmp_i_i_3_0_fu_743_p2                |     |        | cmp_i_i_3_0     | seteq | auto      | 0       |
+|   mult_acc_last_3_fu_749_p2            |     |        | mult_acc_last_3 | and   | auto      | 0       |
+|   icmp_ln32_3_fu_772_p2                |     |        | icmp_ln32_3     | setlt | auto      | 0       |
+|   j_23_fu_800_p2                       |     |        | j_23            | add   | fabric    | 0       |
+|   cmp_i_i_4_0_fu_855_p2                |     |        | cmp_i_i_4_0     | seteq | auto      | 0       |
+|   mult_acc_last_4_fu_860_p2            |     |        | mult_acc_last_4 | and   | auto      | 0       |
+|   icmp_ln32_4_fu_845_p2                |     |        | icmp_ln32_4     | setlt | auto      | 0       |
+|   j_26_fu_884_p2                       |     |        | j_26            | add   | fabric    | 0       |
+|  + array_mult_Pipeline_VITIS_LOOP_26_1 | 0   |        |                 |       |           |         |
+|    icmp_ln26_fu_132_p2                 |     |        | icmp_ln26       | seteq | auto      | 0       |
+|    add_ln26_fu_138_p2                  |     |        | add_ln26        | add   | fabric    | 0       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP   | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_118_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_16_fu_124_p2                      |     |        | k_16            | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U9   | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U9   | 1   |        | mult_acc_data_7 | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP1  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_118_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_14_fu_124_p2                      |     |        | k_14            | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U15  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U15  | 1   |        | mult_acc_data   | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP2  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_13_fu_126_p2                      |     |        | k_13            | add   | fabric    | 0       |
+|    add_ln39_4_fu_136_p2                |     |        | add_ln39_4      | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U20  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U20  | 1   |        | mult_acc_data   | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP3  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_12_fu_126_p2                      |     |        | k_12            | add   | fabric    | 0       |
+|    add_ln39_7_fu_136_p2                |     |        | add_ln39_7      | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U25  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U25  | 1   |        | mult_acc_data   | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP4  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_11_fu_126_p2                      |     |        | k_11            | add   | fabric    | 0       |
+|    add_ln39_10_fu_136_p2               |     |        | add_ln39_10     | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U30  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U30  | 1   |        | mult_acc_data_6 | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP5  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_10_fu_126_p2                      |     |        | k_10            | add   | fabric    | 0       |
+|    add_ln39_fu_136_p2                  |     |        | add_ln39        | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U35  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U35  | 1   |        | mult_acc_data_5 | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP6  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_8_fu_126_p2                       |     |        | k_8             | add   | fabric    | 0       |
+|    add_ln39_fu_136_p2                  |     |        | add_ln39        | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U40  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U40  | 1   |        | mult_acc_data_4 | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP7  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_6_fu_126_p2                       |     |        | k_6             | add   | fabric    | 0       |
+|    add_ln39_fu_136_p2                  |     |        | add_ln39        | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U45  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U45  | 1   |        | mult_acc_data_3 | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP8  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_4_fu_126_p2                       |     |        | k_4             | add   | fabric    | 0       |
+|    add_ln39_fu_136_p2                  |     |        | add_ln39        | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U50  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U50  | 1   |        | mult_acc_data_2 | add   | dsp_slice | 3       |
+|  + array_mult_Pipeline_MULT_ACC_LOOP9  | 1   |        |                 |       |           |         |
+|    icmp_ln36_fu_120_p2                 |     |        | icmp_ln36       | seteq | auto      | 0       |
+|    k_2_fu_126_p2                       |     |        | k_2             | add   | fabric    | 0       |
+|    add_ln39_fu_136_p2                  |     |        | add_ln39        | add   | fabric    | 0       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U55  | 1   |        | mul_ln39        | mul   | dsp_slice | 3       |
+|    mac_muladd_16s_16s_16ns_16_4_1_U55  | 1   |        | mult_acc_data_1 | add   | dsp_slice | 3       |
++----------------------------------------+-----+--------+-----------------+-------+-----------+---------+
 
 
 ================================================================
@@ -145,9 +213,9 @@
 | + array_mult        |              |           | 0    | 0    |        |                 |      |         |                  |
 |   CTRL_s_axi_U      | interface    | s_axilite |      |      |        |                 |      |         |                  |
 |   DATA_IN_B_s_axi_U | interface    | s_axilite |      |      |        |                 |      |         |                  |
-|   in_a_store_data_U | rom_np array |           |      |      |        | in_a_store_data | auto | 1       | 32, 25, 1        |
-|   in_a_store_keep_U | ram_1p array |           |      |      |        | in_a_store_keep | auto | 1       | 4, 25, 1         |
-|   in_a_store_strb_U | ram_1p array |           |      |      |        | in_a_store_strb | auto | 1       | 4, 25, 1         |
+|   in_a_store_data_U | ram_1p array |           |      |      |        | in_a_store_data | auto | 1       | 16, 25, 1        |
+|   in_a_store_keep_U | ram_1p array |           |      |      |        | in_a_store_keep | auto | 1       | 2, 25, 1         |
+|   in_a_store_strb_U | ram_1p array |           |      |      |        | in_a_store_strb | auto | 1       | 2, 25, 1         |
 |   in_a_store_last_U | ram_1p array |           |      |      |        | in_a_store_last | auto | 1       | 1, 25, 1         |
 +---------------------+--------------+-----------+------+------+--------+-----------------+------+---------+------------------+
 
@@ -163,6 +231,9 @@
 | interface | s_axilite port=in_b bundle=DATA_IN_B | ../matrix_mult.cpp:17 in array_mult, in_b   |
 | interface | axis port=in_a                       | ../matrix_mult.cpp:18 in array_mult, in_a   |
 | interface | axis port=result                     | ../matrix_mult.cpp:19 in array_mult, result |
+| unroll    |                                      | ../matrix_mult.cpp:31 in array_mult         |
+| unroll    | factor=2                             | ../matrix_mult.cpp:33 in array_mult         |
+| pipeline  | II=2                                 | ../matrix_mult.cpp:37 in array_mult         |
 +-----------+--------------------------------------+---------------------------------------------+
 
 

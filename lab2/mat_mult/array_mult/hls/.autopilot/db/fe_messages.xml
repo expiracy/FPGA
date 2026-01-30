@@ -44,17 +44,20 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../matrix_mult.cpp:19:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="array_mult" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=result" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../matrix_mult.cpp:32:14" msg_body="Loop 'COLS_LOOP' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="COLS_LOOP"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../matrix_mult.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_mult" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../matrix_mult.cpp:36:19" msg_body="Loop 'MULT_ACC_LOOP' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="MULT_ACC_LOOP"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../matrix_mult.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_mult" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../matrix_mult.cpp:14:0" msg_body="Unrolling loop 'COLS_LOOP' (../matrix_mult.cpp:32:14) in function 'array_mult' completely with a factor of 5">
-        <args Factor="5" LoopLoc="../matrix_mult.cpp:32:14" LoopName="COLS_LOOP"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../matrix_mult.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="array_mult" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../matrix_mult.cpp:14:0" msg_body="Unrolling loop 'MULT_ACC_LOOP' (../matrix_mult.cpp:36:19) in function 'array_mult' completely with a factor of 5">
-        <args Factor="5" LoopLoc="../matrix_mult.cpp:36:19" LoopName="MULT_ACC_LOOP"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../matrix_mult.cpp:14:0" msg_body="Unrolling loop 'ROWS_LOOP' (../matrix_mult.cpp:30:13) in function 'array_mult' completely with a factor of 5">
+        <args Factor="5" LoopLoc="../matrix_mult.cpp:30:13" LoopName="ROWS_LOOP"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="../matrix_mult.cpp:14:0" msg_body="Unrolling loop 'COLS_LOOP' (../matrix_mult.cpp:32:13) in function 'array_mult' partially with a factor of 2">
+        <args Factor="2" LoopLoc="../matrix_mult.cpp:32:13" LoopName="COLS_LOOP"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

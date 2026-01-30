@@ -1,0 +1,274 @@
+<profile>
+<RunData>
+  <RUN_TYPE>impl</RUN_TYPE>
+  <VIVADO_VERSION>v.2024.1</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>7.337</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>7.337</CP_FINAL>
+  <CP_ROUTE>7.337</CP_ROUTE>
+  <CP_SYNTH>6.580</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>2.663</SLACK_FINAL>
+  <SLACK_ROUTE>2.663</SLACK_ROUTE>
+  <SLACK_SYNTH>3.420</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>0.000</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>2.663</WNS_FINAL>
+  <WNS_ROUTE>2.663</WNS_ROUTE>
+  <WNS_SYNTH>3.420</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>10</DSP>
+    <FF>775</FF>
+    <LATCH>0</LATCH>
+    <LUT>710</LUT>
+    <SLICE>290</SLICE>
+    <SRL>0</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>280</BRAM>
+    <CLB>0</CLB>
+    <DSP>220</DSP>
+    <FF>106400</FF>
+    <LUT>53200</LUT>
+    <SLICE>13300</SLICE>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="array_mult" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="25">CTRL_s_axi_U DATA_IN_B_s_axi_U grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387 grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396 grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405 grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414 grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423 grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432 grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441 grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450 grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459 grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378 grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362 in_a_store_data_U in_a_store_keep_U in_a_store_last_U in_a_store_strb_U regslice_both_in_a_V_data_V_U regslice_both_in_a_V_keep_V_U regslice_both_in_a_V_last_V_U regslice_both_in_a_V_strb_V_U regslice_both_result_V_data_V_U regslice_both_result_V_keep_V_U regslice_both_result_V_last_V_U regslice_both_result_V_strb_V_U</SubModules>
+    <Resources DSP="10" FF="775" LUT="710" LUTRAM="74" LogicLUT="636"/>
+    <LocalResources FF="185" LUT="50" LogicLUT="50"/>
+  </RtlModule>
+  <RtlModule CELL="inst/CTRL_s_axi_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_CTRL_s_axi">
+    <Resources FF="25" LUT="28" LogicLUT="28"/>
+  </RtlModule>
+  <RtlModule CELL="inst/DATA_IN_B_s_axi_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_DATA_IN_B_s_axi">
+    <Resources FF="107" LUT="71" LUTRAM="32" LogicLUT="39"/>
+    <LocalResources FF="43" LUT="23" LogicLUT="23"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP1">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U15</SubModules>
+    <Resources DSP="1" FF="31" LUT="24" LogicLUT="24"/>
+    <LocalResources FF="29" LUT="13" LogicLUT="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP1.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="11" LogicLUT="11"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387/mac_muladd_16s_16s_16ns_16_4_1_U15" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP1.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP2">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U20</SubModules>
+    <Resources DSP="1" FF="31" LUT="45" LogicLUT="45"/>
+    <LocalResources FF="29" LUT="30" LogicLUT="30"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP2.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/mac_muladd_16s_16s_16ns_16_4_1_U20" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP2.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP3">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U25</SubModules>
+    <Resources DSP="1" FF="31" LUT="45" LogicLUT="45"/>
+    <LocalResources FF="29" LUT="29" LogicLUT="29"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP3.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405/mac_muladd_16s_16s_16ns_16_4_1_U25" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP3.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP4">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U30</SubModules>
+    <Resources DSP="1" FF="31" LUT="25" LogicLUT="25"/>
+    <LocalResources FF="29" LUT="13" LogicLUT="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP4.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="12" LogicLUT="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414/mac_muladd_16s_16s_16ns_16_4_1_U30" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP4.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP5">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U35</SubModules>
+    <Resources DSP="1" FF="31" LUT="45" LogicLUT="45"/>
+    <LocalResources FF="29" LUT="33" LogicLUT="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP5.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="13" LogicLUT="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423/mac_muladd_16s_16s_16ns_16_4_1_U35" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP5.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP6">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U40</SubModules>
+    <Resources DSP="1" FF="33" LUT="34" LogicLUT="34"/>
+    <LocalResources FF="31" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP6.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432/mac_muladd_16s_16s_16ns_16_4_1_U40" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP6.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP7">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U45</SubModules>
+    <Resources DSP="1" FF="33" LUT="35" LogicLUT="35"/>
+    <LocalResources FF="31" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP7.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="22" LogicLUT="22"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441/mac_muladd_16s_16s_16ns_16_4_1_U45" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP7.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP8">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U50</SubModules>
+    <Resources DSP="1" FF="33" LUT="37" LogicLUT="37"/>
+    <LocalResources FF="31" LUT="17" LogicLUT="17"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP8.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/mac_muladd_16s_16s_16ns_16_4_1_U50" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP8.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP9">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U55</SubModules>
+    <Resources DSP="1" FF="33" LUT="48" LogicLUT="48"/>
+    <LocalResources FF="31" LUT="30" LogicLUT="30"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP9.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="18" LogicLUT="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/mac_muladd_16s_16s_16ns_16_4_1_U55" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP9.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mac_muladd_16s_16s_16ns_16_4_1_U9</SubModules>
+    <Resources DSP="1" FF="31" LUT="30" LogicLUT="30"/>
+    <LocalResources FF="29" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="14" LogicLUT="14"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/mac_muladd_16s_16s_16ns_16_4_1_U9" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" ORIG_REF_NAME="array_mult_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_array_mult_Pipeline_VITIS_LOOP_26_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="7" LUT="21" LogicLUT="21"/>
+    <LocalResources FF="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v" ORIG_REF_NAME="array_mult_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="21" LogicLUT="21"/>
+  </RtlModule>
+  <RtlModule CELL="inst/in_a_store_data_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W">
+    <Resources FF="16" LUT="44" LUTRAM="32" LogicLUT="12"/>
+  </RtlModule>
+  <RtlModule CELL="inst/in_a_store_keep_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_in_a_store_keep_RAM_AUTO_1R1W">
+    <Resources FF="2" LUT="5" LUTRAM="4" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/in_a_store_last_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_in_a_store_last_RAM_AUTO_1R1W">
+    <Resources FF="1" LUT="6" LUTRAM="2" LogicLUT="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/in_a_store_strb_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_in_a_store_keep_RAM_AUTO_1R1W">
+    <Resources FF="2" LUT="5" LUTRAM="4" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_in_a_V_data_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="37" LUT="23" LogicLUT="23"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_in_a_V_keep_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="7" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_in_a_V_last_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="5" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_in_a_V_strb_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="7" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_result_V_data_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="37" LUT="44" LogicLUT="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_result_V_keep_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="7" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_result_V_last_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="5" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_result_V_strb_V_U" DEPTH="1" FILE_NAME="array_mult.v" ORIG_REF_NAME="array_mult_regslice_both">
+    <Resources FF="7" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="7.328" DATAPATH_LOGIC_DELAY="1.657" DATAPATH_NET_DELAY="5.671" ENDPOINT_PIN="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[11]/D" LOGIC_LEVELS="6" MAX_FANOUT="32" SLACK="2.663" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult.v" LINE_NUMBER="1119"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6__0" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_20" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_2" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0__22/SP" PRIMITIVE_TYPE="DMEM.dram.RAM32X1S" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0[11]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="43"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.174" DATAPATH_LOGIC_DELAY="1.621" DATAPATH_NET_DELAY="5.553" ENDPOINT_PIN="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[13]/D" LOGIC_LEVELS="6" MAX_FANOUT="32" SLACK="2.817" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[14]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[14]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult.v" LINE_NUMBER="991"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0[15]_i_10" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_22" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_7" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_3" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0__26/SP" PRIMITIVE_TYPE="DMEM.dram.RAM32X1S" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0[13]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="43"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.096" DATAPATH_LOGIC_DELAY="1.375" DATAPATH_NET_DELAY="5.721" ENDPOINT_PIN="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[7]/D" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="2.895" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[30]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[30]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult.v" LINE_NUMBER="991"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0_i_14" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult.v" LINE_NUMBER="9"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0__13/SP" PRIMITIVE_TYPE="DMEM.dram.RAM32X1S" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0[7]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[7]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="43"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="6.989" DATAPATH_LOGIC_DELAY="1.375" DATAPATH_NET_DELAY="5.614" ENDPOINT_PIN="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[15]/D" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="3.002" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[30]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[30]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult.v" LINE_NUMBER="991"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0_i_14" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult.v" LINE_NUMBER="9"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0__29/SP" PRIMITIVE_TYPE="DMEM.dram.RAM32X1S" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0[15]_i_2" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[15]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="43"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="6.944" DATAPATH_LOGIC_DELAY="1.347" DATAPATH_NET_DELAY="5.597" ENDPOINT_PIN="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[4]/D" LOGIC_LEVELS="5" MAX_FANOUT="32" SLACK="3.003" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[30]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[30]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult.v" LINE_NUMBER="991"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0_i_14" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult.v" LINE_NUMBER="9"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5" PRIMITIVE_TYPE="LUT.others.LUT6" FILE_NAME="array_mult_array_mult_Pipeline_MULT_ACC_LOOP.v" LINE_NUMBER="155"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/ram_reg_0_15_0_0__8/SP" PRIMITIVE_TYPE="DMEM.dram.RAM32X1S" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0[4]_i_1" PRIMITIVE_TYPE="LUT.others.LUT3" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/in_a_store_data_U/q0_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="array_mult_in_a_store_data_RAM_AUTO_1R1W.v" LINE_NUMBER="43"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/array_mult_design_analysis_routed.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/array_mult_failfast_routed.rpt"/>
+  <ReportFile TYPE="status" PATH="verilog/report/array_mult_status_routed.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/array_mult_timing_routed.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/array_mult_timing_paths_routed.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/array_mult_utilization_routed.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/array_mult_utilization_hierarchical_routed.rpt"/>
+</VivadoReportFiles>
+</profile>

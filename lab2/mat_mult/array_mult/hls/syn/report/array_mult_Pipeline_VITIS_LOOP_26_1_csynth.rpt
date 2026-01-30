@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'array_mult_Pipeline_VITIS_LOOP_26_1'
 ================================================================
-* Date:           Fri Jan 30 10:34:19 2026
+* Date:           Fri Jan 30 11:32:02 2026
 
 * Version:        2024.1 (Build 5069499 on May 21 2024)
 * Project:        array_mult
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.208 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  6.146 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -131,26 +131,26 @@
 |ap_idle                   |  out|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
 |ap_ready                  |  out|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
 |in_a_TVALID               |   in|    1|        axis|                        in_a_V_data_V|       pointer|
-|in_a_TDATA                |   in|   32|        axis|                        in_a_V_data_V|       pointer|
+|in_a_TDATA                |   in|   16|        axis|                        in_a_V_data_V|       pointer|
 |in_a_store_data_address0  |  out|    5|   ap_memory|                      in_a_store_data|         array|
 |in_a_store_data_ce0       |  out|    1|   ap_memory|                      in_a_store_data|         array|
 |in_a_store_data_we0       |  out|    1|   ap_memory|                      in_a_store_data|         array|
-|in_a_store_data_d0        |  out|   32|   ap_memory|                      in_a_store_data|         array|
+|in_a_store_data_d0        |  out|   16|   ap_memory|                      in_a_store_data|         array|
 |in_a_store_keep_address0  |  out|    5|   ap_memory|                      in_a_store_keep|         array|
 |in_a_store_keep_ce0       |  out|    1|   ap_memory|                      in_a_store_keep|         array|
 |in_a_store_keep_we0       |  out|    1|   ap_memory|                      in_a_store_keep|         array|
-|in_a_store_keep_d0        |  out|    4|   ap_memory|                      in_a_store_keep|         array|
+|in_a_store_keep_d0        |  out|    2|   ap_memory|                      in_a_store_keep|         array|
 |in_a_store_strb_address0  |  out|    5|   ap_memory|                      in_a_store_strb|         array|
 |in_a_store_strb_ce0       |  out|    1|   ap_memory|                      in_a_store_strb|         array|
 |in_a_store_strb_we0       |  out|    1|   ap_memory|                      in_a_store_strb|         array|
-|in_a_store_strb_d0        |  out|    4|   ap_memory|                      in_a_store_strb|         array|
+|in_a_store_strb_d0        |  out|    2|   ap_memory|                      in_a_store_strb|         array|
 |in_a_store_last_address0  |  out|    5|   ap_memory|                      in_a_store_last|         array|
 |in_a_store_last_ce0       |  out|    1|   ap_memory|                      in_a_store_last|         array|
 |in_a_store_last_we0       |  out|    1|   ap_memory|                      in_a_store_last|         array|
 |in_a_store_last_d0        |  out|    1|   ap_memory|                      in_a_store_last|         array|
 |in_a_TREADY               |  out|    1|        axis|                        in_a_V_last_V|       pointer|
 |in_a_TLAST                |   in|    1|        axis|                        in_a_V_last_V|       pointer|
-|in_a_TKEEP                |   in|    4|        axis|                        in_a_V_keep_V|       pointer|
-|in_a_TSTRB                |   in|    4|        axis|                        in_a_V_strb_V|       pointer|
+|in_a_TKEEP                |   in|    2|        axis|                        in_a_V_keep_V|       pointer|
+|in_a_TSTRB                |   in|    2|        axis|                        in_a_V_strb_V|       pointer|
 +--------------------------+-----+-----+------------+-------------------------------------+--------------+
 

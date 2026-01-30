@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity array_mult_in_a_store_keep_RAM_AUTO_1R1W is 
     generic(
         MEM_TYPE        : string    := "auto"; 
-        DataWidth       : integer   := 4; 
+        DataWidth       : integer   := 2; 
         AddressWidth    : integer   := 5;
         AddressRange    : integer   := 25
     ); 

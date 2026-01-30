@@ -18,32 +18,111 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.080</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.146</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>90</Best-caseLatency>
-<Average-caseLatency>90</Average-caseLatency>
-<Worst-caseLatency>90</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.900 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.900 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.900 us</Worst-caseRealTimeLatency>
-<Interval-min>91</Interval-min>
-<Interval-max>91</Interval-max>
+<Best-caseLatency>610</Best-caseLatency>
+<Average-caseLatency>610</Average-caseLatency>
+<Worst-caseLatency>610</Worst-caseLatency>
+<Best-caseRealTimeLatency>6.100 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>6.100 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>6.100 us</Worst-caseRealTimeLatency>
+<Interval-min>611</Interval-min>
+<Interval-max>611</Interval-max>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<COLS_LOOP>
+<Slack>7.30</Slack>
+<TripCount>3</TripCount>
+<Latency>114</Latency>
+<AbsoluteTimeLatency>1140</AbsoluteTimeLatency>
+<IterationLatency>37</IterationLatency>
+<InstanceList>
+</InstanceList>
+</COLS_LOOP>
+<COLS_LOOP>
+<Slack>7.30</Slack>
+<TripCount>3</TripCount>
+<Latency>114</Latency>
+<AbsoluteTimeLatency>1140</AbsoluteTimeLatency>
+<IterationLatency>37</IterationLatency>
+<InstanceList>
+</InstanceList>
+</COLS_LOOP>
+<COLS_LOOP>
+<Slack>7.30</Slack>
+<TripCount>3</TripCount>
+<Latency>114</Latency>
+<AbsoluteTimeLatency>1140</AbsoluteTimeLatency>
+<IterationLatency>37</IterationLatency>
+<InstanceList>
+</InstanceList>
+</COLS_LOOP>
+<COLS_LOOP>
+<Slack>7.30</Slack>
+<TripCount>3</TripCount>
+<Latency>114</Latency>
+<AbsoluteTimeLatency>1140</AbsoluteTimeLatency>
+<IterationLatency>37</IterationLatency>
+<InstanceList>
+</InstanceList>
+</COLS_LOOP>
+<COLS_LOOP>
+<Slack>7.30</Slack>
+<TripCount>3</TripCount>
+<Latency>114</Latency>
+<AbsoluteTimeLatency>1140</AbsoluteTimeLatency>
+<IterationLatency>37</IterationLatency>
+<InstanceList>
+</InstanceList>
+</COLS_LOOP>
+</SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../matrix_mult.cpp:13</SourceLocation>
+<SourceLocation>../matrix_mult.cpp:21</SourceLocation>
+<SummaryOfLoopViolations>
+<COLS_LOOP>
+<Name>COLS_LOOP</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../matrix_mult.cpp:21</SourceLocation>
+</COLS_LOOP>
+<COLS_LOOP>
+<Name>COLS_LOOP</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../matrix_mult.cpp:21</SourceLocation>
+</COLS_LOOP>
+<COLS_LOOP>
+<Name>COLS_LOOP</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../matrix_mult.cpp:21</SourceLocation>
+</COLS_LOOP>
+<COLS_LOOP>
+<Name>COLS_LOOP</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../matrix_mult.cpp:21</SourceLocation>
+</COLS_LOOP>
+<COLS_LOOP>
+<Name>COLS_LOOP</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../matrix_mult.cpp:21</SourceLocation>
+</COLS_LOOP>
+</SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<DSP>15</DSP>
-<FF>2910</FF>
-<LUT>2169</LUT>
+<DSP>10</DSP>
+<FF>847</FF>
+<LUT>2539</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -271,7 +350,7 @@
 <Type>array</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>7</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>0</HasCtrl>
@@ -348,7 +427,7 @@
 <Type>array</Type>
 <IOProtocol>s_axi</IOProtocol>
 <Dir>in</Dir>
-<Bits>8</Bits>
+<Bits>7</Bits>
 <Attribute>unknown</Attribute>
 <CType>int</CType>
 <HasCtrl>0</HasCtrl>
@@ -471,7 +550,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>32</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -519,7 +598,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>4</Bits>
+<Bits>2</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -531,7 +610,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>in</Dir>
-<Bits>4</Bits>
+<Bits>2</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -543,7 +622,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>32</Bits>
+<Bits>16</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -591,7 +670,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>4</Bits>
+<Bits>2</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>
@@ -603,7 +682,7 @@
 <IOProtocol>axis</IOProtocol>
 <IOConfig>register, both mode</IOConfig>
 <Dir>out</Dir>
-<Bits>4</Bits>
+<Bits>2</Bits>
 <Attribute>data</Attribute>
 <CType>int</CType>
 </RtlPorts>

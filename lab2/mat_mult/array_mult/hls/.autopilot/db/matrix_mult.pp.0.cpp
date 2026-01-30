@@ -9754,8 +9754,8 @@ private:
 }
 # 12 "../matrix_mult.h" 2
 # 24 "../matrix_mult.h"
-typedef ap_axis<32,0,0,0> packet;
-typedef ap_int<32> data;
+typedef ap_axis<16,0,0,0> packet;
+typedef ap_int<16> data;
 typedef hls::stream<packet> stream_data;
 
 __attribute__((sdx_kernel("array_mult", 0))) void array_mult (stream_data &in_a, data in_b[5*5], stream_data &result);
@@ -9783,15 +9783,15 @@ __attribute__((sdx_kernel("array_mult", 0))) void array_mult (stream_data &in_a,
  }
 
  ROWS_LOOP: for (i=0;i<5;i++) {
-
-  COLS_LOOP: for (j=0;j<5;j++) {
-
-   mult_acc.data=0;
+#pragma HLS unroll
+ COLS_LOOP: for (j=0;j<5;j++) {
+#pragma HLS unroll factor=2
+ mult_acc.data=0;
 
    MULT_ACC_LOOP: for (k=0;k<5;k++) {
+#pragma HLS PIPELINE II=2
 
-
-    mult_acc.data+=in_a_store[i*5 +k].data*in_b[k*5 +j];
+ mult_acc.data+=in_a_store[i*5 +k].data*in_b[k*5 +j];
     mult_acc.last=in_a_store[i*5 +k].last&(j==(5 -1));
     mult_acc.keep = in_a_store[i*5 +k].keep;
     mult_acc.strb = in_a_store[i*5 +k].strb;

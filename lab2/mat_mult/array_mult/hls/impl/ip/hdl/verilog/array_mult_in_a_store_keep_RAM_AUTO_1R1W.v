@@ -12,7 +12,7 @@ module array_mult_in_a_store_keep_RAM_AUTO_1R1W (
      
     reset, clk);
 
-parameter DataWidth = 4;
+parameter DataWidth = 2;
 parameter AddressWidth = 5;
 parameter AddressRange = 25;
  

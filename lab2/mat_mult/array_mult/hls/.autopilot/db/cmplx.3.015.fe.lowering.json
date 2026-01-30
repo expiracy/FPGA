@@ -1,18 +1,18 @@
 {
   "0": {
-    "basicblocks": 5,
+    "basicblocks": 38,
     "calls": "",
     "file": "matrix_mult.cpp",
     "fileloc": 13,
-    "instructions": 210,
+    "instructions": 472,
     "loads": {
-      "L": 12,
-      "T": 25
+      "L": 29,
+      "T": 10
     },
     "name": "array_mult",
     "stores": {
-      "L": 24
+      "L": 44
     },
-    "total_instructions": 210
+    "total_instructions": 472
   }
 }

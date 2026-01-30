@@ -1,0 +1,397 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Fri Jan 30 11:37:05 +0000 2026
+    * Version:         2024.1 (Build 5069499 on May 21 2024)
+    * Project:         array_mult
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              710
+FF:               775
+DSP:              10
+BRAM:             0
+URAM:             0
+SRL:              0
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 6.580       |
+| Post-Route     | 7.337       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++------------------------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                 | LUT | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++------------------------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                 | 710 | 775 | 10  |      |      |     |        |      |         |          |        |
+|   (inst)                                             | 50  | 185 |     |      |      |     |        |      |         |          |        |
+|   CTRL_s_axi_U                                       | 28  | 25  |     |      |      |     |        |      |         |          |        |
+|   DATA_IN_B_s_axi_U                                  | 71  | 107 |     |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387      | 24  | 31  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP1_fu_387)  | 13  | 29  |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U15               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396      | 45  | 31  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396)  | 30  | 29  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 15  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U20               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405      | 45  | 31  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP3_fu_405)  | 29  | 29  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 16  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U25               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414      | 25  | 31  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP4_fu_414)  | 13  | 29  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 12  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U30               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423      | 45  | 31  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP5_fu_423)  | 33  | 29  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 13  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U35               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432      | 34  | 33  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP6_fu_432)  | 14  | 31  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 20  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U40               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441      | 35  | 33  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP7_fu_441)  | 14  | 31  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 22  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U45               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450      | 37  | 33  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450)  | 17  | 31  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 20  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U50               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459      | 48  | 33  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459)  | 30  | 31  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 18  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U55               | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378       | 30  | 31  | 1   |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378)   | 16  | 29  |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 14  | 2   |     |      |      |     |        |      |         |          |        |
+|     mac_muladd_16s_16s_16ns_16_4_1_U9                | 1   |     | 1   |      |      |     |        |      |         |          |        |
+|   grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362     | 21  | 7   |     |      |      |     |        |      |         |          |        |
+|     (grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362) |     | 5   |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U         | 21  | 2   |     |      |      |     |        |      |         |          |        |
+|   in_a_store_data_U                                  | 44  | 16  |     |      |      |     |        |      |         |          |        |
+|   in_a_store_keep_U                                  | 5   | 2   |     |      |      |     |        |      |         |          |        |
+|   in_a_store_last_U                                  | 6   | 1   |     |      |      |     |        |      |         |          |        |
+|   in_a_store_strb_U                                  | 5   | 2   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_in_a_V_data_V_U                      | 23  | 37  |     |      |      |     |        |      |         |          |        |
+|   regslice_both_in_a_V_keep_V_U                      | 8   | 7   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_in_a_V_last_V_U                      | 5   | 5   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_in_a_V_strb_V_U                      | 8   | 7   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_result_V_data_V_U                    | 44  | 37  |     |      |      |     |        |      |         |          |        |
+|   regslice_both_result_V_keep_V_U                    | 6   | 7   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_result_V_last_V_U                    | 16  | 5   |     |      |      |     |        |      |         |          |        |
+|   regslice_both_result_V_strb_V_U                    | 6   | 7   |     |      |      |     |        |      |         |          |        |
++------------------------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 1.33%  | OK     |
+| FD                                                        | 50%       | 0.73%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.43%  | OK     |
+| MUXF7                                                     | 15%       | 0.01%  | OK     |
+| DSP                                                       | 80%       | 4.55%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 4.55%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 59     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 3.17   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+-------------------------------------------------------------------+--------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                    | ENDPOINT PIN                   | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                   |                                |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------------------------------------------------------+--------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 2.663 | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg/C | in_a_store_data_U/q0_reg[11]/D |            6 |         32 |          7.328 |          1.657 |        5.671 |
+| Path2 | 2.817 | ap_CS_fsm_reg[14]/C                                               | in_a_store_data_U/q0_reg[13]/D |            6 |         32 |          7.174 |          1.621 |        5.553 |
+| Path3 | 2.895 | ap_CS_fsm_reg[30]/C                                               | in_a_store_data_U/q0_reg[7]/D  |            5 |         32 |          7.096 |          1.375 |        5.721 |
+| Path4 | 3.002 | ap_CS_fsm_reg[30]/C                                               | in_a_store_data_U/q0_reg[15]/D |            5 |         32 |          6.989 |          1.375 |        5.614 |
+| Path5 | 3.003 | ap_CS_fsm_reg[30]/C                                               | in_a_store_data_U/q0_reg[4]/D  |            5 |         32 |          6.944 |          1.347 |        5.597 |
++-------+-------+-------------------------------------------------------------------+--------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                                     | Primitive Type       |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg                                                 | FLOP_LATCH.flop.FDRE |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6__0 | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_20     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_2     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__22/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[11]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[11]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[14]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/q0[15]_i_10                                                                                   | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_22     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_7      | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_3     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__26/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[13]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[13]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__13/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[7]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[7]                                                                                     | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__29/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[15]_i_2                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[15]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__8/SP                                                                        | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[4]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[4]                                                                                     | FLOP_LATCH.flop.FDRE |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                                                     | Primitive Type       |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg                                                 | FLOP_LATCH.flop.FDRE |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6__0 | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_20     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_2     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__22/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[11]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[11]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[14]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/q0[15]_i_10                                                                                   | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_22     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_7      | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_3     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__26/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[13]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[13]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__13/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[7]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[7]                                                                                     | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__29/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[15]_i_2                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[15]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__8/SP                                                                        | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[4]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[4]                                                                                     | FLOP_LATCH.flop.FDRE |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                                     | Primitive Type       |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg                                                 | FLOP_LATCH.flop.FDRE |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6__0 | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_20     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_2     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__22/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[11]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[11]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[14]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/q0[15]_i_10                                                                                   | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_22     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_7      | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_3     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__26/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[13]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[13]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__13/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[7]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[7]                                                                                     | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__29/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[15]_i_2                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[15]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__8/SP                                                                        | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[4]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[4]                                                                                     | FLOP_LATCH.flop.FDRE |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                                     | Primitive Type       |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg                                                 | FLOP_LATCH.flop.FDRE |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6__0 | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_20     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_2     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__22/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[11]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[11]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[14]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/q0[15]_i_10                                                                                   | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_22     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_7      | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_3     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__26/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[13]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[13]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__13/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[7]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[7]                                                                                     | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__29/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[15]_i_2                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[15]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__8/SP                                                                        | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[4]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[4]                                                                                     | FLOP_LATCH.flop.FDRE |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                                     | Primitive Type       |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362_ap_start_reg_reg                                                 | FLOP_LATCH.flop.FDRE |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6__0 | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_20     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP2_fu_396/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_6     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP8_fu_450/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_2     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__22/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[11]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[11]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[14]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/q0[15]_i_10                                                                                   | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_22     | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP_fu_378/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_7      | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_MULT_ACC_LOOP9_fu_459/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_3     | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__26/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[13]_i_1                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[13]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__13/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[7]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[7]                                                                                     | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__29/SP                                                                       | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[15]_i_2                                                                                    | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[15]                                                                                    | FLOP_LATCH.flop.FDRE |
+    | ap_CS_fsm_reg[30]                                                                                               | FLOP_LATCH.flop.FDRE |
+    | in_a_store_data_U/ram_reg_0_15_0_0_i_14                                                                         | LUT.others.LUT3      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_15   | LUT.others.LUT6      |
+    | grp_array_mult_Pipeline_VITIS_LOOP_26_1_fu_362/flow_control_loop_pipe_sequential_init_U/ram_reg_0_15_0_0_i_5    | LUT.others.LUT6      |
+    | in_a_store_data_U/ram_reg_0_15_0_0__8/SP                                                                        | DMEM.dram.RAM32X1S   |
+    | in_a_store_data_U/q0[4]_i_1                                                                                     | LUT.others.LUT3      |
+    | in_a_store_data_U/q0_reg[4]                                                                                     | FLOP_LATCH.flop.FDRE |
+    +-----------------------------------------------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+--------------------------------------------------------------------+
+| Report Type              | Report Location                                                    |
++--------------------------+--------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/array_mult_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/array_mult_failfast_routed.rpt                 |
+| status                   | impl/verilog/report/array_mult_status_routed.rpt                   |
+| timing                   | impl/verilog/report/array_mult_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/array_mult_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/array_mult_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/array_mult_utilization_hierarchical_routed.rpt |
++--------------------------+--------------------------------------------------------------------+
+
+

@@ -1,0 +1,225 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/repos/FPGA/lab2/mat_mult/array_mult\array_mult.hlsrun_cosim_summary, at 01/30/26 11:18:32
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run cosim -work_dir C:/repos/FPGA/lab2/mat_mult/array_mult -config C:/repos/FPGA/lab2/mat_mult/hls_config.cfg -cmdlineconfig C:/repos/FPGA/lab2/mat_mult/array_mult/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Jan 30 11:18:33 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'u2227951' on host 'e10-e21c6500.ads.warwick.ac.uk' (Windows NT_amd64 version 10.0) on Fri Jan 30 11:18:34 +0000 2026
+INFO: [HLS 200-10] In directory 'C:/repos/FPGA/lab2/mat_mult'
+INFO: [HLS 200-2005] Using work_dir C:/repos/FPGA/lab2/mat_mult/array_mult 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/repos/FPGA/lab2/matrix_mult.cpp' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/repos/FPGA/lab2/matrix_mult.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/repos/FPGA/lab2/matrix_mult.h' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/repos/FPGA/lab2/matrix_mult.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/repos/FPGA/lab2/tb_matrix_mult.cpp' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/repos/FPGA/lab2/tb_matrix_mult.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=array_mult' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(5)
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++"
+   Compiling apatb_array_mult.cpp
+   Compiling tb_matrix_mult.cpp_pre.cpp.tb.cpp
+   Compiling apatb_array_mult_util.cpp
+   Compiling matrix_mult.cpp_pre.cpp.tb.cpp
+   Compiling apatb_array_mult_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Random seed: 1549294172
+6	10	3	7	5	
+10	2	0	0	2	
+7	0	7	10	2	
+5	1	6	5	4	
+0	7	10	2	2	
+
+8	9	0	8	8	
+1	5	8	3	7	
+0	1	9	0	10	
+1	4	7	4	9	
+1	1	2	0	1	
+
+Expected array:
+70	140	166	106	216	
+84	102	20	86	96	
+68	112	137	96	218	
+50	80	105	63	156	
+11	55	164	29	169	
+
+Array accelerator:
+70	140	166	106	216	
+84	102	20	86	96	
+68	112	137	96	218	
+50	80	105	63	156	
+11	55	164	29	169	
+
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 25
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\repos\FPGA\lab2\mat_mult\array_mult\hls\sim\verilog>set PATH= 
+
+C:\repos\FPGA\lab2\mat_mult\array_mult\hls\sim\verilog>call C:/Xilinx/Vivado/2024.1/bin/xelab xil_defaultlib.apatb_array_mult_top glbl -Oenable_linking_all_libraries  -prj array_mult.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib "ieee_proposed=./ieee_proposed" -s array_mult  
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_array_mult_top glbl -Oenable_linking_all_libraries -prj array_mult.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_23 -L floating_point_v7_1_18 --lib ieee_proposed=./ieee_proposed -s array_mult 
+Multi-threading is on. Using 14 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_slave_CTRL.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CTRL
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_slave_DATA_IN_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_DATA_IN_B
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_s_in_a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_a
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_s_result.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_result
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_array_mult_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_array_mult_Pipeline_ROWS_LOOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_array_mult_Pipeline_ROWS_LOOP
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_array_mult_Pipeline_VITIS_LOOP_26_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_array_mult_Pipeline_VITIS_LOOP_26_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_CTRL_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_CTRL_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_DATA_IN_B_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_DATA_IN_B_s_axi
+INFO: [VRFC 10-311] analyzing module array_mult_DATA_IN_B_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_in_a_store_keep_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_in_a_store_keep_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_in_a_store_last_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_in_a_store_last_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_mul_32s_32s_32_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_mul_32s_32s_32_2_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module array_mult_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.array_mult_in_a_store_data_RAM_1...
+Compiling module xil_defaultlib.array_mult_in_a_store_keep_RAM_A...
+Compiling module xil_defaultlib.array_mult_in_a_store_last_RAM_A...
+Compiling module xil_defaultlib.array_mult_flow_control_loop_pip...
+Compiling module xil_defaultlib.array_mult_array_mult_Pipeline_V...
+Compiling module xil_defaultlib.array_mult_mul_32s_32s_32_2_1(NU...
+Compiling module xil_defaultlib.array_mult_array_mult_Pipeline_R...
+Compiling module xil_defaultlib.array_mult_CTRL_s_axi
+Compiling module xil_defaultlib.array_mult_DATA_IN_B_s_axi_ram(M...
+Compiling module xil_defaultlib.array_mult_DATA_IN_B_s_axi
+Compiling module xil_defaultlib.array_mult_regslice_both(DataWid...
+Compiling module xil_defaultlib.array_mult_regslice_both(DataWid...
+Compiling module xil_defaultlib.array_mult_regslice_both(DataWid...
+Compiling module xil_defaultlib.array_mult
+Compiling module xil_defaultlib.fifo(DEPTH=25,WIDTH=32)
+Compiling module xil_defaultlib.fifo(DEPTH=25,WIDTH=4)
+Compiling module xil_defaultlib.fifo(DEPTH=25,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_in_a
+Compiling module xil_defaultlib.AESL_axi_s_result
+Compiling module xil_defaultlib.AESL_axi_slave_DATA_IN_B
+WARNING: [XSIM 43-3373] "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_slave_DATA_IN_B.v" Line 461. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_slave_DATA_IN_B.v" Line 470. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/AESL_axi_slave_DATA_IN_B.v" Line 511. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.AESL_axi_slave_CTRL
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_array_mult_top
+Compiling module work.glbl
+Built simulation snapshot array_mult
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Jan 30 11:19:02 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/array_mult/xsim_script.tcl
+# xsim {array_mult} -autoloadwcfg -tclbatch {array_mult.tcl}
+Time resolution is 1 ps
+source array_mult.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "2405000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2465 ns : File "C:/repos/FPGA/lab2/mat_mult/array_mult/hls/sim/verilog/array_mult.autotb.v" Line 467
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Jan 30 11:19:04 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+Random seed: 1549294172
+6	10	3	7	5	
+10	2	0	0	2	
+7	0	7	10	2	
+5	1	6	5	4	
+0	7	10	2	2	
+
+8	9	0	8	8	
+1	5	8	3	7	
+0	1	9	0	10	
+1	4	7	4	9	
+1	1	2	0	1	
+
+Expected array:
+70	140	166	106	216	
+84	102	20	86	96	
+68	112	137	96	218	
+50	80	105	63	156	
+11	55	164	29	169	
+
+Array accelerator:
+70	140	166	106	216	
+84	102	20	86	96	
+68	112	137	96	218	
+50	80	105	63	156	
+11	55	164	29	169	
+
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 25
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 32.554 seconds; peak allocated memory: 195.801 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 37s

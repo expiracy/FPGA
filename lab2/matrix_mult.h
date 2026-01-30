@@ -19,7 +19,7 @@
 #define MAX_VAL 10
 #define MIN_VAL 0
 
-#define BIT_W 32
+#define BIT_W 16
 
 typedef ap_axis<BIT_W,0,0,0> packet;
 typedef ap_int<BIT_W> data;

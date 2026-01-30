@@ -1,5 +1,43 @@
 {
     "1": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP9",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP1",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "34",
+        "total_instructions": "34",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
         "name": "array_mult_Pipeline_VITIS_LOOP_26_1",
         "file": "..\/matrix_mult.cpp",
         "fileloc": "21",
@@ -17,31 +55,171 @@
             "L": "1"
         }
     },
+    "4": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP7",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP5",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP4",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
     "0": {
         "name": "array_mult",
         "file": "matrix_mult.cpp",
         "fileloc": "13",
-        "instructions": "78",
-        "total_instructions": "227",
-        "calls": "1 2",
-        "basicblocks": "1",
+        "instructions": "186",
+        "total_instructions": "567",
+        "calls": "3 7 8 6 11 10 1 4 5 9 2",
+        "basicblocks": "16",
         "loads": {
-            "T": "25"
+            "L": "30"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "5"
         }
     },
-    "2": {
-        "name": "array_mult_Pipeline_ROWS_LOOP",
+    "7": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP",
         "file": "..\/matrix_mult.cpp",
         "fileloc": "21",
-        "instructions": "120",
-        "total_instructions": "120",
+        "instructions": "34",
+        "total_instructions": "34",
         "calls": "",
         "basicblocks": "4",
         "loads": {
-            "L": "9"
+            "L": "4",
+            "T": "1"
         },
         "stores": {
-            "L": "2"
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP2",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP3",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP8",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "array_mult_Pipeline_MULT_ACC_LOOP6",
+        "file": "..\/matrix_mult.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "4",
+            "T": "1"
+        },
+        "stores": {
+            "L": "4"
         },
         "loops": {
             "L": "1"

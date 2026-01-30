@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 30 11:02:20 2026" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jan 30 11:33:27 2026" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="bd_0" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -14,12 +14,12 @@
         <CONNECTION INSTANCE="hls_inst" PORT="ap_rst_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="31" NAME="in_a_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TDATA">
+    <PORT DIR="I" LEFT="15" NAME="in_a_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="in_a_TDATA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="in_a_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TKEEP">
+    <PORT DIR="I" LEFT="1" NAME="in_a_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TKEEP">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="in_a_TKEEP"/>
       </CONNECTIONS>
@@ -34,7 +34,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="in_a_TREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="in_a_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TSTRB">
+    <PORT DIR="I" LEFT="1" NAME="in_a_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TSTRB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="in_a_TSTRB"/>
       </CONNECTIONS>
@@ -49,12 +49,12 @@
         <CONNECTION INSTANCE="hls_inst" PORT="interrupt"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="result_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TDATA">
+    <PORT DIR="O" LEFT="15" NAME="result_tdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TDATA">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="result_TDATA"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="result_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TKEEP">
+    <PORT DIR="O" LEFT="1" NAME="result_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TKEEP">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="result_TKEEP"/>
       </CONNECTIONS>
@@ -69,7 +69,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="result_TREADY"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="result_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TSTRB">
+    <PORT DIR="O" LEFT="1" NAME="result_tstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TSTRB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="result_TSTRB"/>
       </CONNECTIONS>
@@ -164,7 +164,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_CTRL_WVALID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="7" NAME="s_axi_DATA_IN_B_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_ARADDR">
+    <PORT DIR="I" LEFT="6" NAME="s_axi_DATA_IN_B_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_ARADDR">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_DATA_IN_B_ARADDR"/>
       </CONNECTIONS>
@@ -179,7 +179,7 @@
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_DATA_IN_B_ARVALID"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="7" NAME="s_axi_DATA_IN_B_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_AWADDR">
+    <PORT DIR="I" LEFT="6" NAME="s_axi_DATA_IN_B_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_AWADDR">
       <CONNECTIONS>
         <CONNECTION INSTANCE="hls_inst" PORT="s_axi_DATA_IN_B_AWADDR"/>
       </CONNECTIONS>
@@ -262,7 +262,7 @@
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
       <PARAMETER NAME="PHASE" VALUE="0.0"/>
-      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
       <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -285,7 +285,7 @@
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
       <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
       <PARAMETER NAME="PHASE" VALUE="0.0"/>
-      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
       <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
       <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -417,18 +417,18 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="2114458621" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="array_mult" VLNV="xilinx.com:hls:array_mult:1.0">
+    <MODULE COREREVISION="2114458652" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="array_mult" VLNV="xilinx.com:hls:array_mult:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_S_AXI_CTRL_ADDR_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_S_AXI_CTRL_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_S_AXI_DATA_IN_B_ADDR_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_S_AXI_DATA_IN_B_ADDR_WIDTH" VALUE="7"/>
         <PARAMETER NAME="C_S_AXI_DATA_IN_B_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="Component_Name" VALUE="bd_0_hls_inst_0"/>
-        <PARAMETER NAME="II" VALUE="91"/>
+        <PARAMETER NAME="II" VALUE="611"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="90"/>
+        <PARAMETER NAME="latency" VALUE="610"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_S_AXI_CTRL_BASEADDR" VALUE="0x00000000"/>
@@ -447,12 +447,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="in_a_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TDATA">
+        <PORT DIR="I" LEFT="15" NAME="in_a_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="in_a_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="in_a_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TKEEP">
+        <PORT DIR="I" LEFT="1" NAME="in_a_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TKEEP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="in_a_tkeep"/>
           </CONNECTIONS>
@@ -467,7 +467,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="in_a_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="in_a_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TSTRB">
+        <PORT DIR="I" LEFT="1" NAME="in_a_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_in_a_TSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="in_a_tstrb"/>
           </CONNECTIONS>
@@ -482,12 +482,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="result_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TDATA">
+        <PORT DIR="O" LEFT="15" NAME="result_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TDATA">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="result_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="result_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TKEEP">
+        <PORT DIR="O" LEFT="1" NAME="result_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TKEEP">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="result_tkeep"/>
           </CONNECTIONS>
@@ -502,7 +502,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="result_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="result_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TSTRB">
+        <PORT DIR="O" LEFT="1" NAME="result_TSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_result_TSTRB">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="result_tstrb"/>
           </CONNECTIONS>
@@ -597,7 +597,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_CTRL_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axi_DATA_IN_B_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_ARADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_DATA_IN_B_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_DATA_IN_B_araddr"/>
           </CONNECTIONS>
@@ -612,7 +612,7 @@
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_DATA_IN_B_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="s_axi_DATA_IN_B_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_AWADDR">
+        <PORT DIR="I" LEFT="6" NAME="s_axi_DATA_IN_B_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_DATA_IN_B_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_DATA_IN_B_awaddr"/>
           </CONNECTIONS>
@@ -737,7 +737,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="External_Interface_s_axi_DATA_IN_B" DATAWIDTH="32" NAME="s_axi_DATA_IN_B" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="7"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
@@ -798,7 +798,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
@@ -821,7 +821,7 @@
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
