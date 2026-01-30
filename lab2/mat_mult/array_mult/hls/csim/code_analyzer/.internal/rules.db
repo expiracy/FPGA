@@ -1,0 +1,227 @@
+{
+    "rules": {
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix_mult.cpp.0.bc', 'C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix_mult.cpp.0.bc.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-emit-llvm",
+                "-MD",
+                "-MF",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_mult.cpp.0.bc.d",
+                "-fhls",
+                "-hls-syn-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\autopilot",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=array_mult",
+                "-fslxtrace",
+                "../matrix_mult.cpp",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_mult.cpp.0.bc"
+            ],
+            "exectime": 6.703103065490723,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\tb_matrix_mult.cpp.0.o', 'C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\tb_matrix_mult.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\tb_matrix_mult.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=array_mult",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../tb_matrix_mult.cpp",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\tb_matrix_mult.cpp.0.o"
+            ],
+            "exectime": 1.9469645023345947,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix_mult.cpp.0.o', 'C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\matrix_mult.cpp.0.o.d']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang.exe",
+                "-c",
+                "-MD",
+                "-MF",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_mult.cpp.0.o.d",
+                "-fhls-tb",
+                "-hls-sim-headers-dir=c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\include",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt",
+                "-fhlstoplevel=array_mult",
+                "-fslxskipfunctionbody",
+                "-fslxtrace",
+                "../matrix_mult.cpp",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_mult.cpp.0.o"
+            ],
+            "exectime": 1.7424864768981934,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.bc']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/llvm-link.exe",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_mult.cpp.0.bc",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc"
+            ],
+            "exectime": 0.9429600238800049,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\syn_srcs.opt.bc']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/opt.exe",
+                "-check-single-toplevel",
+                "-make-non-toplevel-internal",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.bc",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc"
+            ],
+            "exectime": 2.4406566619873047,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\build\\\\app.exe']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/clang++.exe",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\tb_matrix_mult.cpp.0.o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\matrix_mult.cpp.0.o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\syn_srcs.opt.bc",
+                "-fhls",
+                "-fhlstoplevel=array_mult",
+                "-vitis-hls=C:\\Xilinx\\Vitis_HLS\\2024.1",
+                "-fslxtrace",
+                "-Wl,-mllvm,-profilerOutputDirectory=C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\profiler\\0",
+                "-fslxpthreads",
+                "-lpthread",
+                "--sysroot=C:\\Xilinx\\Vitis_HLS\\2024.1\\tps\\mingw\\10.0.0\\win64.o\\nt"
+            ],
+            "exectime": 3.845261812210083,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\instrument\\\\app_0\\\\binary_dependencies.json']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\libexec\\clang-scan-deps.exe",
+                "--compilation-database=C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\compile_commands.json",
+                "--format=vitiscxx",
+                "--reuse-filemanager=false",
+                "--output=C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\binary_dependencies.json"
+            ],
+            "exectime": 3.3512308597564697,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\app.functionGraph']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/staticCallGraph.exe",
+                "-i",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "-o",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output\\app.functionGraph"
+            ],
+            "exectime": 1.0455546379089355,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\app.functionMapping']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/functionMapper.exe",
+                "--static-xml",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "--function-mapping",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output\\app.functionMapping",
+                "--ir-module",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "--fn",
+                "323"
+            ],
+            "exectime": 1.0169475078582764,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stdout.txt', 'C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\bin\\\\.tracing_stderr.txt']": {
+            "command": [
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\build\\app.exe"
+            ],
+            "exectime": 10.621657609939575,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\tracing\\csim\\build"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\output\\\\reduced_programmodel.app']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/optimizer.exe",
+                "-DFGPass",
+                "-appName=app",
+                "-outputDir",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output",
+                "-logDir",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\log",
+                "-pmout=C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output\\reduced_programmodel.app",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "-staticFile",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "-traceFile",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\profiler\\0\\app_0_0\\thread0000-trace.txt",
+                "-o",
+                "nul"
+            ],
+            "exectime": 3.140968084335327,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        },
+        "['C:\\\\repos\\\\FPGA\\\\lab2\\\\mat_mult\\\\array_mult\\\\hls\\\\csim\\\\code_analyzer\\\\.internal\\\\dataflow\\\\0\\\\taskgraph.json']": {
+            "command": [
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\/libexec/parallelismSelector.exe",
+                "-g",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output\\reduced_programmodel.app",
+                "--basepath",
+                "C:\\repos\\FPGA\\lab2\\mat_mult",
+                "--static-xml",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\static.xml",
+                "--fpga-part",
+                "xc7z020-clg400-1",
+                "--device-totals",
+                "c:\\xilinx\\vitis_hls\\2024.1\\vcxx\\data\\platform\\logic\\fpga.devicetotals",
+                "--clock-frequency",
+                "100.0",
+                "--out-dir",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output",
+                "--log-dir",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\log",
+                "--mapping",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\output\\app.functionMapping",
+                "--objective",
+                "none",
+                "--performance-target",
+                "target_both",
+                "--max-array-optimization-factor",
+                "1024",
+                "--complete-partition-limit",
+                "4",
+                "--lut-constraint",
+                "100.0",
+                "--ff-constraint",
+                "100.0",
+                "--dsp-constraint",
+                "100.0",
+                "--bram-constraint",
+                "100.0",
+                "--uram-constraint",
+                "100.0",
+                "--ir-module",
+                "C:\\repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\.internal\\instrument\\app_0\\project.symbols.bc",
+                "--max-iterations",
+                "1000",
+                "--max-iterations-branch-full-log",
+                "20",
+                "--df-id",
+                "0",
+                "--df-target",
+                "%F323"
+            ],
+            "exectime": 2.622605323791504,
+            "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+        }
+    }
+}

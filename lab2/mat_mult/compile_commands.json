@@ -1,0 +1,26 @@
+[
+  {
+    "directory": "C:\\repos\\FPGA\\lab2\\mat_mult",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\common\\technology\\autopilot",
+      "",
+      "-c",
+      "C:/repos/FPGA/lab2/matrix_mult.cpp"
+    ],
+    "file": "C:/repos/FPGA/lab2/matrix_mult.cpp"
+  },
+  {
+    "directory": "C:\\repos\\FPGA\\lab2\\mat_mult",
+    "arguments": [
+      "C:\\Xilinx\\Vitis_HLS\\2024.1\\vcxx\\libexec\\clang++.exe",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\Vitis_HLS\\2024.1\\include",
+      "",
+      "-c",
+      "C:/repos/FPGA/lab2/tb_matrix_mult.cpp"
+    ],
+    "file": "C:/repos/FPGA/lab2/tb_matrix_mult.cpp"
+  }
+]

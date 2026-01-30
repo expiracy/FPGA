@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vitis HLS Report for 'array_mult_Pipeline_VITIS_LOOP_26_1'
+================================================================
+* Date:           Fri Jan 30 10:34:19 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        array_mult
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.208 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       27|       27|  0.270 us|  0.270 us|   26|   26|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_26_1  |       25|       25|         1|          1|          1|    25|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     28|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     36|    -|
+|Register         |        -|    -|       7|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       7|     64|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln26_fu_138_p2                |         +|   0|  0|  13|           5|           1|
+    |icmp_ln26_fu_132_p2               |      icmp|   0|  0|  13|           5|           4|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  28|          11|           6|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1  |   9|          2|    5|         10|
+    |i_fu_56               |   9|          2|    5|         10|
+    |in_a_TDATA_blk_n      |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  36|          8|   12|         24|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_56      |  5|   0|    5|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  7|   0|    7|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |            Source Object            |    C Type    |
++--------------------------+-----+-----+------------+-------------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  array_mult_Pipeline_VITIS_LOOP_26_1|  return value|
+|in_a_TVALID               |   in|    1|        axis|                        in_a_V_data_V|       pointer|
+|in_a_TDATA                |   in|   32|        axis|                        in_a_V_data_V|       pointer|
+|in_a_store_data_address0  |  out|    5|   ap_memory|                      in_a_store_data|         array|
+|in_a_store_data_ce0       |  out|    1|   ap_memory|                      in_a_store_data|         array|
+|in_a_store_data_we0       |  out|    1|   ap_memory|                      in_a_store_data|         array|
+|in_a_store_data_d0        |  out|   32|   ap_memory|                      in_a_store_data|         array|
+|in_a_store_keep_address0  |  out|    5|   ap_memory|                      in_a_store_keep|         array|
+|in_a_store_keep_ce0       |  out|    1|   ap_memory|                      in_a_store_keep|         array|
+|in_a_store_keep_we0       |  out|    1|   ap_memory|                      in_a_store_keep|         array|
+|in_a_store_keep_d0        |  out|    4|   ap_memory|                      in_a_store_keep|         array|
+|in_a_store_strb_address0  |  out|    5|   ap_memory|                      in_a_store_strb|         array|
+|in_a_store_strb_ce0       |  out|    1|   ap_memory|                      in_a_store_strb|         array|
+|in_a_store_strb_we0       |  out|    1|   ap_memory|                      in_a_store_strb|         array|
+|in_a_store_strb_d0        |  out|    4|   ap_memory|                      in_a_store_strb|         array|
+|in_a_store_last_address0  |  out|    5|   ap_memory|                      in_a_store_last|         array|
+|in_a_store_last_ce0       |  out|    1|   ap_memory|                      in_a_store_last|         array|
+|in_a_store_last_we0       |  out|    1|   ap_memory|                      in_a_store_last|         array|
+|in_a_store_last_d0        |  out|    1|   ap_memory|                      in_a_store_last|         array|
+|in_a_TREADY               |  out|    1|        axis|                        in_a_V_last_V|       pointer|
+|in_a_TLAST                |   in|    1|        axis|                        in_a_V_last_V|       pointer|
+|in_a_TKEEP                |   in|    4|        axis|                        in_a_V_keep_V|       pointer|
+|in_a_TSTRB                |   in|    4|        axis|                        in_a_V_strb_V|       pointer|
++--------------------------+-----+-----+------------+-------------------------------------+--------------+
+

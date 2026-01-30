@@ -1,0 +1,3 @@
+relativeroot=C:/repos/FPGA/lab2/mat_mult
+original_argv=--mode hls --package --config C:\repos\FPGA\lab2\mat_mult\hls_config.cfg --work_dir array_mult 
+

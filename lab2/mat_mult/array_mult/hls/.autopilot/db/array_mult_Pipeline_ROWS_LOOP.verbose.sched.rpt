@@ -1,0 +1,362 @@
+
+
+================================================================
+== Vitis HLS Report for 'array_mult_Pipeline_ROWS_LOOP'
+================================================================
+* Date:           Fri Jan 30 10:34:18 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        array_mult
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       33|       33|  0.330 us|  0.330 us|   30|   30|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ROWS_LOOP  |       31|       31|        12|          5|          1|     5|       yes|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 12
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 1
+  Pipeline-0 : II = 5, D = 12, States = { 1 2 3 4 5 6 7 8 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.69>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1" [../matrix_mult.cpp:21]   --->   Operation 15 'alloca' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %result_V_data_V, i4 %result_V_keep_V, i4 %result_V_strb_V, i1 0, i1 %result_V_last_V, i1 0, i1 0, void @empty_7"   --->   Operation 16 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %result_V_last_V, i4 %result_V_strb_V, i4 %result_V_keep_V, i32 %result_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%in_b_load_21_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_21"   --->   Operation 18 'read' 'in_b_load_21_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%in_b_load_22_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_22"   --->   Operation 19 'read' 'in_b_load_22_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%in_b_load_20_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_20"   --->   Operation 20 'read' 'in_b_load_20_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%in_b_load_24_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_24"   --->   Operation 21 'read' 'in_b_load_24_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%in_b_load_23_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_23"   --->   Operation 22 'read' 'in_b_load_23_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%in_b_load_16_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_16"   --->   Operation 23 'read' 'in_b_load_16_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%in_b_load_17_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_17"   --->   Operation 24 'read' 'in_b_load_17_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%in_b_load_15_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_15"   --->   Operation 25 'read' 'in_b_load_15_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%in_b_load_19_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_19"   --->   Operation 26 'read' 'in_b_load_19_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%in_b_load_18_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_18"   --->   Operation 27 'read' 'in_b_load_18_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%in_b_load_11_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_11"   --->   Operation 28 'read' 'in_b_load_11_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%in_b_load_12_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_12"   --->   Operation 29 'read' 'in_b_load_12_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%in_b_load_10_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_10"   --->   Operation 30 'read' 'in_b_load_10_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%in_b_load_14_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_14"   --->   Operation 31 'read' 'in_b_load_14_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%in_b_load_13_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_13"   --->   Operation 32 'read' 'in_b_load_13_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%in_b_load_6_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_6"   --->   Operation 33 'read' 'in_b_load_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%in_b_load_7_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_7"   --->   Operation 34 'read' 'in_b_load_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%in_b_load_5_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_5"   --->   Operation 35 'read' 'in_b_load_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%in_b_load_9_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_9"   --->   Operation 36 'read' 'in_b_load_9_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%in_b_load_8_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_8"   --->   Operation 37 'read' 'in_b_load_8_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%in_b_load_1_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_1"   --->   Operation 38 'read' 'in_b_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%in_b_load_2_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_2"   --->   Operation 39 'read' 'in_b_load_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%in_b_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load"   --->   Operation 40 'read' 'in_b_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%in_b_load_4_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_4"   --->   Operation 41 'read' 'in_b_load_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%in_b_load_3_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_b_load_3"   --->   Operation 42 'read' 'in_b_load_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (1.58ns)   --->   "%store_ln21 = store i3 0, i3 %i_1" [../matrix_mult.cpp:21]   --->   Operation 43 'store' 'store_ln21' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln0 = br void %COLS_LOOP"   --->   Operation 44 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%i = load i3 %i_1" [../matrix_mult.cpp:30]   --->   Operation 45 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (1.65ns)   --->   "%icmp_ln30 = icmp_eq  i3 %i, i3 5" [../matrix_mult.cpp:30]   --->   Operation 46 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 1.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (1.65ns)   --->   "%add_ln30 = add i3 %i, i3 1" [../matrix_mult.cpp:30]   --->   Operation 47 'add' 'add_ln30' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %icmp_ln30, void %COLS_LOOP.split, void %for.end52.exitStub" [../matrix_mult.cpp:30]   --->   Operation 48 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln30 = zext i3 %i" [../matrix_mult.cpp:30]   --->   Operation 49 'zext' 'zext_ln30' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %i, i2 0" [../matrix_mult.cpp:30]   --->   Operation 50 'bitconcatenate' 'tmp' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_shl = zext i5 %tmp" [../matrix_mult.cpp:30]   --->   Operation 51 'zext' 'p_shl' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (1.78ns)   --->   "%mul_i_i250 = add i6 %p_shl, i6 %zext_ln30" [../matrix_mult.cpp:30]   --->   Operation 52 'add' 'mul_i_i250' <Predicate = (!icmp_ln30)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln40 = zext i6 %mul_i_i250" [../matrix_mult.cpp:40]   --->   Operation 53 'zext' 'zext_ln40' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln40 = trunc i6 %mul_i_i250" [../matrix_mult.cpp:40]   --->   Operation 54 'trunc' 'trunc_ln40' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%in_a_store_data_addr = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln40" [../matrix_mult.cpp:39]   --->   Operation 55 'getelementptr' 'in_a_store_data_addr' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_1 : Operation 56 [2/2] (2.32ns)   --->   "%in_a_store_data_load = load i5 %in_a_store_data_addr" [../matrix_mult.cpp:39]   --->   Operation 56 'load' 'in_a_store_data_load' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 57 [1/1] (1.58ns)   --->   "%store_ln21 = store i3 %add_ln30, i3 %i_1" [../matrix_mult.cpp:21]   --->   Operation 57 'store' 'store_ln21' <Predicate = (!icmp_ln30)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 4.10>
+ST_2 : Operation 58 [1/2] (2.32ns)   --->   "%in_a_store_data_load = load i5 %in_a_store_data_addr" [../matrix_mult.cpp:39]   --->   Operation 58 'load' 'in_a_store_data_load' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_2 : Operation 59 [1/1] (1.78ns)   --->   "%add_ln39_1 = add i5 %trunc_ln40, i5 2" [../matrix_mult.cpp:39]   --->   Operation 59 'add' 'add_ln39_1' <Predicate = (!icmp_ln30)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln39_1 = zext i5 %add_ln39_1" [../matrix_mult.cpp:39]   --->   Operation 60 'zext' 'zext_ln39_1' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%in_a_store_data_addr_2 = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln39_1" [../matrix_mult.cpp:39]   --->   Operation 61 'getelementptr' 'in_a_store_data_addr_2' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 62 [2/2] (2.32ns)   --->   "%in_a_store_data_load_2 = load i5 %in_a_store_data_addr_2" [../matrix_mult.cpp:39]   --->   Operation 62 'load' 'in_a_store_data_load_2' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_2 : Operation 63 [1/1] (1.78ns)   --->   "%add_ln39_2 = add i5 %trunc_ln40, i5 3" [../matrix_mult.cpp:39]   --->   Operation 63 'add' 'add_ln39_2' <Predicate = (!icmp_ln30)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln39_2 = zext i5 %add_ln39_2" [../matrix_mult.cpp:39]   --->   Operation 64 'zext' 'zext_ln39_2' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%in_a_store_data_addr_3 = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln39_2" [../matrix_mult.cpp:39]   --->   Operation 65 'getelementptr' 'in_a_store_data_addr_3' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_2 : Operation 66 [2/2] (2.32ns)   --->   "%in_a_store_data_load_3 = load i5 %in_a_store_data_addr_3" [../matrix_mult.cpp:39]   --->   Operation 66 'load' 'in_a_store_data_load_3' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 67 [1/1] (1.78ns)   --->   "%add_ln40 = add i5 %trunc_ln40, i5 4" [../matrix_mult.cpp:40]   --->   Operation 67 'add' 'add_ln40' <Predicate = (!icmp_ln30)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln40_1 = zext i5 %add_ln40" [../matrix_mult.cpp:40]   --->   Operation 68 'zext' 'zext_ln40_1' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (1.78ns)   --->   "%add_ln39 = add i5 %trunc_ln40, i5 1" [../matrix_mult.cpp:39]   --->   Operation 69 'add' 'add_ln39' <Predicate = (!icmp_ln30)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln39 = zext i5 %add_ln39" [../matrix_mult.cpp:39]   --->   Operation 70 'zext' 'zext_ln39' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%in_a_store_data_addr_1 = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln39" [../matrix_mult.cpp:39]   --->   Operation 71 'getelementptr' 'in_a_store_data_addr_1' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 72 [2/2] (2.32ns)   --->   "%in_a_store_data_load_1 = load i5 %in_a_store_data_addr_1" [../matrix_mult.cpp:39]   --->   Operation 72 'load' 'in_a_store_data_load_1' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_3 : Operation 73 [1/2] (2.32ns)   --->   "%in_a_store_data_load_2 = load i5 %in_a_store_data_addr_2" [../matrix_mult.cpp:39]   --->   Operation 73 'load' 'in_a_store_data_load_2' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_3 : Operation 74 [1/2] (2.32ns)   --->   "%in_a_store_data_load_3 = load i5 %in_a_store_data_addr_3" [../matrix_mult.cpp:39]   --->   Operation 74 'load' 'in_a_store_data_load_3' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%in_a_store_data_addr_4 = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln40_1" [../matrix_mult.cpp:39]   --->   Operation 75 'getelementptr' 'in_a_store_data_addr_4' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 76 [2/2] (2.32ns)   --->   "%in_a_store_data_load_4 = load i5 %in_a_store_data_addr_4" [../matrix_mult.cpp:39]   --->   Operation 76 'load' 'in_a_store_data_load_4' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_3 : Operation 77 [2/2] (6.91ns)   --->   "%mul_ln39_2 = mul i32 %in_a_store_data_load, i32 %in_b_load_read" [../matrix_mult.cpp:39]   --->   Operation 77 'mul' 'mul_ln39_2' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [2/2] (6.91ns)   --->   "%mul_ln39_7 = mul i32 %in_a_store_data_load, i32 %in_b_load_5_read" [../matrix_mult.cpp:39]   --->   Operation 78 'mul' 'mul_ln39_7' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [2/2] (6.91ns)   --->   "%mul_ln39_12 = mul i32 %in_a_store_data_load, i32 %in_b_load_10_read" [../matrix_mult.cpp:39]   --->   Operation 79 'mul' 'mul_ln39_12' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [2/2] (6.91ns)   --->   "%mul_ln39_17 = mul i32 %in_a_store_data_load, i32 %in_b_load_15_read" [../matrix_mult.cpp:39]   --->   Operation 80 'mul' 'mul_ln39_17' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [2/2] (6.91ns)   --->   "%mul_ln39_22 = mul i32 %in_a_store_data_load, i32 %in_b_load_20_read" [../matrix_mult.cpp:39]   --->   Operation 81 'mul' 'mul_ln39_22' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.91>
+ST_4 : Operation 82 [1/2] (2.32ns)   --->   "%in_a_store_data_load_1 = load i5 %in_a_store_data_addr_1" [../matrix_mult.cpp:39]   --->   Operation 82 'load' 'in_a_store_data_load_1' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_4 : Operation 83 [1/2] (2.32ns)   --->   "%in_a_store_data_load_4 = load i5 %in_a_store_data_addr_4" [../matrix_mult.cpp:39]   --->   Operation 83 'load' 'in_a_store_data_load_4' <Predicate = (!icmp_ln30)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_4 : Operation 84 [2/2] (6.91ns)   --->   "%mul_ln39 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_3_read" [../matrix_mult.cpp:39]   --->   Operation 84 'mul' 'mul_ln39' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [1/2] (6.91ns)   --->   "%mul_ln39_2 = mul i32 %in_a_store_data_load, i32 %in_b_load_read" [../matrix_mult.cpp:39]   --->   Operation 85 'mul' 'mul_ln39_2' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [2/2] (6.91ns)   --->   "%mul_ln39_3 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_2_read" [../matrix_mult.cpp:39]   --->   Operation 86 'mul' 'mul_ln39_3' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [2/2] (6.91ns)   --->   "%mul_ln39_5 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_8_read" [../matrix_mult.cpp:39]   --->   Operation 87 'mul' 'mul_ln39_5' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [1/2] (6.91ns)   --->   "%mul_ln39_7 = mul i32 %in_a_store_data_load, i32 %in_b_load_5_read" [../matrix_mult.cpp:39]   --->   Operation 88 'mul' 'mul_ln39_7' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [2/2] (6.91ns)   --->   "%mul_ln39_8 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_7_read" [../matrix_mult.cpp:39]   --->   Operation 89 'mul' 'mul_ln39_8' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [2/2] (6.91ns)   --->   "%mul_ln39_10 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_13_read" [../matrix_mult.cpp:39]   --->   Operation 90 'mul' 'mul_ln39_10' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [1/2] (6.91ns)   --->   "%mul_ln39_12 = mul i32 %in_a_store_data_load, i32 %in_b_load_10_read" [../matrix_mult.cpp:39]   --->   Operation 91 'mul' 'mul_ln39_12' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [1/2] (6.91ns)   --->   "%mul_ln39_17 = mul i32 %in_a_store_data_load, i32 %in_b_load_15_read" [../matrix_mult.cpp:39]   --->   Operation 92 'mul' 'mul_ln39_17' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [1/2] (6.91ns)   --->   "%mul_ln39_22 = mul i32 %in_a_store_data_load, i32 %in_b_load_20_read" [../matrix_mult.cpp:39]   --->   Operation 93 'mul' 'mul_ln39_22' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.91>
+ST_5 : Operation 94 [1/2] (6.91ns)   --->   "%mul_ln39 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_3_read" [../matrix_mult.cpp:39]   --->   Operation 94 'mul' 'mul_ln39' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [2/2] (6.91ns)   --->   "%mul_ln39_1 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_4_read" [../matrix_mult.cpp:39]   --->   Operation 95 'mul' 'mul_ln39_1' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 96 [1/2] (6.91ns)   --->   "%mul_ln39_3 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_2_read" [../matrix_mult.cpp:39]   --->   Operation 96 'mul' 'mul_ln39_3' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 97 [2/2] (6.91ns)   --->   "%mul_ln39_4 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_1_read" [../matrix_mult.cpp:39]   --->   Operation 97 'mul' 'mul_ln39_4' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 98 [1/2] (6.91ns)   --->   "%mul_ln39_5 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_8_read" [../matrix_mult.cpp:39]   --->   Operation 98 'mul' 'mul_ln39_5' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 99 [2/2] (6.91ns)   --->   "%mul_ln39_6 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_9_read" [../matrix_mult.cpp:39]   --->   Operation 99 'mul' 'mul_ln39_6' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 100 [1/2] (6.91ns)   --->   "%mul_ln39_8 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_7_read" [../matrix_mult.cpp:39]   --->   Operation 100 'mul' 'mul_ln39_8' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 101 [2/2] (6.91ns)   --->   "%mul_ln39_9 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_6_read" [../matrix_mult.cpp:39]   --->   Operation 101 'mul' 'mul_ln39_9' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 102 [1/2] (6.91ns)   --->   "%mul_ln39_10 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_13_read" [../matrix_mult.cpp:39]   --->   Operation 102 'mul' 'mul_ln39_10' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 103 [2/2] (6.91ns)   --->   "%mul_ln39_11 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_14_read" [../matrix_mult.cpp:39]   --->   Operation 103 'mul' 'mul_ln39_11' <Predicate = (!icmp_ln30)> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.91>
+ST_6 : Operation 104 [1/2] (6.91ns)   --->   "%mul_ln39_1 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_4_read" [../matrix_mult.cpp:39]   --->   Operation 104 'mul' 'mul_ln39_1' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 105 [1/2] (6.91ns)   --->   "%mul_ln39_4 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_1_read" [../matrix_mult.cpp:39]   --->   Operation 105 'mul' 'mul_ln39_4' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [1/2] (6.91ns)   --->   "%mul_ln39_6 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_9_read" [../matrix_mult.cpp:39]   --->   Operation 106 'mul' 'mul_ln39_6' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 107 [1/2] (6.91ns)   --->   "%mul_ln39_9 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_6_read" [../matrix_mult.cpp:39]   --->   Operation 107 'mul' 'mul_ln39_9' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 108 [1/2] (6.91ns)   --->   "%mul_ln39_11 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_14_read" [../matrix_mult.cpp:39]   --->   Operation 108 'mul' 'mul_ln39_11' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 109 [2/2] (6.91ns)   --->   "%mul_ln39_13 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_12_read" [../matrix_mult.cpp:39]   --->   Operation 109 'mul' 'mul_ln39_13' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 110 [2/2] (6.91ns)   --->   "%mul_ln39_14 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_11_read" [../matrix_mult.cpp:39]   --->   Operation 110 'mul' 'mul_ln39_14' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 111 [2/2] (6.91ns)   --->   "%mul_ln39_15 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_18_read" [../matrix_mult.cpp:39]   --->   Operation 111 'mul' 'mul_ln39_15' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 112 [2/2] (6.91ns)   --->   "%mul_ln39_16 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_19_read" [../matrix_mult.cpp:39]   --->   Operation 112 'mul' 'mul_ln39_16' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 113 [2/2] (6.91ns)   --->   "%mul_ln39_18 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_17_read" [../matrix_mult.cpp:39]   --->   Operation 113 'mul' 'mul_ln39_18' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.91>
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "%in_a_store_last_addr = getelementptr i1 %in_a_store_last, i64 0, i64 %zext_ln40_1" [../matrix_mult.cpp:40]   --->   Operation 114 'getelementptr' 'in_a_store_last_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 115 [2/2] (2.32ns)   --->   "%mult_acc_last = load i5 %in_a_store_last_addr" [../matrix_mult.cpp:40]   --->   Operation 115 'load' 'mult_acc_last' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25> <RAM>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%in_a_store_keep_addr = getelementptr i4 %in_a_store_keep, i64 0, i64 %zext_ln40_1" [../matrix_mult.cpp:40]   --->   Operation 116 'getelementptr' 'in_a_store_keep_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 117 [2/2] (2.32ns)   --->   "%mult_acc_keep = load i5 %in_a_store_keep_addr" [../matrix_mult.cpp:40]   --->   Operation 117 'load' 'mult_acc_keep' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 25> <RAM>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%in_a_store_strb_addr = getelementptr i4 %in_a_store_strb, i64 0, i64 %zext_ln40_1" [../matrix_mult.cpp:40]   --->   Operation 118 'getelementptr' 'in_a_store_strb_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [2/2] (2.32ns)   --->   "%mult_acc_strb = load i5 %in_a_store_strb_addr" [../matrix_mult.cpp:40]   --->   Operation 119 'load' 'mult_acc_strb' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 25> <RAM>
+ST_7 : Operation 120 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_4 = add i32 %mul_ln39, i32 %mul_ln39_1" [../matrix_mult.cpp:39]   --->   Operation 120 'add' 'add_ln39_4' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 121 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln39_5 = add i32 %add_ln39_4, i32 %mul_ln39_3" [../matrix_mult.cpp:39]   --->   Operation 121 'add' 'add_ln39_5' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 122 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_8 = add i32 %mul_ln39_5, i32 %mul_ln39_6" [../matrix_mult.cpp:39]   --->   Operation 122 'add' 'add_ln39_8' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 123 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln39_9 = add i32 %add_ln39_8, i32 %mul_ln39_8" [../matrix_mult.cpp:39]   --->   Operation 123 'add' 'add_ln39_9' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 124 [1/2] (6.91ns)   --->   "%mul_ln39_13 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_12_read" [../matrix_mult.cpp:39]   --->   Operation 124 'mul' 'mul_ln39_13' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 125 [1/2] (6.91ns)   --->   "%mul_ln39_14 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_11_read" [../matrix_mult.cpp:39]   --->   Operation 125 'mul' 'mul_ln39_14' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 126 [1/2] (6.91ns)   --->   "%mul_ln39_15 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_18_read" [../matrix_mult.cpp:39]   --->   Operation 126 'mul' 'mul_ln39_15' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 127 [1/2] (6.91ns)   --->   "%mul_ln39_16 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_19_read" [../matrix_mult.cpp:39]   --->   Operation 127 'mul' 'mul_ln39_16' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 128 [1/2] (6.91ns)   --->   "%mul_ln39_18 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_17_read" [../matrix_mult.cpp:39]   --->   Operation 128 'mul' 'mul_ln39_18' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 129 [2/2] (6.91ns)   --->   "%mul_ln39_19 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_16_read" [../matrix_mult.cpp:39]   --->   Operation 129 'mul' 'mul_ln39_19' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 130 [2/2] (6.91ns)   --->   "%mul_ln39_20 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_23_read" [../matrix_mult.cpp:39]   --->   Operation 130 'mul' 'mul_ln39_20' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 131 [2/2] (6.91ns)   --->   "%mul_ln39_21 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_24_read" [../matrix_mult.cpp:39]   --->   Operation 131 'mul' 'mul_ln39_21' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 132 [2/2] (6.91ns)   --->   "%mul_ln39_23 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_22_read" [../matrix_mult.cpp:39]   --->   Operation 132 'mul' 'mul_ln39_23' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 133 [2/2] (6.91ns)   --->   "%mul_ln39_24 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_21_read" [../matrix_mult.cpp:39]   --->   Operation 133 'mul' 'mul_ln39_24' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 167 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 167 'ret' 'ret_ln0' <Predicate = (icmp_ln30)> <Delay = 1.58>
+
+State 8 <SV = 7> <Delay = 6.91>
+ST_8 : Operation 134 [1/2] (2.32ns)   --->   "%mult_acc_last = load i5 %in_a_store_last_addr" [../matrix_mult.cpp:40]   --->   Operation 134 'load' 'mult_acc_last' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25> <RAM>
+ST_8 : Operation 135 [1/2] (2.32ns)   --->   "%mult_acc_keep = load i5 %in_a_store_keep_addr" [../matrix_mult.cpp:40]   --->   Operation 135 'load' 'mult_acc_keep' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 25> <RAM>
+ST_8 : Operation 136 [1/2] (2.32ns)   --->   "%mult_acc_strb = load i5 %in_a_store_strb_addr" [../matrix_mult.cpp:40]   --->   Operation 136 'load' 'mult_acc_strb' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 25> <RAM>
+ST_8 : Operation 137 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_3 = add i32 %mul_ln39_4, i32 %mul_ln39_2" [../matrix_mult.cpp:39]   --->   Operation 137 'add' 'add_ln39_3' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 138 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%mult_acc_data = add i32 %add_ln39_5, i32 %add_ln39_3" [../matrix_mult.cpp:39]   --->   Operation 138 'add' 'mult_acc_data' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 139 [1/1] (1.29ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %result_V_data_V, i4 %result_V_keep_V, i4 %result_V_strb_V, i1 %result_V_last_V, i32 %mult_acc_data, i4 %mult_acc_keep, i4 %mult_acc_strb, i1 0" [../matrix_mult.cpp:45]   --->   Operation 139 'write' 'write_ln45' <Predicate = true> <Delay = 1.29> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_8 : Operation 140 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_7 = add i32 %mul_ln39_9, i32 %mul_ln39_7" [../matrix_mult.cpp:39]   --->   Operation 140 'add' 'add_ln39_7' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 141 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%mult_acc_data_1 = add i32 %add_ln39_9, i32 %add_ln39_7" [../matrix_mult.cpp:39]   --->   Operation 141 'add' 'mult_acc_data_1' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 142 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_12 = add i32 %mul_ln39_10, i32 %mul_ln39_11" [../matrix_mult.cpp:39]   --->   Operation 142 'add' 'add_ln39_12' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 143 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln39_13 = add i32 %add_ln39_12, i32 %mul_ln39_13" [../matrix_mult.cpp:39]   --->   Operation 143 'add' 'add_ln39_13' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 144 [1/2] (6.91ns)   --->   "%mul_ln39_19 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_16_read" [../matrix_mult.cpp:39]   --->   Operation 144 'mul' 'mul_ln39_19' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 145 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_16 = add i32 %mul_ln39_15, i32 %mul_ln39_16" [../matrix_mult.cpp:39]   --->   Operation 145 'add' 'add_ln39_16' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 146 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln39_17 = add i32 %add_ln39_16, i32 %mul_ln39_18" [../matrix_mult.cpp:39]   --->   Operation 146 'add' 'add_ln39_17' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 147 [1/2] (6.91ns)   --->   "%mul_ln39_20 = mul i32 %in_a_store_data_load_3, i32 %in_b_load_23_read" [../matrix_mult.cpp:39]   --->   Operation 147 'mul' 'mul_ln39_20' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 148 [1/2] (6.91ns)   --->   "%mul_ln39_21 = mul i32 %in_a_store_data_load_4, i32 %in_b_load_24_read" [../matrix_mult.cpp:39]   --->   Operation 148 'mul' 'mul_ln39_21' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 149 [1/2] (6.91ns)   --->   "%mul_ln39_23 = mul i32 %in_a_store_data_load_2, i32 %in_b_load_22_read" [../matrix_mult.cpp:39]   --->   Operation 149 'mul' 'mul_ln39_23' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 150 [1/2] (6.91ns)   --->   "%mul_ln39_24 = mul i32 %in_a_store_data_load_1, i32 %in_b_load_21_read" [../matrix_mult.cpp:39]   --->   Operation 150 'mul' 'mul_ln39_24' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 4.37>
+ST_9 : Operation 151 [1/1] (1.29ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %result_V_data_V, i4 %result_V_keep_V, i4 %result_V_strb_V, i1 %result_V_last_V, i32 %mult_acc_data_1, i4 %mult_acc_keep, i4 %mult_acc_strb, i1 0" [../matrix_mult.cpp:45]   --->   Operation 151 'write' 'write_ln45' <Predicate = true> <Delay = 1.29> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_9 : Operation 152 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_11 = add i32 %mul_ln39_14, i32 %mul_ln39_12" [../matrix_mult.cpp:39]   --->   Operation 152 'add' 'add_ln39_11' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 153 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%mult_acc_data_2 = add i32 %add_ln39_13, i32 %add_ln39_11" [../matrix_mult.cpp:39]   --->   Operation 153 'add' 'mult_acc_data_2' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 154 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_15 = add i32 %mul_ln39_19, i32 %mul_ln39_17" [../matrix_mult.cpp:39]   --->   Operation 154 'add' 'add_ln39_15' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 155 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%mult_acc_data_3 = add i32 %add_ln39_17, i32 %add_ln39_15" [../matrix_mult.cpp:39]   --->   Operation 155 'add' 'mult_acc_data_3' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 156 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_20 = add i32 %mul_ln39_20, i32 %mul_ln39_21" [../matrix_mult.cpp:39]   --->   Operation 156 'add' 'add_ln39_20' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 157 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln39_21 = add i32 %add_ln39_20, i32 %mul_ln39_23" [../matrix_mult.cpp:39]   --->   Operation 157 'add' 'add_ln39_21' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 4.37>
+ST_10 : Operation 158 [1/1] (1.29ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %result_V_data_V, i4 %result_V_keep_V, i4 %result_V_strb_V, i1 %result_V_last_V, i32 %mult_acc_data_2, i4 %mult_acc_keep, i4 %mult_acc_strb, i1 0" [../matrix_mult.cpp:45]   --->   Operation 158 'write' 'write_ln45' <Predicate = true> <Delay = 1.29> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_10 : Operation 159 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39_19 = add i32 %mul_ln39_24, i32 %mul_ln39_22" [../matrix_mult.cpp:39]   --->   Operation 159 'add' 'add_ln39_19' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 160 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%mult_acc_data_4 = add i32 %add_ln39_21, i32 %add_ln39_19" [../matrix_mult.cpp:39]   --->   Operation 160 'add' 'mult_acc_data_4' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 10> <Delay = 1.29>
+ST_11 : Operation 161 [1/1] (1.29ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %result_V_data_V, i4 %result_V_keep_V, i4 %result_V_strb_V, i1 %result_V_last_V, i32 %mult_acc_data_3, i4 %mult_acc_keep, i4 %mult_acc_strb, i1 0" [../matrix_mult.cpp:45]   --->   Operation 161 'write' 'write_ln45' <Predicate = true> <Delay = 1.29> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+
+State 12 <SV = 11> <Delay = 1.29>
+ST_12 : Operation 162 [1/1] (0.00ns)   --->   "%specpipeline_ln21 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [../matrix_mult.cpp:21]   --->   Operation 162 'specpipeline' 'specpipeline_ln21' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 163 [1/1] (0.00ns)   --->   "%speclooptripcount_ln21 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 5, i64 5, i64 5" [../matrix_mult.cpp:21]   --->   Operation 163 'speclooptripcount' 'speclooptripcount_ln21' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 164 [1/1] (0.00ns)   --->   "%specloopname_ln30 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [../matrix_mult.cpp:30]   --->   Operation 164 'specloopname' 'specloopname_ln30' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 165 [1/1] (1.29ns)   --->   "%write_ln45 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %result_V_data_V, i4 %result_V_keep_V, i4 %result_V_strb_V, i1 %result_V_last_V, i32 %mult_acc_data_4, i4 %mult_acc_keep, i4 %mult_acc_strb, i1 %mult_acc_last" [../matrix_mult.cpp:45]   --->   Operation 165 'write' 'write_ln45' <Predicate = true> <Delay = 1.29> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_12 : Operation 166 [1/1] (0.00ns)   --->   "%br_ln30 = br void %COLS_LOOP" [../matrix_mult.cpp:30]   --->   Operation 166 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.690ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln21', ../matrix_mult.cpp:21) of constant 0 on local variable 'i', ../matrix_mult.cpp:21 [62]  (1.588 ns)
+	'load' operation 3 bit ('i', ../matrix_mult.cpp:30) on local variable 'i', ../matrix_mult.cpp:21 [65]  (0.000 ns)
+	'add' operation 6 bit ('mul_i_i250', ../matrix_mult.cpp:30) [76]  (1.780 ns)
+	'getelementptr' operation 5 bit ('in_a_store_data_addr', ../matrix_mult.cpp:39) [87]  (0.000 ns)
+	'load' operation 32 bit ('in_a_store_data_load', ../matrix_mult.cpp:39) on array 'in_a_store_data' [88]  (2.322 ns)
+
+ <State 2>: 4.102ns
+The critical path consists of the following:
+	'add' operation 5 bit ('add_ln39_1', ../matrix_mult.cpp:39) [93]  (1.780 ns)
+	'getelementptr' operation 5 bit ('in_a_store_data_addr_2', ../matrix_mult.cpp:39) [95]  (0.000 ns)
+	'load' operation 32 bit ('in_a_store_data_load_2', ../matrix_mult.cpp:39) on array 'in_a_store_data' [96]  (2.322 ns)
+
+ <State 3>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln39_2', ../matrix_mult.cpp:39) [105]  (6.912 ns)
+
+ <State 4>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln39', ../matrix_mult.cpp:39) [103]  (6.912 ns)
+
+ <State 5>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln39', ../matrix_mult.cpp:39) [103]  (6.912 ns)
+
+ <State 6>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln39_1', ../matrix_mult.cpp:39) [104]  (6.912 ns)
+
+ <State 7>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln39_13', ../matrix_mult.cpp:39) [126]  (6.912 ns)
+
+ <State 8>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 32 bit ('mul_ln39_19', ../matrix_mult.cpp:39) [137]  (6.912 ns)
+
+ <State 9>: 4.371ns
+The critical path consists of the following:
+	'add' operation 32 bit ('add_ln39_11', ../matrix_mult.cpp:39) [128]  (0.000 ns)
+	'add' operation 32 bit ('mult_acc.data', ../matrix_mult.cpp:39) [131]  (4.371 ns)
+
+ <State 10>: 4.371ns
+The critical path consists of the following:
+	'add' operation 32 bit ('add_ln39_19', ../matrix_mult.cpp:39) [148]  (0.000 ns)
+	'add' operation 32 bit ('mult_acc.data', ../matrix_mult.cpp:39) [151]  (4.371 ns)
+
+ <State 11>: 1.290ns
+The critical path consists of the following:
+	axis write operation ('write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45) [142]  (1.290 ns)
+
+ <State 12>: 1.290ns
+The critical path consists of the following:
+	axis write operation ('write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45) [152]  (1.290 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

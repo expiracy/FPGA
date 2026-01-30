@@ -1,0 +1,7 @@
+{
+  "workspaceRoot": "C:\\repos\\FPGA\\lab2",
+  "mapping": {
+    "tb_matrix_mult.cpp": "mat_mult",
+    "matrix_mult.cpp": "mat_mult"
+  }
+}

@@ -1,0 +1,80 @@
+<ENTRY>
+{
+ "thisFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\csim\\code_analyzer\\app.csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jan 30 10:32:12 2026",
+ "timestampMillis": "1769769132023",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jan 30 10:32:12 2026",
+ "timestampMillis": "1769769132024",
+ "buildStep": {
+  "cmdId": "effe0b8e-fdc6-11f0-bf99-7486e21c6500",
+  "name": "vitis_c++",
+  "logFile": "",
+  "commandLine": "vitis_c++ code_analyzer",
+  "args": [
+   "code_analyzer"
+  ],
+  "iniFiles": [],
+  "cwd": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 30 10:32:12 2026",
+ "timestampMillis": "1769769132025",
+ "status": {
+  "cmdId": "effe0b8e-fdc6-11f0-bf99-7486e21c6500",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 30 10:32:51 2026",
+ "timestampMillis": "1769769171846",
+ "status": {
+  "cmdId": "effe0b8e-fdc6-11f0-bf99-7486e21c6500",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 30 10:32:51 2026",
+ "timestampMillis": "1769769171847",
+ "report": {
+  "path": "C:\\repos\\FPGA\\lab2\\mat_mult",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "VCXX_CODE_ANALYZER",
+  "cmdId": "effe0b8e-fdc6-11f0-bf99-7486e21c6500"
+ }
+}
+</ENTRY>

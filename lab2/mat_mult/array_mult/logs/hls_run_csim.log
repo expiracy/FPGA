@@ -1,0 +1,75 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output C:/repos/FPGA/lab2/mat_mult/array_mult\array_mult.hlsrun_csim_summary, at 01/30/26 10:32:03
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir C:/repos/FPGA/lab2/mat_mult/array_mult -config C:/repos/FPGA/lab2/mat_mult/hls_config.cfg -cmdlineconfig C:/repos/FPGA/lab2/mat_mult/array_mult/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Jan 30 10:32:06 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'u2227951' on host 'e10-e21c6500.ads.warwick.ac.uk' (Windows NT_amd64 version 10.0) on Fri Jan 30 10:32:08 +0000 2026
+INFO: [HLS 200-10] In directory 'C:/repos/FPGA/lab2/mat_mult'
+INFO: [HLS 200-2005] Using work_dir C:/repos/FPGA/lab2/mat_mult/array_mult 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/repos/FPGA/lab2/matrix_mult.cpp' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/repos/FPGA/lab2/matrix_mult.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/repos/FPGA/lab2/matrix_mult.h' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/repos/FPGA/lab2/matrix_mult.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/repos/FPGA/lab2/tb_matrix_mult.cpp' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/repos/FPGA/lab2/tb_matrix_mult.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=array_mult' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(5)
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [SIM 211-200] Compiling source code ../matrix_mult.cpp as hardware code with instrumentation
+INFO: [SIM 211-200] Compiling source code ../tb_matrix_mult.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Compiling source code ../matrix_mult.cpp as test bench code with instrumentation
+INFO: [SIM 211-200] Linking hardware code
+INFO: [SIM 211-200] Transforming hardware bitcode
+INFO: [SIM 211-200] Linking executable
+INFO: [SIM 211-200] Determining source code dependencies
+INFO: [SIM 211-200] Generating static call graph
+INFO: [SIM 211-200] Analyzing Interfaces
+INFO: [SIM 211-200] Running executable
+Random seed: 1549294172
+6	10	3	7	5	
+10	2	0	0	2	
+7	0	7	10	2	
+5	1	6	5	4	
+0	7	10	2	2	
+
+8	9	0	8	8	
+1	5	8	3	7	
+0	1	9	0	10	
+1	4	7	4	9	
+1	1	2	0	1	
+
+Expected array:
+70	140	166	106	216	
+84	102	20	86	96	
+68	112	137	96	218	
+50	80	105	63	156	
+11	55	164	29	169	
+
+Array accelerator:
+70	140	166	106	216	
+84	102	20	86	96	
+68	112	137	96	218	
+50	80	105	63	156	
+11	55	164	29	169	
+
+
+INFO: [SIM 211-200] Analyzing trace data
+INFO: [SIM 211-208] Running Code Analyzer
+INFO: [SIM 211-210] Code Analyzer finished
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 45.508 seconds; peak allocated memory: 138.094 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 50s

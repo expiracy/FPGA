@@ -1,0 +1,160 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output C:/repos/FPGA/lab2/mat_mult/array_mult\array_mult.hlscompile_summary, at 01/30/26 10:33:53
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir C:/repos/FPGA/lab2/mat_mult/array_mult -config C:/repos/FPGA/lab2/mat_mult/hls_config.cfg -cmdlineconfig C:/repos/FPGA/lab2/mat_mult/array_mult/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Fri Jan 30 10:33:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'u2227951' on host 'e10-e21c6500.ads.warwick.ac.uk' (Windows NT_amd64 version 10.0) on Fri Jan 30 10:33:55 +0000 2026
+INFO: [HLS 200-10] In directory 'C:/repos/FPGA/lab2/mat_mult'
+INFO: [HLS 200-2005] Using work_dir C:/repos/FPGA/lab2/mat_mult/array_mult 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/repos/FPGA/lab2/matrix_mult.cpp' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/repos/FPGA/lab2/matrix_mult.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=C:/repos/FPGA/lab2/matrix_mult.h' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/repos/FPGA/lab2/matrix_mult.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=C:/repos/FPGA/lab2/tb_matrix_mult.cpp' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/repos/FPGA/lab2/tb_matrix_mult.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=array_mult' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/repos/FPGA/lab2/mat_mult/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.618 seconds; current allocated memory: 131.324 MB.
+INFO: [HLS 200-10] Analyzing design file '../matrix_mult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.767 seconds; current allocated memory: 134.188 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,768 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 145 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 120 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 115 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 115 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 116 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 189 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 429 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 258 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 258 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 210 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 203 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/repos/FPGA/lab2/mat_mult/array_mult/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-376] automatically set the pipeline for Loop< VITIS_LOOP_26_1> at ../matrix_mult.cpp:26:19 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< ROWS_LOOP> at ../matrix_mult.cpp:30:13 
+INFO: [HLS 214-291] Loop 'COLS_LOOP' is marked as complete unroll implied by the pipeline pragma (../matrix_mult.cpp:32:14)
+INFO: [HLS 214-291] Loop 'MULT_ACC_LOOP' is marked as complete unroll implied by the pipeline pragma (../matrix_mult.cpp:36:19)
+INFO: [HLS 214-186] Unrolling loop 'COLS_LOOP' (../matrix_mult.cpp:32:14) in function 'array_mult' completely with a factor of 5 (../matrix_mult.cpp:14:0)
+INFO: [HLS 214-186] Unrolling loop 'MULT_ACC_LOOP' (../matrix_mult.cpp:36:19) in function 'array_mult' completely with a factor of 5 (../matrix_mult.cpp:14:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 11.05 seconds; current allocated memory: 135.910 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 135.910 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 140.406 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.048 seconds; current allocated memory: 142.254 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'array_mult' (../matrix_mult.cpp:13:13)...20 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 164.625 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 176.488 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'array_mult' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'array_mult_Pipeline_VITIS_LOOP_26_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'in_a_store_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_26_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_26_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.935 seconds; current allocated memory: 180.383 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 181.566 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'array_mult_Pipeline_ROWS_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'in_a_store_data'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'ROWS_LOOP'.
+WARNING: [HLS 200-880] The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45) and axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45) and axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45) and axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'array_mult_Pipeline_ROWS_LOOP' (loop 'ROWS_LOOP'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45) and axis write operation ('result_V_data_V_write_ln45', ../matrix_mult.cpp:45) on port 'result_V_data_V' (../matrix_mult.cpp:45).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'ROWS_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.623 seconds; current allocated memory: 181.859 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 181.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'array_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 181.957 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 182.125 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'array_mult_Pipeline_VITIS_LOOP_26_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'array_mult_Pipeline_VITIS_LOOP_26_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 183.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'array_mult_Pipeline_ROWS_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'array_mult_Pipeline_ROWS_LOOP' pipeline 'ROWS_LOOP' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'array_mult_Pipeline_ROWS_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.652 seconds; current allocated memory: 186.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'array_mult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/in_a_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/in_a_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/in_a_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/in_a_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/in_b' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/result_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/result_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/result_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'array_mult/result_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'array_mult' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CTRL.
+INFO: [RTGEN 206-100] Bundling port 'in_b' to AXI-Lite port DATA_IN_B.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'array_mult'.
+INFO: [RTMG 210-278] Implementing memory 'array_mult_in_a_store_data_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'array_mult_in_a_store_keep_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'array_mult_in_a_store_last_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 190.742 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.658 seconds; current allocated memory: 195.152 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.719 seconds; current allocated memory: 199.750 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for array_mult.
+INFO: [VLOG 209-307] Generating Verilog RTL for array_mult.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 123.77 MHz
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 3 seconds. Total elapsed time: 27.431 seconds; peak allocated memory: 200.141 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 31s

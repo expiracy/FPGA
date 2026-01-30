@@ -1,0 +1,756 @@
+[
+    {
+        "name": "_Z10array_multRN3hls6streamINS_4axisI6ap_intILi32EELy0ELy0ELy0ELh56ELb0EEELi0EEEPS3_S6_",
+        "df_function": "%F323",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 13,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 48,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 13,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 48,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 array_mult) BB 'codeRepl' [Atomic,Loop,Atomic] 'Outline_T3_F323_R2_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 26,
+                        "column": 2
+                    },
+                    "end_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 28,
+                        "column": 2
+                    }
+                },
+                "display_name": "Process 1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A0(0,32)",
+                                "name": "in_a_store[*].data",
+                                "display_name": "Type_data packet::data"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 292,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A1(32,8)",
+                                "name": "in_a_store[*].keep",
+                                "display_name": "Type_keep packet::keep"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 293,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A2(40,8)",
+                                "name": "in_a_store[*].strb",
+                                "display_name": "Type_strb packet::strb"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 5,
+                                                "end": 294,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A3(48,8)",
+                                "name": "in_a_store[*].user",
+                                "display_name": "Type_user packet::user"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 6,
+                                                "end": 295,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A4(56,8)",
+                                "name": "in_a_store[*].last",
+                                "display_name": "Type_last packet::last"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 7,
+                                                "end": 296,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A5(64,8)",
+                                "name": "in_a_store[*].id",
+                                "display_name": "Type_id packet::id"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 8,
+                                                "end": 297,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A6(72,8)",
+                                "name": "in_a_store[*].dest",
+                                "display_name": "Type_dest packet::dest"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 9,
+                                                "end": 298,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A7(80,16)[?(?,8)]",
+                                "name": "in_a_store[*]",
+                                "display_name": "packet in_a_store[25]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 10,
+                                                "end": 299,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 11,
+                                                "end": 300,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 13,
+                                    "column": 0
+                                },
+                                "id": "VId_254_*0(0,64)arg",
+                                "name": "in_a",
+                                "display_name": "stream_data &in_a"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F324_R1",
+                        "description": "<function entry>"
+                    },
+                    {
+                        "id": "%F324_R2",
+                        "description": "<loop 'for.body'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                "line": 26,
+                                "column": 2
+                            },
+                            "end_loc": {
+                                "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                "line": 28,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%F324_R4",
+                        "description": "<function exit>"
+                    }
+                ],
+                "subdataflow": []
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<OutlineCall(R3 array_mult) BB 'codeRepl1' [Atomic,Loop,Atomic] 'Outline_T4_F323_R14_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 30,
+                        "column": 13
+                    },
+                    "end_loc": {
+                        "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                        "line": 47,
+                        "column": 2
+                    }
+                },
+                "display_name": "ROWS_LOOP",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 13,
+                                    "column": 0
+                                },
+                                "id": "VId_256_*0(0,64)arg",
+                                "name": "result",
+                                "display_name": "stream_data &result"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Fifo",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "exec_count": 25
+                                }
+                            ],
+                            "kind": "Fifo",
+                            "has_alias": false,
+                            "arg_idx": 2
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A0(0,32)",
+                                "name": "in_a_store[*].data",
+                                "display_name": "Type_data packet::data"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 292,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 125
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A4(56,8)",
+                                "name": "in_a_store[*].last",
+                                "display_name": "Type_last packet::last"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 7,
+                                                "end": 296,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 125
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A1(32,8)",
+                                "name": "in_a_store[*].keep",
+                                "display_name": "Type_keep packet::keep"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 293,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 125
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 23,
+                                    "column": 9
+                                },
+                                "id": "VId_261_[?(?,96)].A2(40,8)",
+                                "name": "in_a_store[*].strb",
+                                "display_name": "Type_strb packet::strb"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 5,
+                                                "end": 294,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 125
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                    "line": 13,
+                                    "column": 0
+                                },
+                                "id": "VId_255_[?(?,32)]dc",
+                                "name": "in_b[*]",
+                                "display_name": "data in_b[25]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 100,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "exec_count": 125
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        }
+                    ]
+                },
+                "subregions": [
+                    {
+                        "id": "%F325_R1",
+                        "description": "<function entry>"
+                    },
+                    {
+                        "id": "%F325_R2",
+                        "description": "<loop 'ROWS_LOOP'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                "line": 30,
+                                "column": 13
+                            },
+                            "end_loc": {
+                                "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                "line": 47,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%F325_R10",
+                        "description": "<function exit>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                "line": 39,
+                                "column": 18
+                            },
+                            "end_loc": {
+                                "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                                "line": 40,
+                                "column": 44
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": []
+            }
+        },
+        "channels": {
+            "in_a_RAW_1_3_#0": {
+                "name": "in_a_RAW_1_3_#0",
+                "variable_id": "VId_254_*0(0,64)arg",
+                "variable_name": "in_a",
+                "declaration": "stream_data &in_a",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 13,
+                    "column": 0
+                },
+                "source": "1",
+                "sink": "3"
+            },
+            "in_b[*]_RAW_1_4_#1": {
+                "name": "in_b[*]_RAW_1_4_#1",
+                "variable_id": "VId_255_[?(?,32)]dc",
+                "variable_name": "in_b[*]",
+                "declaration": "data in_b[25]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 13,
+                    "column": 0
+                },
+                "source": "1",
+                "sink": "4"
+            },
+            "in_a_store[*].data_RAW_3_4_#2": {
+                "name": "in_a_store[*].data_RAW_3_4_#2",
+                "variable_id": "VId_261_[?(?,96)].A0(0,32)",
+                "variable_name": "in_a_store[*].data",
+                "declaration": "Type_data packet::data",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 23,
+                    "column": 9
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "in_a_store[*].keep_RAW_3_4_#3": {
+                "name": "in_a_store[*].keep_RAW_3_4_#3",
+                "variable_id": "VId_261_[?(?,96)].A1(32,8)",
+                "variable_name": "in_a_store[*].keep",
+                "declaration": "Type_keep packet::keep",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 23,
+                    "column": 9
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "in_a_store[*].strb_RAW_3_4_#4": {
+                "name": "in_a_store[*].strb_RAW_3_4_#4",
+                "variable_id": "VId_261_[?(?,96)].A2(40,8)",
+                "variable_name": "in_a_store[*].strb",
+                "declaration": "Type_strb packet::strb",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 23,
+                    "column": 9
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "in_a_store[*].last_RAW_3_4_#5": {
+                "name": "in_a_store[*].last_RAW_3_4_#5",
+                "variable_id": "VId_261_[?(?,96)].A4(56,8)",
+                "variable_name": "in_a_store[*].last",
+                "declaration": "Type_last packet::last",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 23,
+                    "column": 9
+                },
+                "source": "3",
+                "sink": "4"
+            },
+            "result_RAW_4_2_#6": {
+                "name": "result_RAW_4_2_#6",
+                "variable_id": "VId_256_*0(0,64)arg",
+                "variable_name": "result",
+                "declaration": "stream_data &result",
+                "kind": "Fifo",
+                "dependence": "RAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp",
+                    "line": 13,
+                    "column": 0
+                },
+                "source": "4",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "4",
+                "sink": "2"
+            }
+        ]
+    }
+]

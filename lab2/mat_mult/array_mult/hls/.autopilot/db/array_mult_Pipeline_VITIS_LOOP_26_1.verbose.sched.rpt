@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vitis HLS Report for 'array_mult_Pipeline_VITIS_LOOP_26_1'
+================================================================
+* Date:           Fri Jan 30 10:34:18 2026
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        array_mult
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.208 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |       27|       27|  0.270 us|  0.270 us|   26|   26|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_26_1  |       25|       25|         1|          1|          1|    25|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.20>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../matrix_mult.cpp:21]   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_a_V_data_V, i4 %in_a_V_keep_V, i4 %in_a_V_strb_V, i1 0, i1 %in_a_V_last_V, i1 0, i1 0, void @empty_8"   --->   Operation 5 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_a_V_last_V, i4 %in_a_V_strb_V, i4 %in_a_V_keep_V, i32 %in_a_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln21 = store i5 0, i5 %i" [../matrix_mult.cpp:21]   --->   Operation 7 'store' 'store_ln21' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln26 = br void %for.inc" [../matrix_mult.cpp:26]   --->   Operation 8 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i_1 = load i5 %i" [../matrix_mult.cpp:26]   --->   Operation 9 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.78ns)   --->   "%icmp_ln26 = icmp_eq  i5 %i_1, i5 25" [../matrix_mult.cpp:26]   --->   Operation 10 'icmp' 'icmp_ln26' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.78ns)   --->   "%add_ln26 = add i5 %i_1, i5 1" [../matrix_mult.cpp:26]   --->   Operation 11 'add' 'add_ln26' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %icmp_ln26, void %for.inc.split, void %ROWS_LOOP.exitStub" [../matrix_mult.cpp:26]   --->   Operation 12 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i5 %i_1" [../matrix_mult.cpp:26]   --->   Operation 13 'zext' 'zext_ln26' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln21 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [../matrix_mult.cpp:21]   --->   Operation 14 'specpipeline' 'specpipeline_ln21' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%speclooptripcount_ln21 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 25, i64 25, i64 25" [../matrix_mult.cpp:21]   --->   Operation 15 'speclooptripcount' 'speclooptripcount_ln21' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specloopname_ln26 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [../matrix_mult.cpp:26]   --->   Operation 16 'specloopname' 'specloopname_ln26' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%in_a_store_data_addr = getelementptr i32 %in_a_store_data, i64 0, i64 %zext_ln26" [../matrix_mult.cpp:27]   --->   Operation 17 'getelementptr' 'in_a_store_data_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%in_a_store_keep_addr = getelementptr i4 %in_a_store_keep, i64 0, i64 %zext_ln26" [../matrix_mult.cpp:27]   --->   Operation 18 'getelementptr' 'in_a_store_keep_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%in_a_store_strb_addr = getelementptr i4 %in_a_store_strb, i64 0, i64 %zext_ln26" [../matrix_mult.cpp:27]   --->   Operation 19 'getelementptr' 'in_a_store_strb_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%in_a_store_last_addr = getelementptr i1 %in_a_store_last, i64 0, i64 %zext_ln26" [../matrix_mult.cpp:27]   --->   Operation 20 'getelementptr' 'in_a_store_last_addr' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.51ns)   --->   "%empty = read i41 @_ssdm_op_Read.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %in_a_V_data_V, i4 %in_a_V_keep_V, i4 %in_a_V_strb_V, i1 %in_a_V_last_V" [../matrix_mult.cpp:27]   --->   Operation 21 'read' 'empty' <Predicate = (!icmp_ln26)> <Delay = 0.51> <CoreInst = "regslice">   --->   Core 136 'regslice' <Latency = 0> <II = 1> <Delay = 1.86> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%p_s = extractvalue i41 %empty" [../matrix_mult.cpp:27]   --->   Operation 22 'extractvalue' 'p_s' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%p_1 = extractvalue i41 %empty" [../matrix_mult.cpp:27]   --->   Operation 23 'extractvalue' 'p_1' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%p_2 = extractvalue i41 %empty" [../matrix_mult.cpp:27]   --->   Operation 24 'extractvalue' 'p_2' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%p_0 = extractvalue i41 %empty" [../matrix_mult.cpp:27]   --->   Operation 25 'extractvalue' 'p_0' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (2.32ns)   --->   "%store_ln27 = store i32 %p_s, i5 %in_a_store_data_addr" [../matrix_mult.cpp:27]   --->   Operation 26 'store' 'store_ln27' <Predicate = (!icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM_1WnR">   --->   Core 82 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 27 [1/1] (2.32ns)   --->   "%store_ln27 = store i4 %p_1, i5 %in_a_store_keep_addr" [../matrix_mult.cpp:27]   --->   Operation 27 'store' 'store_ln27' <Predicate = (!icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 25> <RAM>
+ST_1 : Operation 28 [1/1] (2.32ns)   --->   "%store_ln27 = store i4 %p_2, i5 %in_a_store_strb_addr" [../matrix_mult.cpp:27]   --->   Operation 28 'store' 'store_ln27' <Predicate = (!icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 25> <RAM>
+ST_1 : Operation 29 [1/1] (2.32ns)   --->   "%store_ln27 = store i1 %p_0, i5 %in_a_store_last_addr" [../matrix_mult.cpp:27]   --->   Operation 29 'store' 'store_ln27' <Predicate = (!icmp_ln26)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25> <RAM>
+ST_1 : Operation 30 [1/1] (1.58ns)   --->   "%store_ln21 = store i5 %add_ln26, i5 %i" [../matrix_mult.cpp:21]   --->   Operation 30 'store' 'store_ln21' <Predicate = (!icmp_ln26)> <Delay = 1.58>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln26 = br void %for.inc" [../matrix_mult.cpp:26]   --->   Operation 31 'br' 'br_ln26' <Predicate = (!icmp_ln26)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 32 'ret' 'ret_ln0' <Predicate = (icmp_ln26)> <Delay = 1.58>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.208ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln21', ../matrix_mult.cpp:21) of constant 0 on local variable 'i', ../matrix_mult.cpp:21 [12]  (1.588 ns)
+	'load' operation 5 bit ('i', ../matrix_mult.cpp:26) on local variable 'i', ../matrix_mult.cpp:21 [15]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln26', ../matrix_mult.cpp:26) [16]  (1.780 ns)
+	axis read operation ('empty', ../matrix_mult.cpp:27) on port 'in_a_V_data_V' (../matrix_mult.cpp:27) [28]  (0.518 ns)
+	'store' operation 0 bit ('store_ln27', ../matrix_mult.cpp:27) of variable 'p_s', ../matrix_mult.cpp:27 on array 'in_a_store_data' [33]  (2.322 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

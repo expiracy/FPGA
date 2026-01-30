@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\array_mult.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "01/30/26 10:32:03",
+ "timestampMillis": "242597958",
+ "buildStep": {
+  "cmdId": "c8b5dfa3-96a1-4694-8b3e-8da814d8a0b5",
+  "name": "vitis-run",
+  "logFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\logs\\array_mult.steps.log",
+  "commandLine": "C:/Xilinx/Vitis/2024.1/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\repos\\FPGA\\lab2\\mat_mult\\hls_config.cfg --work_dir array_mult ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\repos\\FPGA\\lab2\\mat_mult\\hls_config.cfg",
+   "--work_dir",
+   "array_mult"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:32:03",
+ "timestampMillis": "242597959",
+ "status": {
+  "cmdId": "c8b5dfa3-96a1-4694-8b3e-8da814d8a0b5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "01/30/26 10:32:09",
+ "timestampMillis": "242603593",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "array_mult",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/repos\\FPGA\\lab2\\matrix_mult.cpp",
+     "C:/repos\\FPGA\\lab2\\matrix_mult.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "01/30/26 10:32:09",
+ "timestampMillis": "242603594",
+ "buildStep": {
+  "cmdId": "a688571a-5335-42ea-afcb-9c9144587eec",
+  "name": "csim_design",
+  "logFile": "C:/repos\\FPGA\\lab2\\mat_mult\\array_mult\\hls\\hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\repos\\FPGA\\lab2\\mat_mult"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:32:09",
+ "timestampMillis": "242603595",
+ "status": {
+  "cmdId": "a688571a-5335-42ea-afcb-9c9144587eec",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:32:51",
+ "timestampMillis": "242645965",
+ "status": {
+  "cmdId": "a688571a-5335-42ea-afcb-9c9144587eec",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "01/30/26 10:32:52",
+ "timestampMillis": "242646068",
+ "status": {
+  "cmdId": "c8b5dfa3-96a1-4694-8b3e-8da814d8a0b5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:32:52",
+ "timestampMillis": "242646068",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "01/30/26 10:32:52",
+ "timestampMillis": "242646068",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

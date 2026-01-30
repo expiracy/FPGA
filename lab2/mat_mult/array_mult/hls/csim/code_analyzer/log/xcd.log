@@ -1,0 +1,3 @@
+XILINX_HLS='C:/Xilinx\Vitis_HLS\2024.1'
+XILINX_VITIS='C:/Xilinx\Vitis\2024.1'
+cmdline: 'C:\Xilinx\Vitis\2024.1\bin\xcd.bat' -p 52689 -t eec468df-fdc6-11f0-9cdb-7486e21c6500

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cpuFpgaMapping:cpuFpgaMapping xmlns:cpuFpgaMapping="http://www.xilinx.com/act/cpuFpgaMapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xilinx.com/act/cpuFpgaMapping cpuFPGAMapping.xsd">
+  <Function id="_f206" name="generate">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f208" name="ap_int&lt;32>::ap_int">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f209" name="ap_int&lt;32>::operator=">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f210" name="ap_int_base&lt;32, true>::operator long long">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f211" name="printf">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f214" name="ap_private&lt;32, true, true>::operator int">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f215" name="ap_private&lt;32, true, true>::get_cleared_VAL">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f216" name="ap_int_base&lt;32, true>::operator=">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f218" name="ap_private&lt;32, true, true>::operator=">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f219" name="ap_private&lt;32, true, true>::get_VAL">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f220" name="ap_private&lt;32, true, true>::clearUnusedBits">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f221" name="ap_int&lt;32>::ap_int">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f222" name="ap_int_base&lt;32, true>::ap_int_base">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f223" name="ap_int_base&lt;32, true>::checkOverflowBaseC&lt;int>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f224" name="ap_private&lt;32, true, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f225" name="ssdm_int_sim&lt;32, true>::ssdm_int_sim">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f226" name="ap_private&lt;32, true, true>::operator=">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f227" name="ap_private&lt;32, true, true>::set_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f228" name="ap_private&lt;32, true, true>::check_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f229" name="ap_private&lt;32, true, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f230" name="print_array">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f231" name="main">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f233" name="ap_int&lt;32>::ap_int">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f235" name="hls::stream&lt;hls::axis&lt;ap_int&lt;32>, 0ull, 0ull, 0ull, (unsigned char)56, false>, 0>::stream">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f237" name="hls::stream&lt;hls::axis&lt;ap_int&lt;32>, 0ull, 0ull, 0ull, (unsigned char)56, false>, 0>::~stream">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f238" name="hls::stream&lt;hls::axis&lt;ap_int&lt;32>, 0ull, 0ull, 0ull, (unsigned char)56, false>, 0>::write">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f239" name="hls::stream&lt;hls::axis&lt;ap_int&lt;32>, 0ull, 0ull, 0ull, (unsigned char)56, false>, 0>::read">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f240" name="operator*&lt;32, true, 32, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f241" name="ap_int_base&lt;64, true>::operator long long">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f242" name="ap_int_base&lt;32, true>::operator!=&lt;32, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f243" name="ap_int_base&lt;32, true>::to_int">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f244" name="ap_private&lt;32, true, true>::operator==">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f245" name="ap_private&lt;64, true, true>::operator long long">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f246" name="ap_private&lt;64, true, true>::get_cleared_VAL">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f247" name="ap_int_base&lt;64, true>::ap_int_base&lt;32, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f248" name="ap_int_base&lt;64, true>::ap_int_base">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f249" name="ap_private&lt;64, true, true>::operator*&lt;64, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f250" name="ap_private&lt;64, true, true>::operator=&lt;128, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f251" name="ap_int&lt;64>::ap_int&lt;64, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f252" name="ap_int&lt;64>::ap_int&lt;64, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f253" name="ap_private&lt;128, true, false>::get_cleared_VAL">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f254" name="ap_private&lt;64, true, true>::clearUnusedBits">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f255" name="ap_private&lt;128, true, false>::ap_private&lt;64, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f256" name="ap_private&lt;128, true, false>::operator*=&lt;64, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f257" name="ap_private&lt;128, true, false>::getActiveBits">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f258" name="ap_private&lt;128, true, false>::whichWord">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f259" name="ap_private&lt;128, true, false>::clear">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f261" name="ap_private&lt;128, true, false>::get_pVal">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f262" name="ap_private_ops::mul">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f263" name="ap_private&lt;128, true, false>::isNegative">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f264" name="ap_private&lt;64, true, true>::isNegative">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f265" name="ap_private&lt;128, true, false>::clearUnusedBits">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f268" name="ap_private_ops::mul_1">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f269" name="ap_private&lt;128, true, false>::countLeadingZeros">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f270" name="ap_private_ops::CountLeadingZeros_64">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f271" name="ap_private&lt;128, true, false>::ap_private&lt;64, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f272" name="ap_private&lt;128, true, false>::set_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f273" name="ap_private&lt;64, true, true>::get_VAL">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f274" name="ap_private&lt;128, true, false>::check_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f275" name="ap_int_base&lt;64, true>::ap_int_base">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f276" name="ap_private&lt;64, true, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f277" name="ssdm_int_sim&lt;64, true>::ssdm_int_sim">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f278" name="ap_private&lt;64, true, true>::operator=">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f279" name="ap_private&lt;64, true, true>::set_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f280" name="ap_private&lt;64, true, true>::check_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f281" name="ap_private&lt;64, true, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f282" name="ap_int_base&lt;64, true>::ap_int_base&lt;32, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f283" name="ap_private&lt;64, true, true>::ap_private&lt;32, true, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f284" name="ap_private&lt;64, true, true>::operator=&lt;32, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f285" name="ap_private&lt;64, true, true>::ap_private&lt;32, true, true>">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f286" name="hls::stream&lt;hls::axis&lt;ap_int&lt;32>, 0ull, 0ull, 0ull, (unsigned char)56, false>, 0>::~stream">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f288" name="__clang_call_terminate">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f291" name="hls::stream&lt;hls::axis&lt;ap_int&lt;32>, 0ull, 0ull, 0ull, (unsigned char)56, false>, 0>::stream">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f294" name="ap_uint&lt;4>::ap_uint">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f295" name="ap_uint&lt;1>::ap_uint">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f296" name="ap_uint&lt;1>::ap_uint">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f297" name="ap_int_base&lt;1, false>::ap_int_base">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f298" name="ssdm_int_sim&lt;1, false>::ssdm_int_sim">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f299" name="ap_private&lt;1, false, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f300" name="ap_private&lt;1, false, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f301" name="ap_private&lt;1, false, true>::set_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f302" name="ap_private&lt;1, false, true>::clearUnusedBits">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f303" name="ap_private&lt;1, false, true>::check_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f304" name="ap_uint&lt;4>::ap_uint">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f305" name="ap_int_base&lt;4, false>::ap_int_base">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f306" name="ssdm_int_sim&lt;4, false>::ssdm_int_sim">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f307" name="ap_private&lt;4, false, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f308" name="ap_private&lt;4, false, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f309" name="ap_private&lt;4, false, true>::set_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f310" name="ap_private&lt;4, false, true>::clearUnusedBits">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f311" name="ap_private&lt;4, false, true>::check_canary">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f312" name="ap_int&lt;32>::ap_int">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f313" name="ap_int_base&lt;32, true>::ap_int_base">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f314" name="ssdm_int_sim&lt;32, true>::ssdm_int_sim">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f315" name="ap_private&lt;32, true, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f316" name="ap_private&lt;32, true, true>::ap_private">
+    <MappedTo editable="true">
+      <Partition>CPU</Partition>
+    </MappedTo>
+  </Function>
+  <Function id="_f323" name="array_mult">
+    <MappedTo editable="true">
+      <Partition>FPGA</Partition>
+    </MappedTo>
+    <TopLevel>true</TopLevel>
+    <IsCalledByHwFn>false</IsCalledByHwFn>
+    <Interfaces>
+      <Return>
+        <PragmaOrigin id="_fi323_return">
+          <CodeSection beginColumn="0" beginLine="16" endColumn="0" endLine="16" file="..\matrix_mult.cpp"/>
+        </PragmaOrigin>
+        <AXI-Lite>
+          <Depth/>
+          <Name/>
+          <Register>false</Register>
+          <Offset/>
+          <Clock/>
+          <Bundle>CTRL</Bundle>
+          <PortBitwidth>32</PortBitwidth>
+        </AXI-Lite>
+      </Return>
+      <Argument declaration="in_a (stream_data*)" id="_v254" name="in_a">
+        <PragmaOrigin id="_fi323_254">
+          <CodeSection beginColumn="0" beginLine="18" endColumn="0" endLine="18" file="..\matrix_mult.cpp"/>
+        </PragmaOrigin>
+        <AXI-Stream>
+          <Depth/>
+          <Name/>
+          <Register>false</Register>
+          <RegisterMode>both</RegisterMode>
+          <PortBitwidth>128</PortBitwidth>
+        </AXI-Stream>
+      </Argument>
+      <Argument declaration="in_b (data*)" id="_v255" name="in_b">
+        <PragmaOrigin id="_fi323_255">
+          <CodeSection beginColumn="0" beginLine="17" endColumn="0" endLine="17" file="..\matrix_mult.cpp"/>
+        </PragmaOrigin>
+        <AXI-Lite>
+          <Depth/>
+          <Name/>
+          <Register>false</Register>
+          <Offset/>
+          <Clock/>
+          <Bundle>DATA_IN_B</Bundle>
+          <PortBitwidth>32</PortBitwidth>
+        </AXI-Lite>
+      </Argument>
+      <Argument declaration="result (stream_data*)" id="_v256" name="result">
+        <PragmaOrigin id="_fi323_256">
+          <CodeSection beginColumn="0" beginLine="19" endColumn="0" endLine="19" file="..\matrix_mult.cpp"/>
+        </PragmaOrigin>
+        <AXI-Stream>
+          <Depth/>
+          <Name/>
+          <Register>false</Register>
+          <RegisterMode>both</RegisterMode>
+          <PortBitwidth>128</PortBitwidth>
+        </AXI-Stream>
+      </Argument>
+    </Interfaces>
+  </Function>
+</cpuFpgaMapping:cpuFpgaMapping>

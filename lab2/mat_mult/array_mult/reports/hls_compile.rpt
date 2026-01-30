@@ -1,0 +1,168 @@
+
+
+================================================================
+== Synthesis Summary Report of 'array_mult'
+================================================================
++ General Information: 
+    * Date:           Fri Jan 30 10:34:21 2026
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        array_mult
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |                 Modules                |  Issue |       | Latency | Latency | Iteration|         | Trip |          |      |         |           |           |     |
+    |                 & Loops                |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ array_mult                            |  Timing|  -0.78|       90|  900.000|         -|       91|     -|        no|     -|  15 (6%)|  2910 (2%)|  2169 (4%)|    -|
+    | + array_mult_Pipeline_VITIS_LOOP_26_1  |       -|   1.09|       27|  270.000|         -|       27|     -|        no|     -|        -|    7 (~0%)|   64 (~0%)|    -|
+    |  o VITIS_LOOP_26_1                     |       -|   7.30|       25|  250.000|         1|        1|    25|       yes|     -|        -|          -|          -|    -|
+    | + array_mult_Pipeline_ROWS_LOOP        |  Timing|  -0.78|       33|  330.000|         -|       33|     -|        no|     -|  15 (6%)|  1851 (1%)|  1497 (2%)|    -|
+    |  o ROWS_LOOP                           |      II|   7.30|       31|  310.000|        12|        5|     5|       yes|     -|        -|          -|          -|    -|
+    +----------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_CTRL      | 32         | 4             |        |          |
+| s_axi_DATA_IN_B | 32         | 8             | 128    | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| in_a      | in        | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| result    | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
++-----------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------------------+
+| Argument | Direction | Datatype                                               |
++----------+-----------+--------------------------------------------------------+
+| in_a     | in        | stream<hls::axis<ap_int<32>, 0, 0, 0, '8', false>, 0>& |
+| in_b     | in        | ap_int<32>*                                            |
+| result   | out       | stream<hls::axis<ap_int<32>, 0, 0, 0, '8', false>, 0>& |
++----------+-----------+--------------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+-----------------+-----------+--------------------------------+
+| Argument | HW Interface    | HW Type   | HW Info                        |
++----------+-----------------+-----------+--------------------------------+
+| in_a     | in_a            | interface |                                |
+| in_b     | s_axi_DATA_IN_B | memory    | name=in_b offset=128 range=128 |
+| result   | result          | interface |                                |
++----------+-----------------+-----------+--------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+-----+--------+-------------+-------+--------+---------+
+| Name                                   | DSP | Pragma | Variable    | Op    | Impl   | Latency |
++----------------------------------------+-----+--------+-------------+-------+--------+---------+
+| + array_mult                           | 15  |        |             |       |        |         |
+|  + array_mult_Pipeline_VITIS_LOOP_26_1 | 0   |        |             |       |        |         |
+|    icmp_ln26_fu_132_p2                 |     |        | icmp_ln26   | seteq | auto   | 0       |
+|    add_ln26_fu_138_p2                  |     |        | add_ln26    | add   | fabric | 0       |
+|  + array_mult_Pipeline_ROWS_LOOP       | 15  |        |             |       |        |         |
+|    icmp_ln30_fu_439_p2                 |     |        | icmp_ln30   | seteq | auto   | 0       |
+|    add_ln30_fu_445_p2                  |     |        | add_ln30    | add   | fabric | 0       |
+|    mul_i_i250_fu_467_p2                |     |        | mul_i_i250  | add   | fabric | 0       |
+|    add_ln40_fu_507_p2                  |     |        | add_ln40    | add   | fabric | 0       |
+|    add_ln39_fu_517_p2                  |     |        | add_ln39    | add   | fabric | 0       |
+|    add_ln39_1_fu_487_p2                |     |        | add_ln39_1  | add   | fabric | 0       |
+|    add_ln39_2_fu_497_p2                |     |        | add_ln39_2  | add   | fabric | 0       |
+|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39    | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_1  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_2  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_3  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_4  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_5  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_6  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_7  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_8  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_9  | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_10 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_11 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_12 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_13 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_14 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_15 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_16 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_17 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_18 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U9               | 3   |        | mul_ln39_19 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U10              | 3   |        | mul_ln39_20 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U11              | 3   |        | mul_ln39_21 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_22 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U12              | 3   |        | mul_ln39_23 | mul   | auto   | 1       |
+|    mul_32s_32s_32_2_1_U13              | 3   |        | mul_ln39_24 | mul   | auto   | 1       |
++----------------------------------------+-----+--------+-------------+-------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------+--------------+-----------+------+------+--------+-----------------+------+---------+------------------+
+| Name                | Usage        | Type      | BRAM | URAM | Pragma | Variable        | Impl | Latency | Bitwidth, Depth, |
+|                     |              |           |      |      |        |                 |      |         | Banks            |
++---------------------+--------------+-----------+------+------+--------+-----------------+------+---------+------------------+
+| + array_mult        |              |           | 0    | 0    |        |                 |      |         |                  |
+|   CTRL_s_axi_U      | interface    | s_axilite |      |      |        |                 |      |         |                  |
+|   DATA_IN_B_s_axi_U | interface    | s_axilite |      |      |        |                 |      |         |                  |
+|   in_a_store_data_U | rom_np array |           |      |      |        | in_a_store_data | auto | 1       | 32, 25, 1        |
+|   in_a_store_keep_U | ram_1p array |           |      |      |        | in_a_store_keep | auto | 1       | 4, 25, 1         |
+|   in_a_store_strb_U | ram_1p array |           |      |      |        | in_a_store_strb | auto | 1       | 4, 25, 1         |
+|   in_a_store_last_U | ram_1p array |           |      |      |        | in_a_store_last | auto | 1       | 1, 25, 1         |
++---------------------+--------------+-----------+------+------+--------+-----------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------+---------------------------------------------+
+| Type      | Options                              | Location                                    |
++-----------+--------------------------------------+---------------------------------------------+
+| interface | s_axilite port=return bundle=CTRL    | ../matrix_mult.cpp:16 in array_mult, return |
+| interface | s_axilite port=in_b bundle=DATA_IN_B | ../matrix_mult.cpp:17 in array_mult, in_b   |
+| interface | axis port=in_a                       | ../matrix_mult.cpp:18 in array_mult, in_a   |
+| interface | axis port=result                     | ../matrix_mult.cpp:19 in array_mult, result |
++-----------+--------------------------------------+---------------------------------------------+
+
+
