@@ -1,0 +1,10 @@
+{
+  "workspaceRoot": "C:\\FPGA\\lab3\\vitis",
+  "mapping": {
+    "tb_matrix_mult.cpp": "mat_mult",
+    "C:\\repos\\FPGA\\lab2\\matrix_mult.cpp": "mat_mult",
+    "C:\\repos\\FPGA\\lab2\\matrix_mult.h": "mat_mult",
+    "C:\\repos\\FPGA\\lab2\\tb_matrix_mult.cpp": "mat_mult",
+    "matrix_mult.cpp": "mat_mult"
+  }
+}
