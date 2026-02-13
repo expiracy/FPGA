@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="camera" location="C:/FPGA/lab4/vitis_project/camera" platform="C:/FPGA/lab4/vitis_project/zybo/export/zybo/zybo.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="camera_system" sysConfig="zybo" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" language="CPP" mssSignature="cf0c32a1001175f4f2a3d538f0929c8b">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1819731488">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1394129662" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>
